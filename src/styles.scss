@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+html body{
+  font-family: 'Questrial', sans-serif;
+}
+#app{
+  animation: 400ms ease 400ms 1 normal both running kOCoaO;
+}
+body{
+  background: #333;
+}
+h2{font-size: 2.6179em;margin: 10px 0 20px 0;}
+ul li, p{font-size: 18px;}
+.pad0{padding:0;}
+@keyframes box1{
+  from{right: 15.25vw;}
+  to{right: 6.25vw;}
+}
+@keyframes box2{
+  from{left: 10vw}
+  to{left:1vw}
+}
+@keyframes box{
+  from{width: 0;}
+  to{right: 6.25vw}
+}
+@keyframes boxbig{
+  from{width: 0;}
+  to{left: 1vw}
+}
+@keyframes image{
+  from{opacity:0;}
+}
+@keyframes h1{
+  from{
+    -webkit-transform:scale(0,1);
+    -ms-transform:scale(0,1);
+    transform:scale(0,1);
+  }
+}
+@keyframes h1aft{
+  from{-webkit-transform:scale(1,1);
+  -ms-transform:scale(1,1);
+  transform:scale(1,1);}
+}
