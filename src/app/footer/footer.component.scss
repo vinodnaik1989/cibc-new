@@ -1,0 +1,50 @@
+footer{
+  background: #222;
+  position: fixed;
+  bottom: 0;
+  z-index: -9;
+  left: 0;
+  backface-visibility: hidden;
+  width: 100%;
+  padding: 3rem 0;
+  color: #bbb;
+  & .foo-cont{
+    & .foo-logo{
+      -webkit-box-align: center;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 2px solid rgb(68, 68, 68);
+      font-family: "IBM Plex Mono", monospace;
+      text-transform: uppercase;
+      font-size: 0.8em;
+    }
+    & nav{
+      & a{
+        color: #bbb;
+        display: block;
+        margin-bottom: 15px;
+        font-family: "IBM Plex Mono", monospace;
+      }
+    }
+    & a{
+      color: inherit;
+    }
+    & .foo-logodesc{
+      margin-top: 5rem;
+      & span{
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+        color: #666;
+      }
+    }
+    &:last-child{
+      & .foo-logo{
+        margin-top: 2rem;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

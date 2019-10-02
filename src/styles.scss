@@ -3,7 +3,9 @@ html body{
   font-family: 'Questrial', sans-serif;
 }
 #app{
-  animation: 400ms ease 400ms 1 normal both running kOCoaO;
+  // animation: 400ms ease 400ms 1 normal both running image;
+  margin-bottom: 390px;
+  background: #333;
 }
 body{
   background: #333;
@@ -11,6 +13,39 @@ body{
 h2{font-size: 2.6179em;margin: 10px 0 20px 0;}
 ul li, p{font-size: 18px;}
 .pad0{padding:0;}
+@-webkit-keyframes slideDownIn {
+  0% {
+    -webkit-transform: translateY(-80px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  0% {
+    -webkit-transform: translateY(-80px);
+  }
+}
+.animation{
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+@keyframes slideDownIn {
+ 0% {
+   transform: translateY(-80px);
+ }
+ 100% {
+   transform: translateY(0);
+ }
+ 0% {
+   transform: translateY(-80px);
+ }
+}
+.slideDownIn {
+ -webkit-animation-name: slideDownIn;
+ animation-name: slideDownIn;
+}
+
 @keyframes box1{
   from{right: 15.25vw;}
   to{right: 6.25vw;}
@@ -27,6 +62,14 @@ ul li, p{font-size: 18px;}
   from{width: 0;}
   to{left: 1vw}
 }
+@keyframes box03{
+  from{width: 0;}
+  to{right: 1rem}
+}
+@keyframes box3{
+  from{right: 5rem;}
+  to{right: 1rem}
+}
 @keyframes image{
   from{opacity:0;}
 }
@@ -41,4 +84,55 @@ ul li, p{font-size: 18px;}
   from{-webkit-transform:scale(1,1);
   -ms-transform:scale(1,1);
   transform:scale(1,1);}
+}
+@-webkit-keyframes smallbox{
+  0%{-webkit-transform:scale(1,0);-ms-transform:scale(1,0);transform:scale(1,0);}
+}
+@keyframes smallbox{
+  0%{-webkit-transform:scale(1,0);-ms-transform:scale(1,0);transform:scale(1,0);}
+}
+@-webkit-keyframes movepinkbox{
+  5%{-webkit-transform:translateY(-3.125vw);-ms-transform:translateY(-3.125vw);transform:translateY(-3.125vw);}
+}
+@keyframes movepinkbox{
+  5%{-webkit-transform:translateY(-3.125vw);-ms-transform:translateY(-3.125vw);transform:translateY(-3.125vw);}
+}
+.boxpink{
+  bottom: 0px;
+  display: block;
+  height: 2rem;
+  left: -2rem;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: center bottom;
+  width: 2rem;
+  will-change: transform;
+  z-index: 20;
+  animation: 800ms cubic-bezier(0.23, 1, 0.32, 1) 100ms 1 normal both running smallbox;
+}
+.boxpink2{
+  bottom: 0px;
+  display: block;
+  height: 3rem;
+  left: -4.5rem;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: center bottom;
+  width: 3rem;
+  will-change: transform;
+  z-index: 20;
+  animation: 800ms cubic-bezier(0.23, 1, 0.32, 1) 100ms 1 normal both running smallbox;
+}
+.boxpink3{
+  bottom: 0px;
+  display: block;
+  height: 5rem;
+  right: 3rem;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: center bottom;
+  width: 5rem;
+  will-change: transform;
+  z-index: 20;
+  animation: 800ms cubic-bezier(0.23, 1, 0.32, 1) 100ms 1 normal both running smallbox;
 }

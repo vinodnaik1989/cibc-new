@@ -1,0 +1,166 @@
+.talk-to-us{
+  background: #fff;
+  padding: 3rem 0;
+  & .talk-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    & h2{
+      font-size: 3.5em;
+      margin: 0;
+    }
+    & button{
+      background: #333;
+      color: #fff;
+      padding: 1rem 3rem;
+      height: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+  }
+}
+.left-imge{
+  overflow: hidden;
+  padding-bottom: 6rem;
+}
+.right-bg{
+  position: relative;
+  padding: 5rem 0;
+  overflow: visible;
+  &:after{
+    bottom: 0px;
+    content: "";
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    will-change: transform;
+    z-index: 10;
+    background: #fff;
+    transition: transform 800ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  }
+  &:after{
+    transform: translateX(17.25vw);
+  }
+  & .left-image{
+    z-index: 99;
+    overflow: visible;
+    & .box-3{
+      bottom: -7rem;
+      display: none;
+      height: 4rem;
+      right: 1rem;
+      position: absolute;
+      transform-origin: right center;
+      width: 4rem;
+      will-change: transform;
+      z-index: 20;
+      -webkit-animation: 800ms cubic-bezier(0.23, 1, 0.32, 1) 0s 1 normal both running box03;
+      animation: 800ms cubic-bezier(0.23, 1, 0.32, 1) 0s 1 normal both running box03;
+    }
+    & .box-3{
+      display: block;
+      background: #DE638B;
+    }
+    & .left-img{
+      // overflow: hidden;
+      position: relative;
+      &:after{
+        bottom: 0px;
+        content: "";
+        left: 0px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        z-index: 10;
+        border-width: 2px;
+        border-style: solid;
+        border-color: #fbfaf9;
+        -o-border-image: initial;
+        border-image: initial;
+        margin: 1rem;
+      }
+      &:after{
+        margin: 2rem;
+      }
+      z-index: 40;
+      & >div{
+        will-change: transform;
+        transition: transform 800ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+      }
+      & .img-feature{
+        position: relative;
+        z-index: 5;
+        overflow: hidden;
+        & .img{
+          background-color: #a5abab;
+          padding-top: 75%;
+          position: relative;
+          transform-origin: center bottom;
+          will-change: transform;
+          transform: none;
+          overflow: hidden;
+          transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+          & img{
+            height: 100%;
+            left: 0px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: center center;
+            object-position: center center;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            will-change: opacity;
+            -webkit-animation: 400ms ease 100ms 1 normal backwards running image;
+            animation: 400ms ease 100ms 1 normal backwards running image;
+            &:after{
+              background-color: #a5abab;
+              bottom: 0px;
+              content: "";
+              left: 0px;
+              position: absolute;
+              right: 0px;
+              top: 0px;
+              transform: scale(1, 1);
+              transform-origin: center top;
+              will-change: transform;
+              z-index: 10;
+              transition: transform 600ms cubic-bezier(0.23, 1, 0.32, 1) 400ms;
+            }
+            &:after{
+              transform: scale(1, 0);
+            }
+          }
+        }
+      }
+    }
+  }
+  & .right-text{
+    z-index: 99;
+    & .right-cont{
+      font-size: 2.75rem;
+      line-height: 1.2;
+      padding-left: 3rem;
+      font-weight: bold;
+      position: relative;
+      top: 25%;
+    }
+  }
+  &:hover{
+    & .left-image{
+      & .img-feature{
+        & >div{
+          transform: scale(1.05) !important;
+        }
+      }
+      & .box-3{
+        animation: 9000ms ease 0s 1 normal none running box3;
+      }
+    }
+    &:after{
+      transform: none;
+    }
+  }
+}

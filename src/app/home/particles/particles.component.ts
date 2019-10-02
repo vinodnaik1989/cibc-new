@@ -30,18 +30,18 @@ export class ParticlesComponent implements OnInit {
       this.myParams = {
         particles: {
           number: {
-            value: 100,
+            value: 30,
           },
           color: {
-            value: '#b2b2b2'
+            value: '#DE638B'
           },
           shape: {
-            type: 'edge',
+            type: 'circle',
           },
           move: {
             enable: 'true',
-            speed: 1,
-            direction: 'none',
+            speed: 2,
+            direction: 'random',
           },
           opacity: {
             value: 1,
@@ -53,7 +53,7 @@ export class ParticlesComponent implements OnInit {
           },
           line_linked: {
             enable: 'false',
-            distance: '250',
+            distance: '260',
             color: '#ccc',
             width: '1',
             opacity: '0.2'
