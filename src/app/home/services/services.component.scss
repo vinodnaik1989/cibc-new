@@ -24,7 +24,7 @@
   & .serv-sect{
     margin-bottom: 8rem;
   }
-  & .serv-sect:last-child{
+  & .serv-sect:nth-child(even){
     padding-left: 40px;
   }
 }

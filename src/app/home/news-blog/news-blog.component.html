@@ -8,7 +8,7 @@
           <div class="boxpink2" data-hover="smpink" style="background:#DE638B"></div>
           <div class="col-lg-6 col-md-6 col-sm-6 pad0 news-image">
             <div class="news-img">
-                <img src="../../assets/images/collaborate.jpg"/>
+                <img src="../../assets/images/news.jpg"/>
             </div>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 pad0 nws-cont">
@@ -25,36 +25,14 @@
     <div class="container">
       <div class="row">
         <div class="boxpink3" data-hover="smpink" style="background:#DE638B"></div>
-        <div class="blog-sec col-lg-4 col-md-4 col-sm-4">
+        <div class="blog-sec col-lg-4 col-md-4 col-sm-4" *ngFor="let b of blog">
           <div class="blg-cont">
             <div class="blg-img">
-              <img src="../../assets/images/collaborate.jpg" />
+              <img src="{{b.image}}" />
             </div>
             <div class="blog-sub-cont">
-              <h3>CIBC Expands the leadership team</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-          </div>
-        </div>
-        <div class="blog-sec col-lg-4 col-md-4 col-sm-4">
-          <div class="blg-cont">
-            <div class="blg-img">
-              <img src="../../assets/images/collaborate.jpg" />
-            </div>
-            <div class="blog-sub-cont">
-              <h3>CIBC Expands the leadership team</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-          </div>
-        </div>
-        <div class="blog-sec col-lg-4 col-md-4 col-sm-4">
-          <div class="blg-cont">
-            <div class="blg-img">
-              <img src="../../assets/images/collaborate.jpg" />
-            </div>
-            <div class="blog-sub-cont">
-              <h3>CIBC Expands the leadership team</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <h3>{{b.title}}</h3>
+              <p>{{b.content}}.</p>
             </div>
           </div>
         </div>

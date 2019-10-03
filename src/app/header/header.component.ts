@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Host } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +6,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  isShown:boolean=false;
   constructor() { }
 
   ngOnInit() {
@@ -21,5 +21,4 @@ export class HeaderComponent implements OnInit {
   changeHeaderFontColor(e){
 
   }
-
 }

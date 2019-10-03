@@ -99,6 +99,9 @@
           list-style: none;
           display: inline-block;
           padding-right: 15px;
+          &:nth-child(2){
+            margin-right: 15px;
+          }
         }
       }
     }

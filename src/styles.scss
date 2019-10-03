@@ -47,12 +47,14 @@ ul li, p{font-size: 18px;}
 }
 
 @keyframes box1{
-  from{right: 15.25vw;}
-  to{right: 6.25vw;}
+  // from{right: 15.25vw;}
+  // to{right: 6.25vw;}
+  5%{-webkit-transform:translateX(-6.25vw);-ms-transform:translateX(-6.25vw);transform:translateX(-6.25vw);}} @keyframes LjGCg{5%{-webkit-transform:translateX(-6.25vw);-ms-transform:translateX(-6.25vw);transform:translateX(-6.25vw);}
 }
 @keyframes box2{
-  from{left: 10vw}
-  to{left:1vw}
+  // from{left: 10vw}
+  // to{left:1vw}
+  5%{-webkit-transform:translateX(6.25vw);-ms-transform:translateX(6.25vw);transform:translateX(6.25vw);}} @keyframes hnTqHD{5%{-webkit-transform:translateX(6.25vw);-ms-transform:translateX(6.25vw);transform:translateX(6.25vw);}
 }
 @keyframes box{
   from{width: 0;}
@@ -67,8 +69,9 @@ ul li, p{font-size: 18px;}
   to{right: 1rem}
 }
 @keyframes box3{
-  from{right: 5rem;}
-  to{right: 1rem}
+  // from{right: 5rem;}
+  // to{right: 1rem}
+  5%{-webkit-transform:translateX(-6.25vw);-ms-transform:translateX(-6.25vw);transform:translateX(-6.25vw);}} @keyframes LjGCg{5%{-webkit-transform:translateX(-6.25vw);-ms-transform:translateX(-6.25vw);transform:translateX(-6.25vw);}
 }
 @keyframes image{
   from{opacity:0;}

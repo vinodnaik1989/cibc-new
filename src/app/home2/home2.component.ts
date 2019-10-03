@@ -30,7 +30,7 @@ export class Home2Component implements OnInit {
           // touch
         this.el.addEventListener('touchstart', this.touchMove.bind(this), false);
         this.el.addEventListener('touchmove', this.touchMove.bind(this), false);
-    //   	this.el.addEventListener('touchend', this.resetTarget.bind(this), false);
+        //	this.el.addEventListener('touchend', this.resetTarget.bind(this), false);
       } else {
         // Mouse
         window.addEventListener('mousemove', this.mouseMove.bind(this), false);
@@ -286,14 +286,14 @@ export class Home2Component implements OnInit {
 
       count: 25,
       speed: 0.3,
-      radius: 6,
+      radius: 10,
       width: function() { return window.innerWidth; },
       height: function() { return window.innerHeight; },
       size: 15,
       // color: '30, 180, 1',
       color: '222, 99, 139, 1',
       maxDistance: 100,
-      background: ['0, 0, 0', '0, 0, 0']
+      background: ['51, 51, 51', '34, 34, 34']
       // background: ['1, 62, 66', '1, 40, 60']
     });
   }
