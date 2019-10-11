@@ -9,6 +9,10 @@
   align-items: start;
   padding-top: 8rem;
   background: linear-gradient(to left, rgb(34, 34, 34) 50%, rgb(51, 51, 51) 50%);
+  @media(max-width:640px){
+    background: linear-gradient(to top, rgb(34, 34, 34) 45%, rgb(51, 51, 51) 45%);
+    padding-top: 3rem;
+  }
   & h3{
     color: #fff;
     margin-bottom: 1rem;
@@ -23,9 +27,24 @@
   }
   & .serv-sect{
     margin-bottom: 8rem;
+    @media(max-width: 640px){
+      margin-bottom: 4rem;
+    }
   }
   & .serv-sect:nth-child(even){
     padding-left: 40px;
+    @media(max-width: 640px){
+      padding-left: 15px;
+    }
+  }
+  & .serv{
+    & >div{
+      & >div{
+        @media(max-width: 767px){
+          margin: 0 !important;
+        }
+      }
+    }
   }
 }
 .portfolio{
@@ -37,6 +56,10 @@
   background-color: transparent;
   color: inherit;
   padding-top: 8rem;
+  z-index: 0;
+  @media(max-width: 640px){
+    padding-top: 4rem;
+  }
   & .portf{
     position: relative;
     &:after{
@@ -119,6 +142,11 @@
     top: 3.2rem;
     width: 2px;
     background: #888888;
+    @media(max-width: 640px){
+      left:17.85vw;
+      height: 3rem;
+      top: 0;
+    }
   }
   &:after{
     top: 16rem;
@@ -131,6 +159,12 @@
     top: 12rem;
     width: 20vw;
     background: url(../../../assets/images/dots.svg) center top/contain repeat-y;
+    @media(max-width: 640px){
+      height: 5rem;
+      left: 5.25vw;
+      top: 5rem;
+      width: 32vw;
+    }
   }
   & .portf-cont{
     &:before{
@@ -141,9 +175,17 @@
       top: calc(8rem - 2vw);
       width: 9.375vw;
       background: url(../../../assets/images/circle.svg) center top/contain no-repeat #323231;
+      @media(max-width: 640px){
+        height: 14.375vw;
+        left: 10.85vw;
+        width: 14.375vw;
+      }
     }
     &:before{
       top: calc(0rem - 2.75vw);
+      @media(max-width: 640px){
+        top: calc(-8rem - 2.75vw);
+      }
     }
   }
 }
@@ -152,6 +194,11 @@
 }
 .folios{
   display: block;
+  & .boxpink{
+    @media(max-width: 640px){
+      display: block;
+    }
+  }
   & .flink{
     cursor: pointer;
     & h4{

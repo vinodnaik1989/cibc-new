@@ -1,5 +1,8 @@
 .technologies {
   padding: 16rem 0px 8rem;
+  @media(max-width: 767px){
+    padding-bottom: 4rem;
+  }
 }
 .technologies {
   -webkit-box-align: start;
@@ -29,6 +32,10 @@
     top: 0px;
     width: 2px;
     background: rgb(136, 136, 136);
+    @media(max-width: 767px){
+      height: 5rem;
+      left: 13.275vw;
+    }
   }
   &:after{
     top: 16rem;
@@ -41,6 +48,12 @@
     top: 8rem;
     width: 12vw;
     background: url(../../../assets/images/dots.svg) center top / contain repeat-y;
+    @media(max-width:640px){
+      height: 3rem;
+      left: 5.25vw;
+      width: 28vw;
+      top: 5rem;
+    }
   }
   & .tech-cont{
     &:before{
@@ -51,9 +64,17 @@
       top: calc(8rem - 2vw);
       width: 9.375vw;
       background: url(../../../assets/images/circle.svg) center top / contain no-repeat rgb(50, 50, 49);
+      @media(max-width: 640px){
+        height: 12.375vw;
+        left: 7.75vw;
+        width: 12.375vw;
+      }
     }
     &:before{
       top: calc(0.5rem - 2.75vw);
+      @media(max-width: 640px){
+        top: calc(-3.75rem - 2.75vw);
+      }
     }
   }
 }
@@ -71,6 +92,9 @@
   }
   &:before{
     display: block;
+    @media(max-width:640px){
+      display: none;
+    }
   }
   & .tech-list{
     & >div{
@@ -85,6 +109,9 @@
     }
     & .tech-img{
       text-align: center;
+      @media(max-width:640px){
+        margin-bottom: 3rem;
+      }
       & img{
         max-width: 10rem;
         margin: 0px auto;
@@ -95,12 +122,20 @@
     & .tech-content{
       & ul{
         padding: 0;
+        @media(max-width:640px){
+          display: flex;
+        }
         & li{
           list-style: none;
           display: inline-block;
           padding-right: 15px;
           &:nth-child(2){
             margin-right: 15px;
+          }
+          @media(max-width:640px){
+            & img{
+              width: 75%;
+            }
           }
         }
       }

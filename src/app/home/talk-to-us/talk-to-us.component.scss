@@ -1,5 +1,6 @@
 .talk-to-us{
-  background: #fff;
+  background: #fff url('../../../assets/images/animated_dots.svg');
+  background-size: 25%;
   padding: 3rem 0;
   & .talk-title{
     display: flex;
@@ -8,15 +9,12 @@
     & h2{
       font-size: 3.5em;
       margin: 0;
+      @media(max-width: 640px){
+        margin-bottom: 2rem;
+      }
     }
-    & button{
-      background: #333;
-      color: #fff;
-      padding: 1rem 3rem;
-      height: 4rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-weight: bold;
+    @media(max-width: 640px){
+      display: block;
     }
   }
 }
@@ -28,6 +26,7 @@
   position: relative;
   padding: 5rem 0;
   overflow: visible;
+  z-index: 0;
   &:after{
     bottom: 0px;
     content: "";
@@ -42,6 +41,9 @@
   }
   &:after{
     transform: translateX(17.25vw);
+    @media(max-width:767px){
+      transform: none;
+    }
   }
   & .left-image{
     z-index: 99;
@@ -62,6 +64,9 @@
     & .box-3{
       display: block;
       background: #DE638B;
+      @media(max-width: 640px){
+        display: none;
+      }
     }
     & .left-img{
       // overflow: hidden;
@@ -146,6 +151,10 @@
       font-weight: bold;
       position: relative;
       top: 25%;
+      @media(max-width: 640px){
+        font-size: 8vw;
+        padding-left: 0;
+      }
     }
   }
   &:hover{

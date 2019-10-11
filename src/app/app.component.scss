@@ -1,0 +1,120 @@
+.wrapper {
+  min-height: 100vh;
+  position: absolute;
+  z-index: 99;
+}
+.nav {
+  &__wrapper {
+    position: fixed;
+    height: 100%;
+    padding: 30px;
+    right: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    z-index: 1;
+    @media(max-width:767px){
+      display: none;
+    }
+  }
+  & {
+    margin: 0px;
+    text-align: right;
+    display: block;
+    z-index: 99;
+  }
+  &__counter {
+    font-size: 20px;
+    transition: all 0.15s ease-out;
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 0 0.25em;
+    // width: 300px;
+    width: auto;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.3s ease-out, opacity 0.2s ease-out;
+    text-transform: uppercase;
+  }
+  &__body {
+    font-weight: 100;
+    font-size: 18px;
+    font-size: 18px;
+    width: 300px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.3s ease-out, opacity 0.2s ease-out;
+  }
+  li {
+    position: relative;
+    transition: all 0.3s ease-out;
+    margin-bottom: 0.3em;
+    &:after {
+      content: '';
+      display: block;
+      // border-top: 2px solid white;
+      height: 250px;
+      width: 20px;
+      position: absolute;
+      left: -30px;
+      top: 15px;
+    }
+    a {
+      display: block;
+      padding: 0;
+      color: #aaa;
+      transition: all 0.15s ease-out;
+      text-decoration: none;
+      &:hover {
+        background-color: transparent;
+        // padding-left: 1em;
+        & span{
+          font-size: 24px;
+          color: #DE638B;
+        }
+        & h3{
+          height: 25px;
+          opacity: 1;
+          overflow: visible;
+          color: #DE638B;
+          font-size: 18px;
+        }
+      }
+      &:focus {
+        background-color: transparent;
+      }
+    }
+    &.active {
+      pointer-events: none;
+      // padding-left: 1em;
+      .nav__counter {
+        font-size: 28px;
+        color: #DE638B;
+        &:after {
+          content: '';
+          width: 20px;
+          height: 400px;
+          top: 20px;
+          border-top: 2px solid #DE638B;
+          right: 40px;
+          position: absolute;
+        }
+      }
+      .nav__title {
+        height: 25px;
+        opacity: 1;
+        overflow: visible;
+        color: #DE638B;
+      }
+      .nav__body {
+        height: 100px;
+        opacity: 1;
+        overflow: visible;
+      }
+    }
+  }
+}

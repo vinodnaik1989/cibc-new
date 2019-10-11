@@ -4,6 +4,10 @@
 .blog{
   padding: 4rem 0;
   overflow: hidden;
+  z-index: 0;
+  @media(max-width: 640px){
+    padding: 0;
+  }
   &:after{
     bottom: 0px;
     content: "";
@@ -28,9 +32,12 @@
   }
   & h2{
     color: #fff;
-    font-size: 5.18em;
+    // font-size: 5.18em;
     font-weight: bolder;
     margin: 40px 0;
+    @media(max-width: 640px){
+      margin: 30px 0;
+    }
   }
   &:after{
     transform: translateY(27.25vw);
@@ -40,6 +47,9 @@
     display: block;
     background: #fff;
     z-index: 20;
+    @media(max-width: 640px){
+      padding: 0;
+    }
     & >div{
       margin: 0;
     }
@@ -76,6 +86,9 @@
       & .news-content{
         position: relative;
         top: 25%;
+        @media(max-width: 640px){
+          top: 3%;
+        }
       }
     }
     cursor: pointer;
@@ -91,6 +104,11 @@
   & .blg{
     position: relative;
     padding-top: 3rem;
+    & .boxpink3{
+      @media(max-width: 640px){
+        display: none;
+      }
+    }
   }
   & .blog-content{
     z-index: 20;

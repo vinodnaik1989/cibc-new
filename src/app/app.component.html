@@ -1,6 +1,18 @@
-<div id="app">
-  <app-header></app-header>
+<div class="wrapper">
+  <nav class="nav__wrapper" id="navbar-example">
+    <ul class="nav">
+      <li role="presentation" *ngFor="let time of timeline; let i=index" (click)="setActive(i)" [ngClass]="i == selectActive ? 'active':''">
+        <a href="#{{time.id}}">
+          <span class="nav__counter">{{time.id}}</span>
+          <h3 class="nav__title">{{time.title}}</h3>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div id="app">
+    <app-header></app-header>
   <!-- <app-home></app-home> -->
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
 </div>
-<app-footer></app-footer>
