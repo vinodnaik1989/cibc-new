@@ -1,3 +1,4 @@
+$white: #fff; $grey: #333; $lightgrey:#d4d4d4; $pink: #DE638B;
 header{display: block;}
 header{
   -webkit-box-align: center;
@@ -23,7 +24,7 @@ header{
   height:65px;
   transition: height 0.3s ease-in;
   & a{
-    color: #fff;
+    color: $white;
     &.navbar-brand{
       padding-left: 10px !important;
     }
@@ -41,11 +42,11 @@ header{
     }
   }
   &.sticky{
-    background-color: #fff;
+    background-color: $white;
     transition: background-color 0.3s linear, height 0.3s ease-out;
     box-shadow: 0 3px 22px 5px rgba(28,39,81,.15);
     & .bar{
-      background-color: #333 !important;
+      background-color: $grey !important;
     }
     & #menu{
       @media(max-width:640px){
@@ -53,25 +54,26 @@ header{
       }
     }
     & .logo-imgdesc{
-      background: url('../../assets/images/ae-log_black.png') no-repeat;
+      background: url('../../assets/images/logo-black.png') no-repeat;
+      // background: url('../../assets/images/ae-log_black.png') no-repeat;
       background-size: 100%;
       transition: background 0.3s ease-in;
       transition: width 0.3s ease-out;
       @media(max-width:767px){
-        width: 260px;
+        width: 180px;
         height: 32px;
       }
     }
     & nav{
       & li{
         & a{
-          color: #333;
+          color: $grey;
           @media(max-width: 640px){
-            color: #fff;
+            color: $white;
           }
           &:after{
-            border-right: 1px solid #333;
-            border-bottom: 1px solid #333;
+            border-right: 1px solid $grey;
+            border-bottom: 1px solid $grey;
           }
         }
       }
@@ -86,14 +88,15 @@ header{
     }
   }
   & .logo-imgdesc{
-    background: url('../../assets/images/ae-logo_white.png') no-repeat;
-    width: 360px;
+    background: url('../../assets/images/logo-white.png') no-repeat;
+    width: 230px;
+    // width: 360px;
     background-size: 100%;
     height: 42px;
     transition: background 0.3s ease-out;
-    transition: width 0.3s ease-in;
+    // transition: width 0.3s ease-in;
     @media(max-width:767px){
-      width: 260px;
+      width: 180px;
       height: 32px;
     }
   }
@@ -154,7 +157,7 @@ header{
     }
   }
   &.open{
-    background: #333;
+    background: $grey;
     display: block !important;
     // height: 300px;
     height: 200px;
@@ -162,7 +165,7 @@ header{
     transition: top 0.3s ease-out, height 0.3s ease-in-out;
     @media(max-width:640px){
       top: 61px;
-      background: #fff;
+      background: $white;
       height: 100vh;
     }
     & .menu-sec{
@@ -176,14 +179,14 @@ header{
 .menu-toggle {
   .menu-close {
     cursor: pointer;
-    margin: 0 10px 0 25px;
+    margin: 0 4px 0 25px;
     width: 50px;
     height: auto;
     padding: 10px 15px 10px 5px;
     .bar {
       margin: 8px auto;
       display: block;
-      background-color: #fff;
+      background-color: $white;
       width: 100%;
       height: 2px;
       transition: all 0.25s linear;
@@ -233,7 +236,7 @@ nav{
     padding: 0.275em 1rem !important;
     margin-right: 0 !important;
     @media(max-width:640px){
-      color:#333 !important;
+      color:$grey !important;
     }
     &:after{
       width: 6px;
@@ -241,29 +244,33 @@ nav{
       -webkit-transform: rotate(45deg);
       border-left: none;
       border-top: none;
-      border-right: 1px solid #fff;
-      border-bottom: 1px solid #fff;
+      border-right: 1px solid $white;
+      border-bottom: 1px solid $white;
       z-index: 2;
       margin-left: 8px;
       @media(max-width:640px){
-        border-right: 1px solid #333;
-        border-bottom: 1px solid #333;
+        border-right: 1px solid $grey;
+        border-bottom: 1px solid $grey;
+        transform: rotate(45deg);
+        transition: 0.2s;
       }
     }
   }
   & :hover{
     & a{
       opacity: 0.6;
-      &:after{
-        border-right: 1px solid #DE638B;
-        border-bottom: 1px solid #DE638B;
+      @media (min-width: 1000px){
+        &:after{
+          border-right: 1px solid $pink;
+          border-bottom: 1px solid $pink;
+        }
       }
     }
   }
   & li{
     & :hover{
       opacity: 1;
-      color: #DE638B;
+      color: $pink;
     }
   }
   & .nav-item.dropdown{
@@ -272,9 +279,27 @@ nav{
     }
   }
   & .dropdown{
+    & .dropdown-menu{
+      position: absolute;
+      top: 100%;
+      -webkit-animation: fadeIn 0.2s;
+      -moz-animation: fadeIn 0.2s;
+      -o-animation: fadeIn 0.2s;
+      animation: fadeIn 0.2s;
+      // display: none !important;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0s;
+      -webkit-transform: translateY(30px);
+      -moz-transform: translateY(30px);
+      -ms-transform: translateY(30px);
+      -o-transform: translateY(30px);
+      transform: translateY(30px);
+      border: none;
+    }
     &:hover{
       & a{
-        color: #DE638B;
+        color: $pink;
         opacity: 1;
       }
       & .dropdown-menu{
@@ -283,8 +308,16 @@ nav{
         top: 64px;
         margin: 0;
         border-radius: 0;
-        transition: top 0.3s ease-out;
         border-top: 0px;
+        display: block !important;
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        transform: translateY(0px);
+        transition: 0.2s;
         & li{
           list-style: none;
           line-height: 1.4;
@@ -310,10 +343,10 @@ nav{
                 font-size: 16px;
                 height: 50px;
                 text-decoration: none;
-                color: #333;
+                color: $grey;
                 &:hover{
                   font-weight: bold;
-                  color: #DE638B;
+                  color: $pink;
                 }
                 & span{
                   display: block;

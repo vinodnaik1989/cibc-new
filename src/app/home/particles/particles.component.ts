@@ -39,7 +39,7 @@ export class ParticlesComponent implements OnInit {
           //	this.el.addEventListener('touchend', this.resetTarget.bind(this), false);
         } else {
           // Mouse
-          // window.addEventListener('mousemove', this.mouseMove.bind(this), false);
+          window.addEventListener('mousemove', this.mouseMove.bind(this), false);
           window.addEventListener('mouseout', this.resetTarget.bind(this), false);
         }
 

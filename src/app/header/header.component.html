@@ -4,7 +4,7 @@
       <div class="row">
         <nav class="navbar navbar-expand-lg justify-content-end">
           <div class="logo-section">
-            <a href="" routerLink="/" routerLinkActive="active" class="navbar-brand">
+            <a href="" class="navbar-brand">
               <div class="logo-imgdesc">
               </div>
             </a>
@@ -15,13 +15,14 @@
           <div id="menu" class="collapse navbar-collapse" (onclick)="changeClass($event)">
             <div class="menu-sec">
                 <ul class="nav navbar-nav mr-0">
-                  <li class="nav-item dropdown">
+                  <li class="nav-item dropdown" (click)="subMenuClass()">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Products</a>
-                    <ul class="dropdown-menu animation">
+                    <ul class="dropdown-menu">
                       <li>
                         <div class="submenu-content">
                           <div class="row">
-                            <div class="col-md-3 divider" *ngFor="let item of submenu">
+                            <!-- commented for different menu view -->
+                            <!-- <div class="col-md-3 divider" *ngFor="let item of submenu">
                               <div class="submenu-list">
                                 <ul>
                                   <li>
@@ -36,14 +37,65 @@
                                   </li>
                                 </ul>
                               </div>
+                            </div> -->
+                            <!-- new menu view -->
+                            <div class="col-md-7 divider prod-left">
+                              <div class="left-submenu-image">
+                                <img src="../../assets/images/Web4.svg"/>
+                                <h4>Products</h4>
+                                <div class="prod-desc">
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-5 divider prod-list">
+                              <ul>
+                                <li *ngFor="let item of submenu">
+                                    <a href="#">
+                                      <div class="icon"><img src="../../assets/images/pc-monitor.svg"/></div>
+                                      <div class="submenu-title">
+                                        {{item.title}}
+                                        <span>{{item.abbr}}</span>
+                                      </div>
+                                    </a>
+                                </li>
+                              </ul>
                             </div>
                           </div>
                         </div>
                       </li>
                     </ul>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Shared Services</a>
+                  <li class="nav-item dropdown" (click)="subMenuClass()">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Shared Services</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                          <div class="submenu-content">
+                            <div class="row">
+                              <div class="col-md-7 divider prod-left">
+                                <div class="left-submenu-image">
+                                  <img src="../../assets/images/Web4.svg"/>
+                                  <h4>Products</h4>
+                                  <div class="prod-desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-5 divider prod-list">
+                                <ul>
+                                  <li *ngFor="let item of sharedservices">
+                                      <a href="#">
+                                        <div class="icon"><img src="../../assets/images/pc-monitor.svg"/></div>
+                                        <div class="submenu-title">{{item.title}}</div>
+                                        <!-- <span>{{item.abbr}}</span> -->
+                                      </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Training & Knowledge</a>
@@ -65,3 +117,91 @@
     </div>
   </div>
 </header>
+<style>
+nav .dropdown:hover .dropdown-menu{
+  left: 38.5%;
+  width: 50%;
+  box-shadow: 0 13px 12px 5px rgba(28, 39, 81, 0.15);
+  padding: 0;
+}
+nav .dropdown:hover .dropdown-menu li a{
+  padding: 0 !important;
+  font-weight: bold;
+  /* color: #000; */
+}
+nav .dropdown:hover .dropdown-menu li a:hover{
+  font-weight: bold !important;
+  color: #000 !important;
+}
+.left-submenu-image{
+  overflow: hidden;
+}
+nav .dropdown:hover .dropdown-menu li a span{
+  display: none;
+}
+nav .dropdown:hover .dropdown-menu li .submenu-content ul {
+  padding: 0;
+}
+nav .dropdown:hover .dropdown-menu li .submenu-content li{
+  padding: 12px 15px;
+  margin-bottom: 5px;
+}
+nav .dropdown:hover .dropdown-menu li .submenu-content li:last-child{
+  margin-bottom: 0;
+}
+nav .dropdown:hover .dropdown-menu li .submenu-content li a:hover{
+  text-decoration: none;
+  transition: 0.1s;
+}
+nav .dropdown:hover .dropdown-menu li .submenu-content li a:hover span{
+  color: inherit;
+}
+.left-submenu-image h4{
+  margin: 15px 0;
+}
+.prod-desc p{
+  font-size: 14px;
+}
+@media(max-width:767px){
+  nav .dropdown:hover .dropdown-menu{
+    width: 100%;
+    left: 0;
+  }
+  nav .dropdown:hover .dropdown-menu img{
+    width: 100%;
+  }
+}
+nav .dropdown:hover .dropdown-menu .submenu-content .divider:after{
+  display: none;
+}
+.prod-left{
+  background: #f7f7f7;
+  padding: 10px 60px 5px;
+  text-align: center;
+}
+.prod-list{
+  padding: 18px;
+}
+.prod-list li a{
+  display: inline-block;
+  width: 100%;
+}
+.left-submenu-image:hover h4, .left-submenu-image h4{
+  color: #000
+}
+.left-submenu-image:hover h4:hover, .left-submenu-image:hover p:hover{
+  color: #333 !important;
+}
+.left-submenu-image:hover p, .left-submenu-image p{
+  color: #333;
+}
+.icon{
+  float: left;
+  width: 36px;
+}
+.submenu-title {
+    width: calc(100% - 40px);
+    float: left;
+    padding-left: 5px;
+}
+</style>

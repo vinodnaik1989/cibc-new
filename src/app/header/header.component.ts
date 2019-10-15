@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener, Host } from '@angular/core';
-import { SubMenu } from "../models/submenu";
+import { SubMenu, SharedServices } from "../models/submenu";
 import * as $ from "jquery";
 @Component({
   selector: 'app-header',
@@ -30,7 +30,30 @@ export class HeaderComponent implements OnInit {
       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
     }
 
-  ]
+  ];
+  sharedservices: any[] = [
+    {
+      title:'Messaging'
+    },
+    {
+      title:'Integration'
+    },
+    {
+      title:'Web Development'
+    },
+    {
+      title:'Mobile Development'
+    },
+    {
+      title:'Micro services and API Development (Java – GO Lang)'
+    },
+    {
+      title:'Docker Containerization and OpenShift deployment'
+    },
+    {
+      title:'Cloud setup and Deployment'
+    }
+  ];
 
   isShown:boolean=false;
   constructor() { }
@@ -69,6 +92,12 @@ export class HeaderComponent implements OnInit {
     $('.menu-close').click(function(){
       $(this).addClass("nav-test").toggleClass("open");
       $("#menu").toggleClass("open");
+      $('.dropdown-menu').toggleClass('submenu');
     });
+  }
+  subMenuClass(){
+    $('.dropdown').on('touchstart click',function(){
+      $('.dropdown-menu').toggleClass('submenu');
+    })
   }
 }

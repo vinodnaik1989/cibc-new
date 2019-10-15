@@ -1,18 +1,22 @@
 // @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+$white : #fff;
+$grey : #333;
+$pink : #DE638B;
+$lightgrey: #d4d4d4;
 html body{
   font-family: 'Questrial', sans-serif;
 }
 #app{
   // animation: 400ms ease 400ms 1 normal both running image;
   margin-bottom: 390px;
-  background: #333;
+  background: $grey;
   @media (max-width:640px){
     margin-bottom: 690px;
   }
 }
 body{
-  background: #333;
+  background: $grey;
 }
 .visible-lg, .visible-md, .visible-sm, .visible-xs{display:none!important;}
 @media (max-width: 767px){
@@ -116,8 +120,8 @@ ul li, p{font-size: 18px;}
   animation: 800ms cubic-bezier(0.23, 1, 0.32, 1) 100ms 1 normal both running smallbox;
 }
 button{
-  background: #333;
-  color: #fff;
+  background: $grey;
+  color: $white;
   padding: 1rem 3rem;
   height: 4rem;
   text-transform: uppercase;
@@ -135,7 +139,7 @@ button{
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  background: #333;
+  background: $grey;
   border: none;
   &:before{
     content: "";
@@ -145,7 +149,7 @@ button{
     left: 0;
     right: 0;
     bottom: 0;
-    background: #DE638B;
+    background: $pink;
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50% 0;
@@ -176,8 +180,8 @@ button{
   -webkit-transform: rotate(45deg);
   border-left: none;
   border-top: none;
-  border-right: 2px solid #DE638B;
-  border-bottom: 2px solid #DE638B;
+  border-right: 2px solid $pink;
+  border-bottom: 2px solid $pink;
   @media(max-width: 767px){
     position: relative;
     bottom: -25px;
@@ -191,8 +195,8 @@ button{
     margin: -10px 0 0 -10px;
     border-left: none;
     border-top: none;
-    border-right: 1px #fff solid;
-    border-bottom: 1px #fff solid;
+    border-right: 1px $white solid;
+    border-bottom: 1px $white solid;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-name: arrow;
@@ -234,7 +238,11 @@ button{
  -webkit-animation-name: slideDownIn;
  animation-name: slideDownIn;
 }
+@-webkit-keyframes fadeIn {
+  0%   { opacity: 0;  transform: translate3d(0,40px,0); }
+  100% { opacity: 1; transform: translate3d(0,0,0); }
 
+}
 @keyframes box1{
   // from{right: 15.25vw;}
   // to{right: 6.25vw;}
@@ -294,11 +302,14 @@ button{
   100%{opacity: 0;transform: translate(-10px, -10px);}
 }
 // home2 page css
-.home2{
+.home2, .home3{
+  .nav__wrapper{
+    // z-index: 120 !important;
+  }
   .buttonfx{
-    background: #DE638B !important;
+    background: $pink !important;
     &:before{
-      background: #333 !important;
+      background: $grey !important;
     }
   }
   & .left-bg{
@@ -309,106 +320,338 @@ button{
     }
   }
   & .sect{
-    background-color: #fff !important;
+    background-color: $white !important;
     & .tech-cont{
       &:before{
-        background-color: #fff !important;
+        background-color: $white !important;
       }
     }
     & h2{
-      color: #333 !important;
+      color: $grey !important;
+    }
+  }
+  & .technologies{
+    & .tech-cont{
+      & p{
+        color: $grey !important;
+      }
     }
   }
   & .techn-list{
-    background: #fff;
+    background: $white !important;
     & .tech-list{
       & h3{
-        color: #333 !important;
+        color: $grey !important;
+      }
+      & p{
+        color: $grey !important;
+      }
+      & .row{
+        &:nth-child(4){
+          & img{
+            padding-left: 35px;
+          }
+        }
+        &:nth-child(5){
+          & img{
+            padding-left: 35px;
+          }
+        }
       }
     }
   }
   & .talk-to-us{
-    background-color: #333 !important;
+    background-color: $grey !important;
     background-image: none !important;
     & .talk-title{
       display: block !important;
       text-align: center !important;
       & h2{
-        color: #fff !important;
+        color: $white !important;
         text-align: center;
         margin-bottom: 30px !important;
       }
     }
   }
   & .left-imge{
-    background: #fff !important;
+    background: $white !important;
     & .right-bg{
-      background: #fff !important;
+      background: $white !important;
       &:after{
-        background: #d4d4d4 !important;
+        background: $lightgrey !important;
       }
     }
   }
   & .services{
-    background: linear-gradient(to left, #d4d4d4 50%, #fff 50%) !important;
+    background: linear-gradient(to left, $lightgrey 50%, $white 50%) !important;
     & .serv-sect{
       &:nth-child(odd){
         & .serv-cont{
           & h3{
-            color: #333 !important;
+            color: $grey !important;
           }
         }
       }
       &:nth-child(even){
         & .serv-cont{
           & p{
-            color: #333 !important;
+            color: $grey !important;
           }
         }
       }
     }
   }
   & .solutions{
-    background: #fff !important;
+    background: $white !important;
   }
   & .blog{
-    background: #d4d4d4 !important;
+    background: $lightgrey !important;
+    & h2{
+      color: $grey !important;
+    }
     & h4{
-      color: #333 !important;
+      color: $grey !important;
     }
   }
 }
-
 // home 2 end
+$medgrey: #999;
+.home4{
+  & #app{
+    background:$medgrey;
+  }
+  & .nav__wrapper{
+    & .nav{
+      & li{
+        & a{
+          color: $grey !important;
+        }
+      }
+    }
+  }
+  & .home-cont{
+    & p, h4{
+      color: $white !important;
+    }
+  }
+  & .left-bg{
+    background: $medgrey !important;
+    & .right-image{
+      & .box-2{
+        bottom: -9rem !important;
+      }
+    }
+  }
+  & .left-imge{
+    background: $white;
+    @media(max-width: 767px){
+      padding-bottom: 0 !important;
+    }
+  }
+  & .sect{
+    // background: linear-gradient(to top, #CCC 30%, $medgrey 60%) !important;
+    background: $white !important;
+    &:before{
+      height: 6.7rem !important;
+      // background: $white !important;
+      @media(max-width: 767px){
+        height: 4.2rem !important;
+      }
+    }
+    &:after{
+      background: url('./assets/images/dots-black.svg') center top/contain repeat-y !important;
+    }
+    & .tech-cont{
+      &:before{
+        background-color: transparent !important;
+      }
+      & h2{
+        color: $grey !important;
+      }
+      & p{
+        color: $grey !important;
+      }
+    }
+  }
+  & .techn-list{
+    // background: linear-gradient(to top, $medgrey 30%, #ccc 60%) !important;
+    background: $white !important;
+    & .tech-list{
+      & h3{
+        color: $grey !important;
+      }
+      & p{
+        color: $grey !important;
+      }
+      & .row{
+        &:nth-child(4){
+          & img{
+            padding-left: 35px;
+          }
+        }
+        &:nth-child(5){
+          & img{
+            padding-left: 35px;
+          }
+        }
+      }
+    }
+  }
+  & .right-bg{
+    background: $medgrey !important;
+  }
+  & .services{
+    // background: linear-gradient(to left, $medgrey 35%, #ccc 65%) !important;
+    background: linear-gradient(to left, #d4d4d4 50%, $white 50%) !important;
+    @media(max-width:767px){
+      background: linear-gradient(to top, #d4d4d4 45%, $white 45%) !important;
+    }
+    & p{
+      color: $grey !important;
+    }
+    & .serv-sect{
+      &:nth-child(odd){
+        & .serv-cont{
+          & h3{
+            color: $grey !important;
+          }
+        }
+      }
+      & h3{
+        @media(max-width: 767px){
+          color: $grey !important;
+        }
+      }
+    }
+  }
+  & .solutions{
+    background: $white !important;
+    padding-bottom: 4rem !important;
+    @media(max-width:767px) {
+      padding-top: 4rem !important;
+    }
+    & .portf{
+      &:after{
+        margin-bottom: -2.25vw !important;
+        width: 10vw !important;
+        height: 10vw !important;
+        left: -25rem !important;
+      }
+    }
+  }
+  & .portfl{
+    & p{
+      color: $grey !important;
+    }
+    &:before{
+      top: 0 !important;
+      height: 10.2rem !important;
+      background: $white !important;
+      @media(max-width: 767px){
+        height: 4rem !important;
+      }
+    }
+    &:after{
+      background: url('./assets/images/dots-white.svg') center top/contain repeat-y !important;
+    }
+    & .portf-cont{
+      &:before{
+        background-color: transparent !important;
+      }
+    }
+  }
+  & .folio{
+    & .flink{
+      & h4, p{
+        color: $grey !important;
+      }
+    }
+    & .folios{
+      & .foli{
+        &:before{
+          background: url('./assets/images/dots-white.svg') repeat-y !important;
+        }
+      }
+    }
+  }
+  & .blog{
+    & h2{
+      color: $grey !important;
+    }
+    & h4{
+      color: $grey !important;
+    }
+  }
+}
 // media queries
-@media(max-width:600px){
-  // #menu{
-  //   &.open{
-  //     & .dropdown{
-  //       &.open{
-  //         display: block;
-  //         & .dropdown-menu{
-  //           position: relative;
-  //           top: 0;
-  //           background: #d4d4d4;
-  //           & .submenu-content{
-  //             & .submenu-list{
-  //               & img{
-  //                 display: none;
-  //               }
-  //               & span{
-  //                 display: none;
-  //               }
-  //               & .submenu-desc{
-  //                 display: none;
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+@media(max-width:640px){
+  #menu{
+    &.open{
+      & .nav{
+        padding: 0 !important;
+      }
+      & .dropdown{
+        &.open{
+          display: block;
+          & a{
+            &:after{
+              transform: rotate(225deg);
+              transition: transform 0.2s;
+              vertical-align: middle;
+            }
+          }
+          & .dropdown-menu{
+            &.submenu{
+              display: block !important;
+            }
+            position: relative !important;
+            top: 0 !important;
+            background: $lightgrey;
+            height: 100%;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+        & .dropdown-menu{
+          height: 0px;
+          opacity: 1;
+          visibility: hidden;
+          transform: height 0.2s ease-out;
+          position: relative;
+          padding: 0;
+        }
+      }
+    }
+    & .submenu-content{
+      & .divider{
+        & .submenu-list{
+          & li{
+            border-bottom: 1px solid #fbfbfb;
+            & img{
+              display: none;
+            }
+            & a{
+              height: auto;
+            }
+            & span{
+              display: none;
+            }
+            & .submenu-desc{
+              display: none;
+            }
+          }
+          &:last-child{
+            border: 0;
+          }
+        }
+        &:last-child{
+          & li{
+            border: none;
+          }
+        }
+      }
+    }
+  }
   .pad0{
     padding: 0 20px !important;
   }
@@ -468,12 +711,12 @@ button{
   .talk-to-us{
     text-align: center;
     & .right-bg{
-      background: #d4d4d4 !important;
+      background: $lightgrey !important;
     }
   }
   // services
   .services{
-    // background: linear-gradient(to top, #fff 45%, #d4d4d4 45%) !important;
+    // background: linear-gradient(to top, #fff 45%, $lightgrey 45%) !important;
     & .serv-sect{
       padding: 0 !important;
     }
@@ -571,34 +814,34 @@ button{
       }
     }
     & .left-imge{
-      background: #d4d4d4 !important;
+      background: $lightgrey !important;
     }
     // talk to us
     & .talk-to-us{
       text-align: center;
       & .right-bg{
-        background: #d4d4d4 !important;
+        background: $lightgrey !important;
       }
     }
     // services
     & .services{
-      background: linear-gradient(to top, #fff 45%, #d4d4d4 45%) !important;
+      background: linear-gradient(to top, $white 45%, $lightgrey 45%) !important;
       & .serv-sect{
         padding: 0 !important;
         & p{
-          color: #333 !important;
+          color: $grey !important;
         }
         &:nth-child(1){
           & .serv-cont{
             & h3{
-              color: #fff !important;
+              color: $white !important;
             }
           }
         }
         &:nth-child(4){
           & .serv-cont{
             & h3{
-              color: #333 !important;
+              color: $grey !important;
             }
           }
         }

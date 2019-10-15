@@ -4,3 +4,7 @@ export interface SubMenu {
   abbr: string;
   link: string;
 }
+export interface SharedServices {
+  title: string;
+  link: string;
+}

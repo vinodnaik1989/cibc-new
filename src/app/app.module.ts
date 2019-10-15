@@ -16,6 +16,8 @@ import { FooterComponent } from './footer/footer.component';
 import { NewsBlogComponent } from './home/news-blog/news-blog.component';
 import { Home2Component } from './home2/home2.component';
 import {LocationStrategy, Location, PathLocationStrategy} from '@angular/common';
+import { Home3Component } from './home3/home3.component';
+import { Home4Component } from './home4/home4.component';
 
 // const routes: Routes =[];
 @NgModule({
@@ -30,7 +32,9 @@ import {LocationStrategy, Location, PathLocationStrategy} from '@angular/common'
     ServicesComponent,
     FooterComponent,
     NewsBlogComponent,
-    Home2Component
+    Home2Component,
+    Home3Component,
+    Home4Component
   ],
   imports: [
     BrowserModule,
