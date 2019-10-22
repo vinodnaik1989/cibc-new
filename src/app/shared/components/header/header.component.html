@@ -1,0 +1,437 @@
+<header id="header" (scroll)="stickyHeader($event)">
+    <div class="col-lg-12">
+      <div class="">
+        <div class="row">
+          <nav class="navbar navbar-expand-lg justify-content-end">
+            <div class="logo-section">
+              <a href="" routerLink="" class="navbar-brand">
+                <div class="logo-imgdesc">
+                </div>
+              </a>
+            </div>
+            <div class="menu-toggle responsive-menu">
+              <div class="menu-close" (click)="changeClasses()"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+            </div>
+            <div id="menu" class="collapse navbar-collapse">
+              <div class="menu-sec">
+                  <ul class="nav navbar-nav mr-0">
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Products</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="submenu-content">
+                            <div class="row">
+                              <div class="col-md-7 divider prod-left">
+                                <div class="left-submenu-image">
+                                  <img src="../../assets/images/products.png" class="serv-pink" />
+                                  <img src="../../assets/images/products-blue.png" class="serv-blue" />
+                                  <h4>Products</h4>
+                                  <div class="prod-desc">
+                                    <p>Explore our suite of Product</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-5 divider prod-list">
+                                <ul>
+                                  <li *ngFor="let item of submenu">
+                                      <a href="#" routerLink="/{{item.link}}">
+                                        <div class="icon">
+                                          <img src="{{item.icon}}"/>
+                                          <img src="{{item.iconPink}}" class="iconPink"/>
+                                          <img src="{{item.iconBlue}}" class="iconBlue"/>
+                                        </div>
+                                        <div class="submenu-title">
+                                          {{item.title}}
+                                          <span>{{item.abbr}}</span>
+                                        </div>
+                                      </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Shared Services</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="submenu-content">
+                            <div class="row">
+                              <div class="col-md-7 divider prod-left">
+                                <div class="left-submenu-image">
+                                  <img src="../../assets/images/shared-serives.png" class="serv-pink"/>
+                                  <img src="../../assets/images/shared-serives-blue.png" class="serv-blue" />
+                                  <h4>Shared Services</h4>
+                                  <div class="prod-desc">
+                                    <p>Explore our suite of Shared Services</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-5 divider prod-list">
+                                <ul>
+                                  <li *ngFor="let item of sharedservices">
+                                      <a href="#" routerLink="/{{item.link}}">
+                                        <div class="icon"><img src="{{item.icon}}"/><img src="{{item.iconPink}}" class="iconPink"/><img src="{{item.iconBlue}}" class="iconBlue"/></div>
+                                        <div class="submenu-title">{{item.title}}</div>
+                                      </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Training & Support</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="submenu-content">
+                            <div class="row">
+                              <div class="col-md-7 divider prod-left">
+                                <div class="left-submenu-image">
+                                  <img src="../../assets/images/training-support.png" class="serv-pink"/>
+                                  <img src="../../assets/images/training-support-blue.png" class="serv-blue"/>
+                                  <h4>Training &amp; Support</h4>
+                                  <div class="prod-desc">
+                                    <p>Explore our suite of Training &amp; Support</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-5 divider prod-list">
+                                <ul>
+                                  <li *ngFor="let item of training">
+                                      <a href="#" routerLink="/{{item.link}}">
+                                        <div class="icon"><img src="{{item.icon}}"/><img src="{{item.iconPink}}" class="iconPink"/><img src="{{item.iconBlue}}" class="iconBlue"/></div>
+                                        <div class="submenu-title">{{item.title}}</div>
+                                        <!-- <span>{{item.abbr}}</span> -->
+                                      </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Knowledge Center</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="submenu-content">
+                            <div class="row">
+                              <div class="col-md-7 divider prod-left">
+                                <div class="left-submenu-image">
+                                  <img src="../../assets/images/knowledge-center.png" class="serv-pink"/>
+                                  <img src="../../assets/images/knowledge-center-blue.png" class="serv-blue"/>
+                                  <h4>Knowledge Center</h4>
+                                  <div class="prod-desc">
+                                    <p>Explore our suite of Knowledge Center</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-5 divider prod-list">
+                                <ul>
+                                  <li *ngFor="let item of knowledge">
+                                      <a href="#" routerLink="/{{item.link}}">
+                                        <div class="icon"><img src="{{item.icon}}"/><img src="{{item.iconPink}}" class="iconPink"/><img src="{{item.iconBlue}}" class="iconBlue"/></div>
+                                        <div class="submenu-title">{{item.title}}</div>
+                                      </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Contact Us</a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="submenu-content">
+                            <div class="row">
+                              <div class="col-md-7 divider prod-left">
+                                <div class="left-submenu-image">
+                                  <!-- <img src="../../assets/images/Web4.svg"/> -->
+                                  <h4>Contact Us</h4>
+                                  <div class="prod-desc">
+                                    <p>Explore our suite of Contact Us</p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-5 divider prod-list">
+                                <ul>
+                                  <li *ngFor="let item of contact">
+                                      <a href="#" routerLink="/{{item.link}}">
+                                        <div class="icon"><img src="{{item.icon}}"/><img src="{{item.iconPink}}" class="iconPink"/><img src="{{item.iconBlue}}" class="iconBlue"/></div>
+                                        <div class="submenu-title">{{item.title}}</div>
+                                        <!-- <span>{{item.abbr}}</span> -->
+                                      </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item" style="display:none">
+                      <a class="nav-link" href="#" [routerLink]="'/home2'">Home 1</a>
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <style>
+  .iconPink{
+    display: none !important;
+  }
+  nav .dropdown:hover .dropdown-menu{
+    /* left: 48.5%; */
+    /* width: 50%; */
+    width: auto;
+    padding: 0;
+    background: none !important;
+    left: auto;
+    right: 0;
+  }
+  nav .dropdown:hover .dropdown-menu>li{
+    width: 715px;
+    float: right;
+    background: #fff !important;
+    left: -10px;
+    box-shadow: 0 13px 12px 5px rgba(28, 39, 81, 0.15);
+  }
+  nav .dropdown:hover .dropdown-menu li a{
+    padding: 0 !important;
+    font-weight: bold;
+    /* color: #000; */
+  }
+  nav .dropdown:hover .dropdown-menu li a:hover{
+    font-weight: bold !important;
+    /* color: #000 !important; */
+  }
+  /* nav .dropdown:hover .dropdown-menu li a:hover .icon>img:first-child{
+    display: none !important;
+  }
+  nav .dropdown:hover .dropdown-menu li a:hover .icon>img.iconPink{
+    display: block !important;
+  } */
+  .left-submenu-image{
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  nav .dropdown:hover .dropdown-menu li a span{
+    /* display: none; */
+    display: block;
+    font-size: 0.82em;
+    opacity: 0.6;
+  }
+  nav .dropdown:hover .dropdown-menu li .submenu-content ul {
+    padding: 0;
+  }
+  nav .dropdown:hover .dropdown-menu li .submenu-content li{
+    padding: 12px 15px;
+    margin-bottom: 5px;
+  }
+  nav .dropdown.open .dropdown-menu li .submenu-content li{
+    padding: 5px 10px;
+  }
+  nav .dropdown:hover .dropdown-menu li .submenu-content li:last-child{
+    margin-bottom: 0;
+  }
+  nav .dropdown:hover .dropdown-menu li .submenu-content li a:hover{
+    text-decoration: none;
+    transition: 0.1s;
+  }
+  nav .dropdown:hover .dropdown-menu li .submenu-content li a:hover span{
+    color: inherit;
+  }
+  .left-submenu-image h4{
+    margin: 15px 0;
+  }
+  .left-submenu-image>img{
+    width: 85%;
+  }
+  .prod-desc p{
+    font-size: 14px;
+  }
+  @media screen and (max-width:767px){
+    /* nav{height: auto;} */
+    nav .dropdown:hover .dropdown-menu{
+      width: 100%;
+      left: 0;
+    }
+    nav .dropdown:hover .dropdown-menu img{
+      width: 100%;
+    }
+  }
+  nav .dropdown:hover .dropdown-menu .submenu-content .divider:after{
+    display: none;
+  }
+  .prod-left{
+    /* background: #FBFCFF; */
+    background: #FCFCFD;
+    /* padding: 10px 60px 5px; */
+    text-align: center;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  .prod-list{
+    padding: 18px;
+  }
+  .prod-list li a{
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100%;
+  }
+  .prod-list li a .icon{
+    flex: 1;
+    display: flex;
+    vertical-align: middle;
+    position: relative;
+  }
+  .left-submenu-image:hover h4, .left-submenu-image h4{
+    color: #000
+  }
+  .left-submenu-image:hover h4:hover, .left-submenu-image:hover p:hover{
+    color: #333 !important;
+  }
+  .left-submenu-image:hover p, .left-submenu-image p{
+    color: #333;
+  }
+  .icon{
+    float: left;
+    width: 36px;
+  }
+  @media screen and (max-width:767px){
+    .icon{
+      width: 25px;
+    }
+  }
+  .submenu-title {
+      width: calc(100% - 40px);
+      float: left;
+      padding-left: 5px;
+  }
+  .submenu-content .prod-list li:hover {
+      background: #FCFCFD;
+  }
+  @media screen and (max-width:1024px){
+    .dropdown .dropdown-menu .prod-left{display: none;opacity: 0;}
+  .dropdown.open .dropdown-menu .prod-left{
+    display: none;
+  }
+  .dropdown.open .dropdown-menu {
+    box-shadow: none !important;
+  }
+  .dropdown-backdrop{display: none;}
+  #menu.open .dropdown .dropdown-menu{
+    height: 0px;
+      opacity: 0;
+      visibility: hidden;
+      transform: height 0.2s ease-out;
+      position: relative;
+      -webkit-transition: all 1s -0.25s ease-out;
+      -moz-transition: all 1s -0.25s ease-out;
+      -o-transition: all 1s -0.25s ease-out;
+      -ms-transition: all 1s -0.25s ease-out;
+      transition: all 400ms -0.25s ease-out;
+      padding: 0;
+      top: 0;
+      max-height: 0;
+      transform: none;
+      width: 100%;
+      left: 0;
+  }
+  #menu.open .dropdown.open .dropdown-menu{
+    position: relative !important;
+      top: 0 !important;
+      background: #d4d4d4;
+      height: 100%;
+      opacity: 1;
+      -webkit-transition: all 600ms ease;
+      -moz-transition: all 600ms ease;
+      -o-transition: all 600ms ease;
+      -ms-transition: all 600ms ease;
+      transition: all 600ms ease;
+      max-height: 250px;
+      visibility: visible;
+      width: 100%;
+      left: 0;
+      overflow-y: scroll;
+  }
+  #menu.open .nav {
+      padding: 0 !important;
+  }
+  }
+
+  @media screen and (max-width:48em){
+    .nav-link:focus{
+      outline: none;
+    }
+    nav .dropdown:hover .dropdown-menu>li{
+      width: 100%;
+      background: #fbfaf9 !important;
+      box-shadow: none;
+      float: none;
+      left: auto;
+    }
+    nav .dropdown:hover .dropdown-menu img{
+      width: 60% !important;
+    }
+    header nav li.dropdown:hover a:after, .home header nav li.dropdown:hover a:after{
+      border-right: 1px solid #333 !important;
+      border-bottom: 1px solid #333 !important;
+      position: absolute !important;
+      right: 25px;
+      top: 23px;
+      transform: rotate(45deg) !important;
+    }
+    nav .dropdown.open .dropdown-menu li .submenu-content li{
+      padding: 10px 0 !important;
+      line-height: 22px;
+    }
+    /* header #menu .nav .opened .nav-link::after {
+      transform: rotate(225deg);
+    } */
+    nav .dropdown:hover .dropdown-menu li .submenu-content ul{
+      padding-left: 1rem !important;
+    }
+    header#header #menu .nav .dropdown{
+      border-bottom: .5px solid #e7e6e6 !important;
+    }
+    header#header #menu .nav .nav-link{
+      height: 50px !important;
+      line-height: 45px !important;
+      position: relative;
+      color: #333 !important;
+    }
+    header #menu .nav .dropdown.open .nav-link:after {
+      /* transform: rotate(225deg) !important; */
+    }
+    header #menu .nav .nav-link:after {
+      position: absolute !important;
+      right: 25px;
+      top: 23px;
+      border-right: 1px solid #333 !important;
+      border-bottom: 1px solid #333 !important;
+    }
+    .prod-list{
+      padding: 10px !important;
+    }
+    #menu.open {
+      position: fixed !important;
+    }
+  }
+  </style>

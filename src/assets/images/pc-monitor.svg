@@ -4,8 +4,8 @@
 rect, path{stroke:#333;}
 </style>
 </defs>
-<rect x="1" y="1" width="18.62" height="11.648" rx="1.425" stroke="#0058FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10.3102 13.0962V15.7842" stroke="#0058FF" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
-<path d="M6.12012 16.2322H14.4991" stroke="#0058FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.25879 6.37574L6.58629 4.13574" stroke="#0058FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1" y="1" width="18.62" height="11.648" rx="1.425" stroke="#0058FF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.3102 13.0962V15.7842" stroke="#0058FF" stroke-width="1" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M6.12012 16.2322H14.4991" stroke="#0058FF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.25879 6.37574L6.58629 4.13574" stroke="#0058FF" stroke-width="" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

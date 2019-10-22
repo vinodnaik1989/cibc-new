@@ -1,0 +1,34 @@
+<section id="section-two">
+  <div class="sec2news" *ngFor="let blog of blogData">
+    <div class="row m-0">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 sec2-news-left">
+        <div class="sec2-news-image">
+          <a href="#">
+            <img src="{{blog.bgImage}}"/>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 sec2-news-right">
+        <div class="news-right">
+          <h3>{{blog.title}}</h3>
+          <div class="short-desc">{{blog.shortDesc}}</div>
+        </div>
+        <div class="news-right-user">
+          <div class="news-user-image">
+            <a href="#"><img src="../../../../assets/icons/{{blog.userImg}}"></a>
+          </div>
+          <div class="news-user-det">
+            <a href="#">{{blog.userName}}</a>
+            <div class="news-posted">
+              <span>{{blog.postedDate}}</span>
+              <span class="dot"></span>
+              <span class="read-time">{{blog.postedTime}}</span>
+              <span><i class="navbar-toggler-icon fa fa-star"> </i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

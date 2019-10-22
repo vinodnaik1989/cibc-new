@@ -1,0 +1,67 @@
+<div id="template-two">
+  <div class="container p-0">
+  <section id="section-one">
+    <div class="sec1-header">
+      <div class="row m-0">
+        <div class="sec-title">
+          <!-- <h1 class="h1">News &amp; Blog</h1> -->
+          <h2>News &amp; Blog</h2>
+        </div>
+      </div>
+    </div>
+    <div class="sec1-menu">
+      <div class="row m-0">
+        <nav class="w-100">
+          <ul>
+            <li><a href="#">Menu 1</a></li>
+            <li><a href="#">Menu 2</a></li>
+            <li><a href="#">Menu 3</a></li>
+            <li><a href="#">Menu 4</a></li>
+            <li><a href="#">Menu 5</a></li>
+          </ul>
+          <div class="sec1-search">
+            <img src="../../../assets/icons/search.svg">
+          </div>
+        </nav>
+      </div>
+    </div>
+  </section>
+  <app-blog [blogData]="blogData1"></app-blog>
+  <section id="section-three">
+    <div class="blog-list">
+      <h4>Latest</h4>
+      <div class="row m-0">
+        <div class="blog-list-sec col-lg-4 col-md-4 col-sm-4" *ngFor="let b of blog">
+            <div class="blg-cont">
+              <div class="blg-img">
+                <img src="{{b.image}}" />
+              </div>
+              <div class="blog-sub-cont">
+                <h3>{{b.title}}</h3>
+                <p>{{b.content}}.</p>
+              </div>
+              <div class="news-right-user">
+                <div class="news-user-image">
+                  <a href="#"><img src="../../../../assets/icons/user.svg"></a>
+                </div>
+                <div class="news-user-det">
+                  <a href="#">CIBC User</a>
+                  <div class="news-posted">
+                    <span>Oct 20</span>
+                    <span class="dot"></span>
+                    <span class="read-time">8 hours ago</span>
+                    <span><i class="navbar-toggler-icon fa fa-star"> </i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <h4>Featured</h4>
+  <app-blog [blogData]="blogData2">
+  </app-blog>
+  </div>
+</div>

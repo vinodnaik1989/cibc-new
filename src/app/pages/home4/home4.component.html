@@ -1,0 +1,78 @@
+<!-- <canvas id="canvas"></canvas> -->
+<div class="home4-particles" >
+  <particles [params]="myParams" [style]="myStyle" [width]="width" [height]="height"></particles>
+  <div class="home-cont" id="01">
+    <div>
+      <div class="container pad0">
+        <h4 class="h4"><span>Application </span><span>Engineering </span><span>Collaboration center</span></h4>
+        <h1 class="h1">Collaborate, Learn and Evolve.</h1>
+        <div class="col-lg-6 col-md-10 col-sm-12 col-xs-12 pad0">
+            <p>CIBC Capital Markets Application Engineering team promotes engagement through collaborative consulting to solve challenges, use best practices and leverage industry forward technologies.  We also take on development initiative and offer/implement products that will enhance your architecture.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-left-cont-right-image></app-left-cont-right-image>
+<app-technologies></app-technologies>
+<app-talk-to-us></app-talk-to-us>
+<div class="services serv4" id="05">
+  <div class="serv">
+    <div class="container pad0">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 serv-sect" *ngFor="let service of services">
+          <div class="serv-img">
+            <img src="{{service.image}}"/>
+          </div>
+          <div class="serv-cont">
+            <h3>{{service.title}}</h3>
+            <p>{{service.content}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="solutions portfolio" id="06">
+  <div class="portf col-lg-7 col-md-7 col-sm-7 offset-md-5 pad0">
+    <div class="portf-image">
+      <div class="portf-img">
+        <img class="bimg" src="../../assets/images/graph.jpg" srcset="../../assets/images/graph.jpg 1200w, ../../assets/images/graph.jpg 2400w" />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sol portfl" id="">
+  <div class="portf-cont col-lg-8 col-md-8 col-sm-8 offset-md-4">
+    <h2>Solution Portfolio</h2>
+    <div class="col-lg-8 col-md-8 col-sm-8 pad0">
+      <p>Learn more about how collaborating with CIBC Capital Markets can help your team. You can sample our selected projects below.</p>
+    </div>
+  </div>
+  <div class="folio">
+    <div class="container">
+      <div class="row">
+        <div *ngFor="let port of portfolio" class="col-lg-6 col-md-6 col-sm-6 folios">
+          <a href="#" class="folio-url flink">
+            <div class="foli fimage col-lg-10 offset-md-1">
+              <div class="boxpink" data-hover="smpink" style="background:#DE638B"></div>
+              <div class="feature-image" data-hover="feature">
+                <div class="feature-img">
+                  <div class="ft-img">
+                    <img src="{{port.image}}" srcset="{{port.image}} 600w, {{port.image}} 1200w" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-10 offset-md-1">
+              <h4>{{port.subtitle}}</h4>
+              <h3>{{port.title}}</h3>
+              <p>{{port.content}}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-news-blog></app-news-blog>

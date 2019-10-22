@@ -1,0 +1,46 @@
+@import '../../../../styles/vairable';
+#section-two{
+  padding: 0 0 4rem;
+  position: relative;
+  background: $white;
+  & .sec2news{
+    & .sec2-news-image{
+      overflow: hidden;
+      height: 350px;
+      & img{
+        width: 100%;
+      }
+    }
+    & .sec2-news-right{
+      & .news-right-user {
+        display: flex;
+        align-items: center;
+        padding-top: 2rem;
+        & .news-user-image{
+          border: 1px solid $grey;
+          border-radius: 50%;
+          background: $bgGrey;
+          padding: 10px;
+        }
+        & .news-user-det{
+          font-size: 16px;
+          line-height: 1.4;
+          padding-left: 10px;
+          text-rendering: auto;
+          & .news-posted{
+            & span{
+              font-size: 0.8rem;
+              opacity: 0.6;
+              &.dot{
+                padding: 0 .3em;
+                &:after{
+                  content: '\00B7';
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

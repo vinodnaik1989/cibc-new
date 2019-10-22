@@ -3,4 +3,5 @@ export interface Technologies {
   title: string;
   content: string;
   techicons: any[];
+  image1: string;
 }

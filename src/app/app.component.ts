@@ -1,6 +1,31 @@
 import { Component, HostListener, Renderer2 } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
 import { Timeline } from './models/timeline';
+import { BlogData } from './models/reusable';
+
+const BLOG_DATA_1: BlogData[] = [
+  {
+    bgImage:'computer.jpg',
+    title:'Main title',
+    shortDesc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    userImg:'user.svg',
+    userName:'user one',
+    postedDate:'Oct 19',
+    postedTime:'1 day ago'
+  }
+];
+
+const BLOG_DATA_2: BlogData[] = [
+  {
+    bgImage:'graph.jpg',
+    title:'Main title',
+    shortDesc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    userImg:'user.svg',
+    userName:'user two',
+    postedDate:'Oct 20',
+    postedTime:'3 hours ago'
+  }
+];
 
 @Component({
   selector: 'app-root',
@@ -8,6 +33,9 @@ import { Timeline } from './models/timeline';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  blogData1 = BLOG_DATA_1;
+  blogData2 = BLOG_DATA_2;
 
   timeline: any[] = [
     {
