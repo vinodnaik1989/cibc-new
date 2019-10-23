@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper" (scroll)="onWindowScroll($event);">
   <nav class="nav__wrapper" id="navbar-example">
     <ul class="nav">
       <li role="presentation" *ngFor="let time of timeline; let i=index" (click)="setActive(i)" [ngClass]="i == selectActive ? 'active':''">

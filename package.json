@@ -23,10 +23,12 @@
     "@angular/router": "~8.2.4",
     "angular-particle": "^1.0.4",
     "bootstrap": "^4.3.1",
+    "core-js": "^2.5.4",
     "jquery": "^3.4.1",
     "jquery.mb.ytplayer": "^3.2.10",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
+    "web-animations-js": "^2.3.1",
     "youtube-background": "^1.0.2",
     "zone.js": "~0.9.1"
   },
