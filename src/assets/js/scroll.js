@@ -11,7 +11,7 @@ $(document).ready(function(){
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
            if (target.length) {
              $('html,body').animate({
-                 scrollTop: target.offset().top-(-10)
+                 scrollTop: target.offset().top
             }, 1000);
             return false;
         }
@@ -28,10 +28,54 @@ $(document).ready(function(){
     });
   }
 
-   // $(window).resize(function() {
-  //   $('iframe').height($(window).height());
-  //   $('iframe').width($(window).width());
+  var nav = $("body");
+  var content = $("#04").offset();
+  var content2 = $('.left-imge').offset();
+  var sol = $('.sol').offset();
+  var news = $('.news').offset();
+  // $( window ).resize(function() {
+    $(window).scroll(function(){
+      var screenPosition = $(document).scrollTop() + 10;
+      if (screenPosition < content.top) {
+        nav.removeClass( "lightcolor" );
+      }
+      if ((screenPosition >= content.top)) {
+        nav.addClass("lightcolor");
+      }
+      if (screenPosition > content2.top) {
+        nav.removeClass("lightcolor");
+      }
+      if (screenPosition >= sol.top) {
+        nav.addClass("lightcolor");
+      }
+      if (screenPosition > news.top) {
+        nav.removeClass("lightcolor");
+      }
+    });
+    $( window ).resize(function() {
+      $(window).scroll(function(){
+        var screenPosition = $(document).scrollTop() + 100;
+        if (screenPosition < content.top) {
+          nav.removeClass( "lightcolor" );
+        }
+        if ((screenPosition >= content.top)) {
+          console.log('1');
+          nav.addClass("lightcolor");
+        }
+        if (screenPosition > content2.top) {
+          console.log('2');
+          nav.removeClass("lightcolor");
+        }
+        if (screenPosition >= sol.top) {
+          console.log('3');
+          nav.addClass("lightcolor");
+        }
+        if (screenPosition > news.top) {
+          console.log('4');
+          nav.removeClass("lightcolor");
+        }
+      });
+    });
   // });
 
-  // $(window).trigger('resize');
 })

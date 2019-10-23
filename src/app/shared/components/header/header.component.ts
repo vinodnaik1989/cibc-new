@@ -234,187 +234,109 @@ export class HeaderComponent implements OnInit {
     const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
     const element = document.getElementById('header');
     if ((document.body.classList.contains('home2'))) {
-      var sec2 = document.getElementById("01").offsetHeight;
-      if(number > 200){
-        element.classList.add('sticky');
-      } else if (number < 200) {
-        element.classList.remove('sticky');
+        var sec2 = document.getElementById("01").offsetHeight;
+        if(number > 200){
+          this.navIsFixed = true;
+          element.classList.add('sticky');
+        } else if (number < 200) {
+          this.navIsFixed = false;
+          element.classList.remove('sticky');
+        }
+      } else if ((document.body.classList.contains('home2b'))) {
+        var sec2 = document.getElementById("01").offsetHeight;
+        if(number > 200){
+          this.navIsFixed = true;
+          element.classList.add('sticky');
+        } else if (number < 200) {
+          this.navIsFixed = false;
+          element.classList.remove('sticky');
+        }
+      } else if ((document.body.classList.contains('home2c'))) {
+        var sec2 = document.getElementById("01").offsetHeight;
+        if(number > 200){
+          this.navIsFixed = true;
+          element.classList.add('sticky');
+        } else if (number < 200) {
+          this.navIsFixed = false;
+          element.classList.remove('sticky');
+        }
+      } else if ((document.body.classList.contains('home2d'))) {
+        var sec2 = document.getElementById("01").offsetHeight;
+        if(number > 200){
+          this.navIsFixed = true;
+          element.classList.add('sticky');
+        } else if (number < 200) {
+          this.navIsFixed = false;
+          element.classList.remove('sticky');
+        }
+      } else if ((document.body.classList.contains('home2e'))) {
+        var sec2 = document.getElementById("01").offsetHeight;
+        if(number > 200){
+          this.navIsFixed = true;
+          element.classList.add('sticky');
+        } else if (number < 200) {
+          this.navIsFixed = false;
+          element.classList.remove('sticky');
+        }
+      } else if ((document.body.classList.contains('home2f'))) {
+        var sec2 = document.getElementById("01").offsetHeight;
+        if(number > 200){
+          this.navIsFixed = true;
+          element.classList.add('sticky');
+        } else if (number < 200) {
+          this.navIsFixed = false;
+          element.classList.remove('sticky');
+        }
+      }else if((document.body.classList.contains('shared-services'))){
+        var sec3 = document.getElementById('sec-one').offsetHeight;
+        if(number > 200){
+          this.navIsFixed = true;
+          element.classList.add('sticky');
+        } else if (number < 200) {
+          this.navIsFixed = false;
+          element.classList.remove('sticky');
+        }
+      } else if((document.body.classList.contains('news'))){
+        var sec4 = document.getElementById('section-one').offsetHeight;
+        if(number > 200){
+          this.navIsFixed = true;
+          element.classList.add('sticky');
+        } else if (number < 200) {
+          this.navIsFixed = false;
+          element.classList.remove('sticky');
+        }
+      } else if((document.body.classList.contains('technology'))){
+        var sec4 = document.getElementById('section-one').offsetHeight;
+        if(number > 200){
+          this.navIsFixed = true;
+          element.classList.add('sticky');
+        } else if (number < 200) {
+          this.navIsFixed = false;
+          element.classList.remove('sticky');
+        }
       }
-      // if (number > sec2 ) {
-      //   this.navIsFixed = true;
-      //   const element = document.getElementById('header');
-      //   element.classList.add('sticky');
-      // } else if ((this.navIsFixed) && number < sec2 ) {
-      //   this.navIsFixed = false;
-      //   const element = document.getElementById('header');
-      //   element.classList.remove('sticky');
-      // }
-    } else if ((document.body.classList.contains('home2b'))) {
-      var sec2 = document.getElementById("01").offsetHeight;
-      if(number > 200){
-        element.classList.add('sticky');
-      } else if (number < 200) {
-        element.classList.remove('sticky');
+      else if (!(document.body.classList.contains(''))){
+        var sec2 = document.getElementById("01").offsetHeight;
+        if(number > 200){
+          // element.classList.add('header-bg');
+          this.navIsFixed = true;
+          element.classList.add('sticky');
+        }
+        else if (number < 200) {
+          // element.classList.remove('header-bg');
+          this.navIsFixed = false;
+          element.classList.remove('sticky');
+        }
+        // if (number > sec2 ) {
+        //   this.navIsFixed = true;
+        //   const element = document.getElementById('header');
+        //   element.classList.add('sticky');
+        // } else if ((this.navIsFixed) && number < sec2 ) {
+        //   this.navIsFixed = false;
+        //   const element = document.getElementById('header');
+        //   element.classList.remove('sticky');
+        // }
       }
-      // if (number > sec2 ) {
-      //   this.navIsFixed = true;
-      //   const element = document.getElementById('header');
-      //   element.classList.add('sticky');
-      // } else if ((this.navIsFixed) && number < sec2 ) {
-      //   this.navIsFixed = false;
-      //   const element = document.getElementById('header');
-      //   element.classList.remove('sticky');
-      // }
-    } else if ((document.body.classList.contains('home2c'))) {
-      var sec2 = document.getElementById("01").offsetHeight;
-      if(number > 200){
-        element.classList.add('sticky');
-      } else if (number < 200) {
-        element.classList.remove('sticky');
-      }
-      // if (number > sec2 ) {
-      //   this.navIsFixed = true;
-      //   const element = document.getElementById('header');
-      //   element.classList.add('sticky');
-      // } else if ((this.navIsFixed) && number < sec2 ) {
-      //   this.navIsFixed = false;
-      //   const element = document.getElementById('header');
-      //   element.classList.remove('sticky');
-      // }
-    } else if ((document.body.classList.contains('home2d'))) {
-      var sec2 = document.getElementById("01").offsetHeight;
-      if(number > 200){
-        element.classList.add('sticky');
-      } else if (number < 200) {
-        element.classList.remove('sticky');
-      }
-      // if (number > sec2 ) {
-      //   this.navIsFixed = true;
-      //   const element = document.getElementById('header');
-      //   element.classList.add('sticky');
-      // } else if ((this.navIsFixed) && number < sec2 ) {
-      //   this.navIsFixed = false;
-      //   const element = document.getElementById('header');
-      //   element.classList.remove('sticky');
-      // }
-    } else if ((document.body.classList.contains('home2e'))) {
-      var sec2 = document.getElementById("01").offsetHeight;
-      if(number > 200){
-        element.classList.add('sticky');
-      } else if (number < 200) {
-        element.classList.remove('sticky');
-      }
-      // if (number > sec2 ) {
-      //   this.navIsFixed = true;
-      //   const element = document.getElementById('header');
-      //   element.classList.add('sticky');
-      // } else if ((this.navIsFixed) && number < sec2 ) {
-      //   this.navIsFixed = false;
-      //   const element = document.getElementById('header');
-      //   element.classList.remove('sticky');
-      // }
-    } else if ((document.body.classList.contains('home2f'))) {
-      var sec2 = document.getElementById("01").offsetHeight;
-      if(number > 200){
-        element.classList.add('sticky');
-      } else if (number < 200) {
-        element.classList.remove('sticky');
-      }
-      // if (number > sec2 ) {
-      //   this.navIsFixed = true;
-      //   const element = document.getElementById('header');
-      //   element.classList.add('sticky');
-      // } else if ((this.navIsFixed) && number < sec2 ) {
-      //   this.navIsFixed = false;
-      //   const element = document.getElementById('header');
-      //   element.classList.remove('sticky');
-      // }
-    }else if((document.body.classList.contains('shared-services'))){
-      var sec3 = document.getElementById('sec-one').offsetHeight;
-      if(number > 200){
-        element.classList.add('sticky');
-      } else if (number < 200) {
-        element.classList.remove('sticky');
-      }
-      // if (number > sec3 ) {
-      //   this.navIsFixed = true;
-      //   const element = document.getElementById('header');
-      //   element.classList.add('sticky');
-      // } else if ((this.navIsFixed) && number < sec3 ) {
-      //   this.navIsFixed = false;
-      //   const element = document.getElementById('header');
-      //   element.classList.remove('sticky');
-      // }
-    } else if((document.body.classList.contains('news'))){
-      var sec4 = document.getElementById('section-one').offsetHeight;
-      if(number > 200){
-        element.classList.add('sticky');
-      } else if (number < 200) {
-        element.classList.remove('sticky');
-      }
-      // if (number > sec4 ) {
-      //   this.navIsFixed = true;
-      //   const element = document.getElementById('header');
-      //   element.classList.add('sticky');
-      // } else if ((this.navIsFixed) && number < sec4 ) {
-      //   this.navIsFixed = false;
-      //   const element = document.getElementById('header');
-      //   element.classList.remove('sticky');
-      // }
-    } else if((document.body.classList.contains('technology'))){
-      var sec4 = document.getElementById('section-one').offsetHeight;
-      if(number > 200){
-        element.classList.add('sticky');
-      } else if (number < 200) {
-        element.classList.remove('sticky');
-      }
-      // if (number > sec4 ) {
-      //   this.navIsFixed = true;
-      //   const element = document.getElementById('header');
-      //   element.classList.add('sticky');
-      // } else if ((this.navIsFixed) && number < sec4 ) {
-      //   this.navIsFixed = false;
-      //   const element = document.getElementById('header');
-      //   element.classList.remove('sticky');
-      // }
-    }
-    else if (!(document.body.classList.contains(''))){
-      var sec2 = document.getElementById("01").offsetHeight;
-      if(number > 200){
-        // element.classList.add('header-bg');
-        element.classList.add('sticky');
-      }
-      else if (number < 200) {
-        // element.classList.remove('header-bg');
-        element.classList.remove('sticky');
-      }
-      // if (number > sec2 ) {
-      //   this.navIsFixed = true;
-      //   const element = document.getElementById('header');
-      //   element.classList.add('sticky');
-      // } else if ((this.navIsFixed) && number < sec2 ) {
-      //   this.navIsFixed = false;
-      //   const element = document.getElementById('header');
-      //   element.classList.remove('sticky');
-      // }
-    }
-  };
-
-  // @HostListener('click', ['$event'])
-  // changeClass($event){
-  //   $('.menu-close').on('click',function(){
-  //     $(this).addClass("nav-test").toggleClass("open");
-  //     if($('#menu').hasClass('open')){
-  //       $('#menu').removeClass('open');
-  //     } else{
-  //       $("#menu").addClass('open');
-  //     }
-  //   });
-  // }
-  // subMenuClass(){
-  //   $('.dropdown').on('touchstart click',function(){
-      // $('.dropdown-menu').toggleClass('submenu');
-  //   })
-  // }
+    };
 
 }
