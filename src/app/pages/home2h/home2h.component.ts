@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import 'lodash';
+import * as $ from "jquery";
 
 declare var _: any;
 var PI2 = Math.PI * 2;
@@ -22,7 +23,18 @@ export class Home2hComponent implements OnInit {
     width: number = 100;
     height: number = 100;
 
+    @HostListener('window:resize', ['$event'])
+    onResize(event) {
+      setTimeout(() => {
+        // console.log('resized');
+        // this.renderParticleCanvas();
+      }, 100);
+    }
     ngOnInit() {
+      this.renderParticleCanvas();
+    }
+
+    renderParticleCanvas(){
       function Canvas(options) {
         options = _.clone(options || {});
         this.options = _.defaults(options, this.options);
@@ -141,7 +153,7 @@ export class Home2hComponent implements OnInit {
       }
 
       Canvas.prototype.loop = function() {
-      //   this.clear();
+        // this.clear();
         if(isTouch || isSafari) {
           this.ghost();
         } else {
@@ -293,7 +305,7 @@ export class Home2hComponent implements OnInit {
       };
 
       const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-      const element = document.getElementById('01').offsetHeight;
+      const element = document.getElementById('01').offsetHeight+100;
 
       new Canvas({
         el: document.getElementById('canvas'),
@@ -310,6 +322,6 @@ export class Home2hComponent implements OnInit {
         // background: ['152, 205, 210', '152, 205, 210']
         background: ['162, 207, 232','215, 243, 187']
       });
-    }
 
+    }
 }

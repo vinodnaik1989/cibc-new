@@ -1940,6 +1940,15 @@ header{
     }
   }
 }
+.lightcolor{
+  & .nav__wrapper{
+    & li{
+      & .nav__title{
+        color: #999 !important;
+      }
+    }
+  }
+}
 // media query for screen size > 768 < 992
 @media screen and (min-width: 768px) and (max-width:991px){
   // home
@@ -2173,8 +2182,10 @@ header{
 
 @supports (-ms-accelerator: true) {
    /* Microsoft EdgeV13 CSS styles go here */
-   .home-cont{
+
+  .home-cont{
     background: linear-gradient(to right, rgb(162, 207, 232) 30%, rgb(215, 243, 187) 70%) !important;
+    display: block !important;
   }
    .home-cont{
     &>div{
@@ -2226,8 +2237,10 @@ header{
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
    /* IE10 & IE11 CSS styles go here ['162, 207, 232','215, 243, 187']*/
-   .home-cont{
+  img{height: auto !important;}
+  .home-cont{
     background: linear-gradient(to right, rgb(162, 207, 232) 30%, rgb(215, 243, 187) 70%) !important;
+    display: block !important;
   }
    #header{display: inline-block;}
    .home-cont{
