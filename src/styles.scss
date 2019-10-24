@@ -17,6 +17,12 @@ html body{
 }
 body{
   background: $grey;
+  height: 100%;
+  min-height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 .responsive-menu, #mobile-menu{
   display: none !important;
