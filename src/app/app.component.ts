@@ -94,13 +94,7 @@ export class AppComponent {
           this.previousUrl = currentUrlSlug;
         }
       });
-    this.router.events.pipe(
-      filter((event: any) => event instanceof NavigationEnd)
-    ).subscribe(x => {
-      // this.searchOpened = false;
-      // window.location.reload();
-      console.log(this.router.url);
-    });
+
   }
 
   @HostListener('window:scroll', ['$event'])

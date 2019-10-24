@@ -1,7 +1,8 @@
 import {Component, OnInit, HostListener, Host} from '@angular/core';
 import {SubMenu, SharedServices, Training, Knowledge, Contact} from '../../../models/submenu';
 import * as $ from 'jquery';
-import {Router} from '@angular/router';
+import {NavigationEnd, Router} from '@angular/router';
+import {filter} from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -10,18 +11,7 @@ import {Router} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  changeClasses() {
-    $('.menu-close').addClass('nav-test').toggleClass('open');
-    $('#menu').toggleClass('open');
-    $('body').toggleClass('scroll');
-  }
-
   opened = false;
-
-  toggle() {
-    this.opened = !this.opened;
-  }
-
   submenu: any[] = [
     {
       title: 'CMTS',
@@ -220,12 +210,40 @@ export class HeaderComponent implements OnInit {
     }
   ];
 
+  public navIsFixed: boolean = false;
   isShown: boolean = false;
+  menuOpened = false;
 
   constructor(private router: Router) {
+    this.router.events.pipe(
+      filter((event: any) => event instanceof NavigationEnd)
+    ).subscribe(x => {
+      this.menuOpened = false;
+      console.log(this.router.url);
+    });
   }
 
   ngOnInit() {
+  }
+
+  menuOpen() {
+    this.menuOpened = true;
+  }
+
+
+  menuClose() {
+    this.menuOpened = false;
+  }
+
+
+  changeClasses() {
+    $('.menu-close').addClass('nav-test').toggleClass('open');
+    $('#menu').toggleClass('open');
+    $('body').toggleClass('scroll');
+  }
+
+  toggle() {
+    this.opened = !this.opened;
   }
 
   // class:string = 'hide';
@@ -233,7 +251,6 @@ export class HeaderComponent implements OnInit {
   // changeClass($event){
   //   this.class = $event.type == 'mouseover' ? 'open' : 'hide';
   // }
-  public navIsFixed: boolean = false;
 
   // @HostListener('click', ['$event'])
   // changeClass($event){

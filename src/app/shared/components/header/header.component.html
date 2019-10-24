@@ -16,9 +16,9 @@
           <div id="menu" class="collapse navbar-collapse">
             <div class="menu-sec">
               <ul class="nav navbar-nav mr-0">
-                <li class="nav-item dropdown">
+                <li (mouseover)="menuOpen()" (mouseout)="menuClose()" class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Products</a>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu" [ngClass]='{"active": menuOpened === true}'>
                     <li>
                       <div class="submenu-content">
                         <div class="row">
@@ -54,10 +54,10 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Shared
-                    Services</a>
-                  <ul class="dropdown-menu">
+                <li (mouseover)="menuOpen()" (mouseout)="menuClose()" class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">
+                    Shared Services</a>
+                  <ul class="dropdown-menu" [ngClass]='{"active": menuOpened === true}'>
                     <li>
                       <div class="submenu-content">
                         <div class="row">
@@ -73,7 +73,8 @@
                           </div>
                           <div class="col-md-5 divider prod-list">
                             <ul>
-                              <li *ngFor="let item of sharedservices" [ngClass]='{"active": "/"+item.link === router.url}'>
+                              <li *ngFor="let item of sharedservices"
+                                  [ngClass]='{"active": "/"+item.link === router.url}'>
                                 <a href="#" routerLink="/{{item.link}}">
                                   <div class="icon"><img src="{{item.icon}}"/><img src="{{item.iconPink}}"
                                                                                    class="iconPink"/><img
@@ -88,10 +89,10 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item dropdown">
+                <li (mouseover)="menuOpen()" (mouseout)="menuClose()" class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Training &
                     Support</a>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu" [ngClass]='{"active": menuOpened === true}'>
                     <li>
                       <div class="submenu-content">
                         <div class="row">
@@ -123,10 +124,10 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item dropdown">
+                <li (mouseover)="menuOpen()" (mouseout)="menuClose()" class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Knowledge
                     Center</a>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu" [ngClass]='{"active": menuOpened === true}'>
                     <li>
                       <div class="submenu-content">
                         <div class="row">
@@ -157,10 +158,10 @@
                     </li>
                   </ul>
                 </li>
-                <li class="nav-item dropdown">
+                <li (mouseover)="menuOpen()" (mouseout)="menuClose()" class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Contact
                     Us</a>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu" [ngClass]='{"active": menuOpened === true}'>
                     <li>
                       <div class="submenu-content">
                         <div class="row">
