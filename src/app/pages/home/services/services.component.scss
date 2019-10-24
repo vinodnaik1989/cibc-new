@@ -140,57 +140,63 @@
   }
   &:before{
     content: "";
-    // height: 7rem;
-    height: 10.2rem;
-    left: 17.85vw;
+    // height: 10.2rem;
+    // left: 17.85vw;
     position: absolute;
     // top: 3.2rem;
+    height: 16% !important;
+    left: 18%;
+    right: auto;
     top: 0rem;
     width: 2px;
     background: #888888;
     @media(max-width: 640px){
-      left:17.85vw;
-      height: 3rem;
-      top: 0;
+      height: 4% !important;
+      top: 6%;
     }
   }
   &:after{
-    top: 16rem;
+    // top: 16rem;
   }
   &:after{
     content: "";
-    height: 11rem;
-    left: 9.25vw;
+    height: 14%;
+    left: 13%;
+    right: auto;
+    top: 16%;
+    width: 10%;
     position: absolute;
-    top: 12rem;
-    width: 20vw;
-    background: url('../../../../assets/images/dots.svg') center top/contain repeat-y;
+    background: url('../../../../assets/images/circle-blue.svg') center top/contain no-repeat;
     @media(max-width: 640px){
-      height: 5rem;
-      left: 5.25vw;
-      top: 5rem;
-      width: 32vw;
+      top: 4%;
+      left: 13%;
+      height: 6rem;
     }
   }
   & .portf-cont{
     &:before{
       content: "";
-      height: 9.375vw;
-      left: -20.15vw;
+      // height: 9.375vw;
+      // left: -20.15vw;
+      height: 11rem;
+      left: -35%;
+      right: auto;
+      width: 25%;
       position: absolute;
-      top: calc(8rem - 2vw);
-      width: 9.375vw;
-      background: url('../../../../assets/images/circle.svg') center top/contain no-repeat #323231;
+      // top: calc(8rem - 2vw);
+      // width: 9.375vw;
+      background: url('../../../../assets/images/dots.svg') center bottom/contain repeat-y !important;
       @media(max-width: 640px){
-        height: 14.375vw;
-        left: 10.85vw;
-        width: 14.375vw;
+        top: -60% !important;
+        left: 6%;
+        height: 4rem;
       }
     }
     &:before{
-      top: calc(0rem - 2.75vw);
+      top: -10%;
+      // top: calc(0rem - 2.75vw);
       @media(max-width: 640px){
-        top: calc(-8rem - 2.75vw);
+        // top: calc(-8rem - 2.75vw);
       }
     }
   }
