@@ -9,10 +9,10 @@ html body{
 }
 #app{
   // animation: 400ms ease 400ms 1 normal both running image;
-  margin-bottom: 390px;
+  // margin-bottom: 390px;
   background: $grey;
   @media screen and  (max-width:640px){
-    margin-bottom: 690px;
+    // margin-bottom: 690px;
   }
 }
 body{
@@ -2245,7 +2245,7 @@ header{
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
    /* IE10 & IE11 CSS styles go here ['162, 207, 232','215, 243, 187']*/
   // img{height: auto !important;}
-
+  .box-1, .box-3, .boxpink, .box-2, .boxpink2, .boxpink3, img{animation: none !important;}
   .prod-list{
     & a{
       display: -ms-flexbox;
