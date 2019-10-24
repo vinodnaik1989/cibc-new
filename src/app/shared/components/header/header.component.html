@@ -35,7 +35,7 @@
                           <div class="col-md-5 divider prod-list">
                             <ul>
                               <li *ngFor="let item of submenu" [ngClass]='{"active": "/"+item.link === router.url}'>
-                                <a href="#" routerLink="/{{item.link}}">
+                                <a href="#" routerLink="/{{item.link}}" (click)="changeClasses()">
                                   <div class="icon">
                                     <img src="{{item.icon}}"/>
                                     <img src="{{item.iconPink}}" class="iconPink"/>
@@ -75,7 +75,7 @@
                             <ul>
                               <li *ngFor="let item of sharedservices"
                                   [ngClass]='{"active": "/"+item.link === router.url}'>
-                                <a href="#" routerLink="/{{item.link}}">
+                                <a href="#" routerLink="/{{item.link}}" (click)="changeClasses()">
                                   <div class="icon"><img src="{{item.icon}}"/><img src="{{item.iconPink}}"
                                                                                    class="iconPink"/><img
                                     src="{{item.iconBlue}}" class="iconBlue"/></div>
@@ -109,7 +109,7 @@
                           <div class="col-md-5 divider prod-list">
                             <ul>
                               <li *ngFor="let item of training" [ngClass]='{"active": "/"+item.link === router.url}' >
-                                <a href="#" routerLink="/{{item.link}}">
+                                <a href="#" routerLink="/{{item.link}}" (click)="changeClasses()">
                                   <div class="icon"><img src="{{item.icon}}"/><img src="{{item.iconPink}}"
                                                                                    class="iconPink"/><img
                                     src="{{item.iconBlue}}" class="iconBlue"/></div>
@@ -144,7 +144,7 @@
                           <div class="col-md-5 divider prod-list">
                             <ul>
                               <li *ngFor="let item of knowledge" [ngClass]='{"active": "/"+item.link === router.url}'>
-                                <a href="#" routerLink="/{{item.link}}">
+                                <a href="#" routerLink="/{{item.link}}" (click)="changeClasses()">
                                   <div class="icon"><img src="{{item.icon}}"/><img src="{{item.iconPink}}"
                                                                                    class="iconPink"/><img
                                     src="{{item.iconBlue}}" class="iconBlue"/></div>
@@ -177,7 +177,7 @@
                           <div class="col-md-5 divider prod-list">
                             <ul>
                               <li *ngFor="let item of contact" [ngClass]='{"active": "/"+item.link === router.url}'>
-                                <a href="#" routerLink="/{{item.link}}">
+                                <a href="#" routerLink="/{{item.link}}" (click)="changeClasses()">
                                   <div class="icon"><img src="{{item.icon}}"/><img src="{{item.iconPink}}"
                                                                                    class="iconPink"/><img
                                     src="{{item.iconBlue}}" class="iconBlue"/></div>
