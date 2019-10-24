@@ -2129,6 +2129,9 @@ header{
 }
 @supports (-ms-ime-align: auto) {
   /* Microsoft EdgeV13&14 CSS styles go here */
+  .nav__wrapper{
+    display: none !important;
+  }
   .home-cont{
     background: linear-gradient(to right, rgb(162, 207, 232) 30%, rgb(215, 243, 187) 70%) !important;
   }
@@ -2179,10 +2182,14 @@ header{
     }
   }
 }
-
+.nav__wrapper{
+  display: none !important;
+}
 @supports (-ms-accelerator: true) {
    /* Microsoft EdgeV13 CSS styles go here */
-
+   .nav__wrapper{
+    display: none !important;
+  }
   .home-cont{
     background: linear-gradient(to right, rgb(162, 207, 232) 30%, rgb(215, 243, 187) 70%) !important;
     display: block !important;
@@ -2237,7 +2244,30 @@ header{
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
    /* IE10 & IE11 CSS styles go here ['162, 207, 232','215, 243, 187']*/
-  img{height: auto !important;}
+  // img{height: auto !important;}
+
+  .prod-list{
+    & a{
+      display: -ms-flexbox;
+    }
+  }
+  .right-img {
+    & .img-feature{
+      & .img{
+        & img{
+          height: auto !important
+        }
+      }
+    }
+  }
+  header{
+    & .logo-imgdesc{
+      margin-top: 10px;
+    }
+  }
+  .nav__wrapper{
+    display: none !important;
+  }
   .home-cont{
     background: linear-gradient(to right, rgb(162, 207, 232) 30%, rgb(215, 243, 187) 70%) !important;
     display: block !important;

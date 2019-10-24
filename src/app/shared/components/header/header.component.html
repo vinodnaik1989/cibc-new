@@ -332,6 +332,7 @@
   }
   .prod-list li a {
     display: flex !important;
+    display: -ms-flexbox !important;
     justify-content: space-between !important;
     width: 100%;
   }
@@ -341,6 +342,9 @@
     display: flex;
     vertical-align: middle;
     position: relative;
+    display: -ms-flexbox;
+    -ms-flex: 1;
+    -ms-flex-item-align: center;
   }
 
   .left-submenu-image:hover h4, .left-submenu-image h4 {
