@@ -1,7 +1,8 @@
 import {Component, HostListener, Renderer2} from '@angular/core';
-import {Router, NavigationStart} from '@angular/router';
+import {Router, NavigationStart, NavigationEnd} from '@angular/router';
 import {Timeline} from './models/timeline';
 import {BlogData} from './models/reusable';
+import {filter} from 'rxjs/operators';
 
 const BLOG_DATA_1: BlogData[] = [
   {
@@ -93,6 +94,13 @@ export class AppComponent {
           this.previousUrl = currentUrlSlug;
         }
       });
+    this.router.events.pipe(
+      filter((event: any) => event instanceof NavigationEnd)
+    ).subscribe(x => {
+      // this.searchOpened = false;
+      // window.location.reload();
+      console.log(this.router.url);
+    });
   }
 
   @HostListener('window:scroll', ['$event'])

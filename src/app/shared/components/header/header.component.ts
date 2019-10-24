@@ -1,6 +1,7 @@
 import {Component, OnInit, HostListener, Host} from '@angular/core';
 import {SubMenu, SharedServices, Training, Knowledge, Contact} from '../../../models/submenu';
 import * as $ from 'jquery';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -221,7 +222,7 @@ export class HeaderComponent implements OnInit {
 
   isShown: boolean = false;
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
