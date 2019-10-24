@@ -214,7 +214,7 @@ export class HeaderComponent implements OnInit {
   isShown: boolean = false;
   menuOpened = false;
 
-  constructor(private router: Router) {
+  constructor(public router: Router) {
     this.router.events.pipe(
       filter((event: any) => event instanceof NavigationEnd)
     ).subscribe(x => {
