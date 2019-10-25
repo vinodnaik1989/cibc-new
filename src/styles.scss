@@ -585,72 +585,8 @@ $medgrey: #999;
       }
     }
   }
-  & .iconBlue{
-    display: none !important;
-  }
-  header{
-    & nav{
-      & .dropdown{
-        &:hover{
-          & .dropdown-menu{
-            & li{
-              & a{
-                &:hover{
-                  & .icon{
-                    & >img{
-                      &:first-child{
-                        display: none !important;
-                      }
-                    }
-                    & img{
-                      &.iconBlue{
-                        display: block !important;
-                      }
-                      &.iconPink{
-                        display: none !important;
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }
 // nav .dropdown:hover .dropdown-menu li a:hover .icon>img:first-child
-.iconPink, .iconBlue{display: none !important;}
-header{
-  & nav{
-    & .dropdown{
-      &:hover{
-        & .dropdown-menu{
-          & li{
-            & a{
-              &:hover{
-                opacity: 1;
-                & .icon{
-                  & >img{
-                    &:first-child{
-                      display: none !important;
-                    }
-                  }
-                  & img{
-                    &.iconPink{
-                      display: block !important;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
 .home{
   & header{
     &#header{
