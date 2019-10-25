@@ -248,28 +248,5 @@ export class HeaderComponent implements OnInit {
     this.opened = !this.opened;
   }
 
-  // class:string = 'hide';
-
-  // changeClass($event){
-  //   this.class = $event.type == 'mouseover' ? 'open' : 'hide';
-  // }
-
-  // @HostListener('click', ['$event'])
-  // changeClass($event){
-  //   $('.menu-close').on('click',function(){
-  //     $(this).addClass("nav-test").toggleClass("open");
-  //     if($('#menu').hasClass('open')){
-  //       $('#menu').removeClass('open');
-  //     } else{
-  //       $("#menu").addClass('open');
-  //     }
-  //   });
-  // }
-  // subMenuClass(){
-  //   $('.dropdown').on('touchstart click',function(){
-  // $('.dropdown-menu').toggleClass('submenu');
-  //   })
-  // }
-
 
 }

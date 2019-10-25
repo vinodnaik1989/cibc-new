@@ -143,7 +143,8 @@ header{
       right: 0;
       width: auto;
       height: 65px;
-      overflow: hidden;
+      // overflow: hidden;
+      overflow: scroll;
       line-height: 4;
       // & .nav-item{
         &:last-child{
@@ -385,6 +386,7 @@ header{
               color: #000 !important;
               & .submenu-title{
                 color: $grey;
+                line-height: 2;
               }
               &:after{
                 border-right: 1px solid #000 !important;
@@ -393,7 +395,6 @@ header{
               &:hover{
                 opacity: 1 !important;
                 & .submenu-title{
-                  // color: $pink !important;
                   color: #000 !important;
                 }
               }

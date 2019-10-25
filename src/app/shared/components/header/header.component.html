@@ -237,8 +237,7 @@
   }
 
   nav .dropdown:hover .dropdown-menu li .submenu-content li {
-    padding: 12px 15px;
-    margin-bottom: 5px;
+    padding: 10px 15px;
   }
 
   nav .dropdown.open .dropdown-menu li .submenu-content li {
@@ -403,7 +402,8 @@
       -o-transition: all 600ms ease;
       -ms-transition: all 600ms ease;
       transition: all 600ms ease;
-      max-height: 250px;
+      /* max-height: 250px; */
+      max-height: inherit;
       visibility: visible;
       width: 100%;
       left: 0;
@@ -453,16 +453,17 @@
     }
 
     header#header #menu .nav .nav-link {
-      height: 50px !important;
-      line-height: 45px !important;
+      height: 60px !important;
+      line-height: 55px !important;
       position: relative;
       color: #333 !important;
+      font-size: 18px;
     }
 
     header #menu .nav .nav-link:after {
       position: absolute !important;
       right: 25px;
-      top: 23px;
+      top: 28px;
       border-right: 1px solid #333 !important;
       border-bottom: 1px solid #333 !important;
     }

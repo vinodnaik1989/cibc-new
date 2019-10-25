@@ -244,6 +244,9 @@
   position: relative;
   & .sec5-right-cont{
     padding-left: 2rem;
+    @media screen and (max-width:640px){
+      padding-left: 3rem;
+    }
     & >div{
       position: absolute;
       border: 1px solid $lightgrey;
@@ -256,6 +259,9 @@
       border-radius: 50%;
       color: $lightgrey;
       filter: brightness(0.8);
+      @media screen and (max-width:640px){
+        left: 15px;
+      }
     }
   }
 }
