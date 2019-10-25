@@ -386,7 +386,9 @@
       width: 100%;
       height: 270px;
       float: left;
-      box-shadow: 0 6px 20px 16px rgba(28,39,81,.15);
+      // box-shadow: 0 6px 20px 16px rgba(28,39,81,.15);
+      -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
       right: auto;
       left: 6rem;
       @media screen and (max-width: 580px){

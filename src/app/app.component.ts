@@ -99,7 +99,7 @@ export class AppComponent {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e) {
-    if (window.pageYOffset > 120) {
+    if (window.pageYOffset > 50) {
       const element = document.getElementById('header');
       element.classList.add('sticky');
       // document.getElementById('menu-row').classList.add('header-sticked');
