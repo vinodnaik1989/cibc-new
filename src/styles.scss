@@ -858,7 +858,6 @@ $medgrey: #999;
     }
   }
   .services{
-      // background: linear-gradient(to top, #d4d4d4 45%, $white 45%) !important;
     & p{
       color: $grey !important;
     }
@@ -880,7 +879,7 @@ $medgrey: #999;
   }
   .news{
     & .news-sec{
-      padding-top: 1rem !important;
+      padding-top: 3rem !important;
       & >div{
         padding: 0 20px !important;
       }
