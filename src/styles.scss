@@ -7,13 +7,9 @@ $lightgrey: #d4d4d4;
 html body{
   font-family: 'Questrial', sans-serif;
 }
-#app{
-  // animation: 400ms ease 400ms 1 normal both running image;
-  // margin-bottom: 390px;
-  // background: $grey;
-  @media screen and  (max-width:640px){
-    // margin-bottom: 690px;
-  }
+#app{}
+.responsive-menu, #mobile-menu{
+  display: none !important;
 }
 body{
   background: transparent;
@@ -24,62 +20,8 @@ body{
   -ms-flex-direction: column;
   flex-direction: column;
 }
-.responsive-menu, #mobile-menu{
-  display: none !important;
-}
-@media screen and (max-width: 1024px){
-  .responsive-menu{
-    display: block !important;
-  }
-  #menu{
-    display: none !important;
-  }
-}
-@media screen and (min-width:768px) and (max-width: 1140px){
-  .youtube-background iframe{
-    transform: translateX(-50%) translateY(-20%) scale(1.5) !important;
-  }
-}
-@media screen and (min-width:1141px) and (max-width: 1240px){
-  .youtube-background iframe{
-    transform: translateX(-50%) translateY(-20%) scale(1.5) !important;
-  }
-}
-@media screen and (min-width:1241px) and (max-width: 1439px){
-  .youtube-background iframe{
-    transform: translateX(-50%) translateY(-20%) scale(1.5) !important;
-  }
-}
-@media screen and (min-width:1920px){
-  .youtube-background iframe{
-    transform: translateX(-50%) translateY(-13%) scale(1.2) !important;
-  }
-}
-@media screen and (min-width:2160px){
-  .youtube-background iframe{
-    transform: translateX(-50%) translateY(-13%) scale(1.2) !important;
-  }
-}
-@media screen and (max-width: 640px){
-  .visible-xs {display: block!important;}
-}
-particles{
-  // min-height: 100vh;
-  animation: 0s ease 400ms 1 normal backwards running image;
-  top: 0;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-}
-.home-cont{
-  overflow: hidden;
-}
+
 #canvas {
-  position: absolute;
-  left: 0;
-  top: 0;
   @media screen and (max-width: 767px){
     width: 100%;
     height: 100vh !important;
@@ -143,7 +85,7 @@ ul li, p{font-size: 18px;}
 }
 .box-2{
   display: block;
-  background: #DE638B;
+  // background: #DE638B;
 }
 .boxpink{
   bottom: 0px;
@@ -196,7 +138,6 @@ ul li, p{font-size: 18px;}
 button{
   background: $grey;
   color: $white;
-  // padding: 1rem 3rem;
   width: 200px;
   height: 4rem;
   text-transform: uppercase;
@@ -241,44 +182,6 @@ button{
       -webkit-transform: scaleY(1);
       transform: scaleY(1);
     }
-  }
-}
-.arrow{
-  position: absolute;
-  left: 50%;
-}
-.arrow{
-  width: 40px;
-  height: 40px;
-  bottom: -20%;
-  margin: -20px 0 0 -20px;
-  -webkit-transform: rotate(45deg);
-  border-left: none;
-  border-top: none;
-  border-right: 2px solid $pink;
-  border-bottom: 2px solid $pink;
-  @media screen and (max-width: 640px){
-    position: relative;
-    bottom: -25px;
-  }
-  z-index: 2;
-  &:before{
-    content: '';
-    width: 20px;
-    height: 20px;
-    top: 50%;
-    margin: -10px 0 0 -10px;
-    border-left: none;
-    border-top: none;
-    border-right: 1px $white solid;
-    border-bottom: 1px $white solid;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-name: arrow;
-  }
-  &:before{
-    position: absolute;
-    left: 50%;
   }
 }
 @-webkit-keyframes fadeIn {
@@ -395,14 +298,9 @@ button{
 @-ms-keyframes techn{
   0%{-webkit-transform:translateY(25vw);-ms-transform:translateY(25vw);transform:translateY(25vw);}
 }
-// final home 2c updated logo
 
 .home{
-  .nav__wrapper{
-    // z-index: 120 !important;
-  }
   .buttonfx{
-    background: $pink !important;
     &:before{
       background: $grey !important;
     }
@@ -478,38 +376,12 @@ button{
     }
   }
 }
-// home 2 end
-$medgrey: #999;
 
-// home 2g css start
 .home{
-  // rightside navigation text css
-  & nav{
-    &.nav__wrapper{
-      z-index: 100 !important;
-      & .nav{
-        & li{
-          &.active{
-            &:nth-child(1){
-              & a{
-                & h3{
-                  color: #8BC4E4 !important;
-                  &:before{
-                    border-top: 2px solid #8BC4E4 !important;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
   // section 2
   & .left-bg{
     &:after{
       background: #fbfaf9 !important;
-      // background: linear-gradient(to right, #a2cfe8 20%,#d7f3bb 80%) !important;
     }
     &:before{
       display: none;
@@ -531,17 +403,8 @@ $medgrey: #999;
     }
   }
 }
-// home 2g css end
-.serv-blue{
-  display: none !important;
-}
+
 .home{
-  .serv-pink{
-    display: none !important;
-  }
-  .serv-blue{
-    display: block !important;
-  }
   & .blog{
     & h4{
       font-size: 16px !important;
@@ -577,74 +440,7 @@ $medgrey: #999;
     }
   }
 }
-// nav .dropdown:hover .dropdown-menu li a:hover .icon>img:first-child
-.home{
-  & header{
-    &#header{
-      & nav{
-        & li{
-          &.dropdown{
-            &:hover{
-              & a{
-                color: $white !important;
-                & .submenu-title{
-                  color: $grey;
-                }
-                &:after{
-                  border-right: 1px solid $white !important;
-                  border-bottom: 1px solid $white !important;
-                }
-                &:hover{
-                  opacity: 1 !important;
-                  & .submenu-title{
-                    // color: $pink !important;
-                    color: #8BC4E4 !important;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      &.sticky{
-        & nav{
-          & li{
-            &.dropdown{
-              &:hover{
-                & a{
-                  color: #8BC4E4 !important;
-                  &:after{
-                    border-right: 1px solid #8BC4E4 !important;
-                    border-bottom: 1px solid #8BC4E4 !important;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  & .nav__wrapper{
-    z-index: 100 !important;
-    & .nav{
-      & li{
-        &.active{
-          &:nth-child(1){
-            & a{
-              & h3{
-                color: #fff !important;
-                &:before{
-                  border-top: 2px solid #fff !important;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+
 // shared-services page css
 .shared-services, .news{
   & header{
@@ -707,14 +503,6 @@ $medgrey: #999;
           background-color:$grey !important;
         }
       }
-    }
-  }
-}
-.technology, .shared-services, .news{
-  & .nav__wrapper{
-    display: none !important;
-    & .nav{
-      display: none !important;
     }
   }
 }
@@ -808,19 +596,7 @@ $medgrey: #999;
       }
     }
   }
-  // particle
-  .home-cont{
-    & .pad0{
-      padding: 0 !important;
-    }
-    & h1{
-      // font-size: 11vw !important;
-    }
-    & p{
-      font-size: 3vw !important;
-      padding: 0 !important;
-    }
-  }
+
   // technologies
   .sect{
     & div{
@@ -852,13 +628,12 @@ $medgrey: #999;
   }
   // services
   .services{
-    background: linear-gradient(to top, #fff 45%, $lightgrey 45%) !important;
+    background: linear-gradient(to top, $white 45%, $lightgrey 45%) !important;
     & .serv-sect{
       padding: 0 !important;
     }
   }
   .services{
-      // background: linear-gradient(to top, #d4d4d4 45%, $white 45%) !important;
     & p{
       color: $grey !important;
     }
@@ -880,7 +655,7 @@ $medgrey: #999;
   }
   .news{
     & .news-sec{
-      padding-top: 1rem !important;
+      padding-top: 3rem !important;
       & >div{
         padding: 0 20px !important;
       }
@@ -913,15 +688,6 @@ $medgrey: #999;
   footer{
     & .foo-cont{
       padding: 0 20px !important;
-    }
-  }
-}
-.lightcolor{
-  & .nav__wrapper{
-    & li{
-      & .nav__title{
-        color: #999 !important;
-      }
     }
   }
 }
@@ -1018,20 +784,7 @@ $medgrey: #999;
     }
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1199px){
-  .nav__wrapper{
-    z-index: 100 !important;
-  }
-  .home-cont{
-    & .sec-text{
-      z-index: 1;
-    }
-    & .video-right{
-      bottom: 25px !important;
-      top: auto !important;
-    }
-  }
-}
+@media screen and (min-width: 992px) and (max-width: 1199px){}
 @media screen and (max-width:1024px){
   body.scroll{
     overflow: hidden;
@@ -1233,53 +986,6 @@ $medgrey: #999;
       @media screen and (min-width: 1401px) and (max-width: 1800px){
         font-size: 1.1em;
       }
-    }
-  }
-}
-
-.home-cont{
-  &>div{
-      width: 79%;
-      @media screen and (max-width: 640px){
-        width: 79%;
-        margin: 8rem auto 4rem !important;
-      }
-      @media screen and (min-width: 991px) and (max-width: 1400px){
-        margin: 10rem auto 4rem !important;
-      }
-      @media screen and (min-width: 1801px){
-        margin: 10rem auto 4rem !important;
-      }
-      @media screen and (min-width:120em){
-        width: 65%;
-      }
-      @media screen and (min-width:160em){
-        width: 50%;
-      }
-  }
-  & .h1 {
-  @media screen and (min-width: 991px) and (max-width: 1400px){
-          font-size: 2.2358em;
-      }
-      @media screen and (min-width: 1401px) and (max-width: 1800px){
-          font-size: 3.0358em;
-      }
-      @media screen and (min-width: 1801px){
-          font-size: 3.2358em;
-      }
-      @media screen and (max-width:48em){
-          font-size: 3.0358em;
-      }
-    @media screen and (max-width:64em){
-          font-size: 2.7358em;
-      }
-  }
-  & p{
-    @media screen and (min-width: 991px) and (max-width: 1400px){
-        font-size: 1.1em;
-    }
-    @media screen and (min-width: 1401px) and (max-width: 1800px){
-      font-size: 1.1em;
     }
   }
 }

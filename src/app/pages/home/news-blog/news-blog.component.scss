@@ -113,6 +113,9 @@
                 content: "|";
                 color: #333;
                 padding: 0 1rem;
+                @media screen and (max-width:640px){
+                  padding: 0 .5rem !important
+                }
               }
               &:hover{
                 text-decoration: none;
@@ -164,7 +167,7 @@
           & p{
             font-size: 0.8em;
             @media screen and (max-width:767px){
-              font-size: 18px;
+              font-size: 0.8em;
             }
           }
         }

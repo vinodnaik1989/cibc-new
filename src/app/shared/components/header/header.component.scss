@@ -422,7 +422,10 @@ header {
               color: #000 !important;
               & .submenu-title {
                 color: $grey;
-                line-height: 2;
+                line-height: 1.4;
+                @media screen and (max-width:640px){
+                  line-height: 1.4;
+                }
               }
               &:after {
                 border-right: 1px solid #000 !important;
