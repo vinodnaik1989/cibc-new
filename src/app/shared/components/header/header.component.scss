@@ -377,6 +377,25 @@ nav{
     }
   }
 }
+
+nav .menu-sec .dropdown:hover .dropdown-menu{
+  display: none !important;
+}
+nav .menu-sec .dropdown:hover .dropdown-menu.active{
+
+  position: fixed;
+  //display: block;
+  top: 64px;
+  margin: 0;
+  border-radius: 0;
+  border-top: 0;
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+  transition: 0.2s;
+}
+
 header{
   &#header{
     & nav{
