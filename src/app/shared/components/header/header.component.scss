@@ -143,14 +143,16 @@ header{
       right: 0;
       width: auto;
       height: 65px;
-      // overflow: hidden;
-      overflow: scroll;
+      overflow: hidden;
       line-height: 4;
       // & .nav-item{
         &:last-child{
           padding-right: 1rem;
         }
       // }
+      @media(max-width:1024px){
+        // overflow-y: scroll;
+      }
     }
   }
   &.open{
@@ -222,7 +224,6 @@ nav{
   & a{
     font-size: 0.7861em;
     color: $grey;
-    // font-family: 'IBM Plex Mono', monospace;
     font-family: "Questrial", sans-serif;
     transition: opacity 400ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
     padding: 0.275em 1rem !important;

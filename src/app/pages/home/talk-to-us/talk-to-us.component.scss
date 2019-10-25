@@ -38,7 +38,7 @@
     top: 0px;
     will-change: transform;
     z-index: 10;
-    background: $white;
+    background: $bgGrey;
     transition: transform 800ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
   }
   &:after{
@@ -154,8 +154,11 @@
       position: relative;
       top: 25%;
       @media(max-width: 640px){
-        font-size: 8vw;
+        font-size: 2.25rem;
         padding-left: 0;
+      }
+      @media screen and (min-width: 641px) and (max-width: 767px){
+        font-size: 2.25rem;
       }
     }
   }

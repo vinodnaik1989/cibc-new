@@ -6,6 +6,7 @@
   padding: 4rem 0;
   overflow: hidden;
   z-index: 0;
+  background: linear-gradient(to top, $white 65%, $bgGrey 65%);
   @media(max-width: 640px){
     padding: 0;
   }
@@ -18,7 +19,7 @@
     top: 0px;
     will-change: transform;
     z-index: 10;
-    background: #ebeae7;
+    // background: #ebeae7;
     transition: transform 800ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
   }
   & h4{
@@ -29,10 +30,10 @@
     margin-top: 0px;
     opacity: 0.5;
     text-transform: uppercase;
-    color: #bbb;
+    color: $grey;
   }
   & h2{
-    color: $white;
+    color: $grey;
     font-weight: bolder;
     margin: 40px 0;
     @media(max-width: 640px){
@@ -40,7 +41,7 @@
     }
   }
   &:after{
-    transform: translateY(27.25vw);
+    // transform: translateY(27.25vw);
   }
   & .blog-bg{
     position: relative;
@@ -93,6 +94,15 @@
           top: 5% !important;
           padding: 2rem;
         }
+        @media screen and (min-width: 768px) and (max-width:991px){
+          top: 15% !important;
+        }
+        @media screen and (min-width: 992px) and (max-width:1024px){
+          top: 15% !important;
+        }
+        @media screen and (min-width: 1025px) and (max-width:1199px){
+          top: 12% !important;
+        }
         & .news-right-user{
           display: flex;
           align-items: center;
@@ -143,6 +153,7 @@
         position: relative;
         z-index: 5;
         overflow: hidden;
+        box-shadow: 7px 3px 15px -2px rgba(0, 0, 0, 0.2), 5px 3px 15px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
         & .blog-sub-cont{
           padding: 20px;
           & h3{
@@ -184,11 +195,10 @@
         & .news-right-user{
           display: flex;
           align-items: center;
-          padding: 1rem 15px 15px;
+          padding: 1rem 0 15px;
           & .news-user-image{
             border: 1px solid #333;
             border-radius: 50%;
-            // background: #fbfaf9;
             padding: 10px;
           }
           & .news-user-det{
