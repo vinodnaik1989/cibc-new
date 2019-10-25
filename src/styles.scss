@@ -10,13 +10,13 @@ html body{
 #app{
   // animation: 400ms ease 400ms 1 normal both running image;
   // margin-bottom: 390px;
-  background: $grey;
+  // background: $grey;
   @media screen and  (max-width:640px){
     // margin-bottom: 690px;
   }
 }
 body{
-  background: $grey;
+  background: transparent;
   height: 100%;
   min-height: 100%;
   display: -ms-flexbox;
@@ -63,22 +63,6 @@ body{
 @media screen and (max-width: 640px){
   .visible-xs {display: block!important;}
 }
-@media screen and (max-width: 767px){
-  .youtube-background{
-    & iframe{
-      display: none !important;
-    }
-  }
-  .home2d{
-    & .youtube-background{
-      & #video-cover{
-        position: absolute;
-        right: -30%;
-        transform: translateX(20%);
-      }
-    }
-  }
-}
 particles{
   // min-height: 100vh;
   animation: 0s ease 400ms 1 normal backwards running image;
@@ -96,31 +80,12 @@ particles{
   position: absolute;
   left: 0;
   top: 0;
-  @media screen and (max-width: 991px){
+  @media screen and (max-width: 767px){
     width: 100%;
     height: 100vh !important;
   }
 }
-.overlay{
-  visibility: hidden;
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  background-color: #000;
-  background-color: rgba(0,0,0,.8);
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  -khtml-opacity: 0;
-  opacity: 0;
-  -webkit-transition: opacity .5s ease 0s;
-  -moz-transition: opacity .5s ease 0s;
-  -o-transition: opacity .5s ease 0s;
-  transition: opacity .5s ease 0s;
-}
+
 h2{
   font-size: 2.6179em;
   margin: 10px 0 20px 0;
@@ -422,145 +387,8 @@ button{
   0%{-webkit-transform:translateY(25vw);-ms-transform:translateY(25vw);transform:translateY(25vw);}
 }
 // final home 2c updated logo
-.home2c{
-  & header{
-    & .navbar-brand{
-      & .logo-imgdesc{
-        background: url('../src/assets/images/ae_logo-black.png') no-repeat !important;
-        background-size: 100% !important;
-      }
-    }
-    &.header-bg{
-      & .navbar-brand{
-        & .logo-imgdesc{
-          background: url('../src/assets/images/ae_logo-white.png') no-repeat !important;
-          background-size: 100% !important;
-        }
-      }
-      & #menu{
-        & .nav{
-          & .nav-link{
-            color: $white !important;
-            &:after{
-              border-right: 1px solid $white;
-              border-bottom: 1px solid $white;
-            }
-          }
-        }
-      }
-      &.sticky{
-        & .navbar-brand{
-          & .logo-imgdesc{
-            background: url('../src/assets/images/ae_logo-black.png') no-repeat !important;
-            background-size: 100% !important;
-          }
-        }
-        & #menu{
-          & .nav{
-            & .nav-link{
-              color: $grey !important;
-              &:after{
-                border-right: 1px solid $grey;
-                border-bottom: 1px solid $grey;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-// home2 page css
-.home2b, .home2c, .home2d, .home2e{
-  & header{
-    & .logo-imgdesc{
-      background: url('../src/assets/images/logo-black-pink.png') no-repeat !important;
-      background-size: 100% !important;
-    }
-    &.header-bg{
-      & .logo-imgdesc{
-        background: url('../src/assets/images/logo-white-pink.png') no-repeat !important;
-        background-size: 100% !important;
-      }
-      & #menu{
-        & .nav{
-          & .nav-link{
-            color: $white !important;
-            &:after{
-              border-right: 1px solid $white;
-              border-bottom: 1px solid $white;
-            }
-          }
-        }
-      }
-      &.sticky{
-        & .logo-imgdesc{
-          background: url('../src/assets/images/logo-black-pink.png') no-repeat !important;
-          background-size: 100% !important;
-        }
-        & #menu{
-          & .nav{
-            & .nav-link{
-              color: $grey !important;
-              &:after{
-                border-right: 1px solid $grey;
-                border-bottom: 1px solid $grey;
-              }
-            }
-          }
-        }
-      }
-    }
-    & #menu{
-      & .nav{
-        & .nav-link{
-          color: $grey !important;
-          &:after{
-            border-right: 1px solid $grey;
-            border-bottom: 1px solid $grey;
-          }
-        }
-      }
-    }
-  }
-  & .services{
-    & .serv-sect{
-      & .serv-cont{
-        & h3, p{
-          color: $grey !important;
-        }
-      }
-    }
-  }
-}
-.techn-list{
-  & .tech-list{
-    & .row{
-      &:nth-child(4){
-        & img{
-          padding-left: 10px;
-        }
-      }
-      &:nth-child(5){
-        & img{
-          padding-left: 10px;
-        }
-      }
-    }
-  }
-}
-.home2, .home4, .home2h{
-  & .services{
-    & .serv-sect{
-      & .serv-cont{
-        & h3, p{
-          color: $grey !important;
-        }
-      }
-    }
-  }
-}
-.home, .home2, .home3, .home2b, .home2c, .home3, .home2d, .home2e, .home2f{
+
+.home{
   .nav__wrapper{
     // z-index: 120 !important;
   }
@@ -640,33 +468,6 @@ button{
       }
     }
   }
-  & .services{
-    background: linear-gradient(to left, $lightgrey 50%, $white 50%) !important;
-    @media screen and (max-width:767px){
-      background: linear-gradient(to top, $lightgrey 45%, $white 45%) !important;
-    }
-    & .serv-sect{
-      & .serv-cont{
-        & h3, p{
-          color: $grey !important;
-        }
-      }
-      &:nth-child(odd){
-        & .serv-cont{
-          & h3{
-            color: $grey !important;
-          }
-        }
-      }
-      &:nth-child(even){
-        & .serv-cont{
-          & p{
-            color: $grey !important;
-          }
-        }
-      }
-    }
-  }
   & .solutions{
     background: $white !important;
   }
@@ -688,401 +489,9 @@ button{
 }
 // home 2 end
 $medgrey: #999;
-.home4, .home5{
-  & #app{
-    background:$medgrey;
-  }
-  & .nav__wrapper{
-    & .nav{
-      & li{
-        & a{
-          color: $grey !important;
-        }
-      }
-    }
-  }
-  & .home-cont{
-    & p, h4{
-      color: $white !important;
-    }
-  }
-  & .left-bg{
-    background: $medgrey !important;
-    & .right-image{
-      & .box-2{
-        bottom: -9rem !important;
-      }
-    }
-  }
-  & .left-imge{
-    background: $white;
-    @media screen and (max-width: 640px){
-      padding-bottom: 0 !important;
-    }
-  }
-  & .sect{
-    // background: linear-gradient(to top, #CCC 30%, $medgrey 60%) !important;
-    background: $white !important;
-    &:before{
-      height: 6.7rem !important;
-      // background: $white !important;
-      @media screen and (max-width: 640px){
-        height: 4.2rem !important;
-      }
-    }
-    &:after{
-      background: url('./assets/images/dots-black.svg') center top/contain repeat-y !important;
-    }
-    & .tech-cont{
-      &:before{
-        background-color: transparent !important;
-      }
-      & h2{
-        color: $grey !important;
-      }
-      & p{
-        color: $grey !important;
-      }
-    }
-  }
-  & .techn-list{
-    // background: linear-gradient(to top, $medgrey 30%, #ccc 60%) !important;
-    background: $white !important;
-    & .tech-list{
-      & h3{
-        color: $grey !important;
-      }
-      & p{
-        color: $grey !important;
-      }
-      & .row{
-        &:nth-child(4){
-          & img{
-            padding-left: 27px;
-          }
-        }
-        &:nth-child(5){
-          & img{
-            padding-left: 27px;
-          }
-        }
-      }
-    }
-  }
-  & .right-bg{
-    background: $medgrey !important;
-  }
-  & .services{
-    // background: linear-gradient(to left, $medgrey 35%, #ccc 65%) !important;
-    background: linear-gradient(to left, #d4d4d4 50%, $white 50%) !important;
-    @media screen and (max-width:640px){
-      background: linear-gradient(to top, #d4d4d4 45%, $white 45%) !important;
-    }
-    & p{
-      color: $grey !important;
-    }
-    & .serv-sect{
-      &:nth-child(odd){
-        & .serv-cont{
-          & h3{
-            color: $grey !important;
-          }
-        }
-      }
-      & h3{
-        @media screen and (max-width: 640px){
-          color: $grey !important;
-        }
-      }
-    }
-  }
-  & .solutions{
-    background: $white !important;
-    padding-bottom: 4rem !important;
-    @media screen and (max-width:640px) {
-      padding-top: 4rem !important;
-    }
-    & .portf{
-      &:after{
-        margin-bottom: -2.25vw !important;
-        width: 10vw !important;
-        height: 10vw !important;
-        left: -25rem !important;
-      }
-    }
-  }
-  & .portfl{
-    & p{
-      color: $grey !important;
-    }
-    &:before{
-      top: 0 !important;
-      height: 10.2rem !important;
-      background: $white !important;
-      @media screen and (max-width: 640px){
-        height: 4rem !important;
-      }
-    }
-    &:after{
-      background: url('./assets/images/dots-white.svg') center top/contain repeat-y !important;
-    }
-    & .portf-cont{
-      &:before{
-        background-color: transparent !important;
-      }
-    }
-  }
-  & .folio{
-    & .flink{
-      & h4, p{
-        color: $grey !important;
-      }
-    }
-    & .folios{
-      & .foli{
-        &:before{
-          background: url('./assets/images/dots-white.svg') repeat-y !important;
-        }
-      }
-    }
-  }
-  & .blog{
-    & h2{
-      color: $grey !important;
-    }
-    & h4{
-      color: $grey !important;
-    }
-  }
-}
-// home2e css section starts here <----
-.home2e{
-  & header{
-    & nav{
-      & li{
-        &.dropdown{
-          &:hover{
-            & a{
-              color: $white !important;
-              & .submenu-title{
-                color: $grey;
-              }
-              &:after{
-                border-right: 1px solid $grey !important;
-                border-bottom: 1px solid $grey !important;
-              }
-              &:hover{
-                opacity: 1 !important;
-                & .submenu-title{
-                  // color: $pink !important;
-                  color: #8BC4E4 !important;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    & .logo-imgdesc{
-      background: url('../src/assets/images/ae_logo-black.png') no-repeat !important;
-      background-size: 100% !important;
-    }
-    &.header-bg{
-      & .logo-imgdesc{
-        background: url('../src/assets/images/ae_logo-white.png') no-repeat !important;
-        background-size: 100% !important;
-      }
-      & #menu{
-        & .nav{
-          & .nav-link{
-            color: $white !important;
-            &:after{
-              border-right: 1px solid $white;
-              border-bottom: 1px solid $white;
-            }
-          }
-        }
-      }
-      &.sticky{
-        & .logo-imgdesc{
-          background: url('../src/assets/images/ae_logo-black.png') no-repeat !important;
-          background-size: 100% !important;
-        }
-        & #menu{
-          & .nav{
-            & .nav-link{
-              color: $grey !important;
-              &:after{
-                border-right: 1px solid $grey;
-                border-bottom: 1px solid $grey;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  // rightside navigation text css
-  & .nav__wrapper{
-    & .nav{
-      & li{
-        &.active{
-          & .nav__counter{
-            display: none;
-          }
-          & .nav__title{
-            height: 25px;
-            font-size: 24px;
-            transition: all 0.15s ease-out;
-            margin: 0 0 0.4em;
-            color: #8BC4E4 !important;
-            &:before{
-              content: "";
-              width: 20px;
-              height: 2px;
-              top: 12px;
-              border-top: 2px solid #8BC4E4;
-              // border-top: 2px solid $pink;
-              left: -25px;
-              position: absolute;
-              transition: all 0.15s ease-out;
-            }
-          }
-        }
-        & .nav__counter{
-          display: none;
-        }
-        & .nav__title{
-          display: block;
-          height: 25px;
-          opacity: 1;
-          font-size: 16px;
-          margin: 0 0 0.4em;
-          transition: all 0.15s ease-out;
-          color: #000;
-        }
-        &:hover{
-          & .nav__title{
-            color: #8BC4E4 !important;
-          }
-        }
-      }
-    }
-  }
-  // section 2
-  & .left-bg{
-    &:after{
-      // background: $pink !important;
-      // background: linear-gradient(to right, #8BC4E4 40%,#BFE895 60%) !important;
-      background: linear-gradient(to right, #a2cfe8 20%,#d7f3bb 80%) !important;
-    }
-    &:before{
-      content: '';
-      background: url('./assets/images/wave2e1.png');
-      width: 100%;
-      height: 40px;
-      background-size: 100% 100%;
-      position: absolute;
-      top: 0;
-      z-index: 99;
-    }
-    & .right-image{
-      & .box-1{
-        background: #BFE895 !important;
-      }
-      & .box-2{
-        background: #8BC4E4 !important;
-      }
-    }
-    & .sec-left{
-      & .left-text{
-        & h2, p, li {
-          color: $grey !important;
-        }
-      }
-    }
-  }
-}
+
 // home 2g css start
-.home2g, .home2h, .home2e, .home{
-  & header{
-    &#header{
-      & nav{
-        & li{
-          &.dropdown{
-            &:hover{
-              & a{
-                color: #8BC4E4 !important;
-                & .submenu-title{
-                  color: $grey;
-                }
-                &:after{
-                  border-right: 1px solid #8BC4E4 !important;
-                  border-bottom: 1px solid #8BC4E4 !important;
-                }
-                &:hover{
-                  opacity: 1 !important;
-                  & .submenu-title{
-                    // color: $pink !important;
-                    color: #8BC4E4 !important;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      & .logo-imgdesc{
-        background: url('../src/assets/images/ae_logo-black.png') no-repeat !important;
-        background-size: 100% !important;
-      }
-      & #menu{
-        & .nav{
-          & .nav-link{
-            color: $grey;
-            &:after{
-              border-right: 1px solid $grey;
-              border-bottom: 1px solid $grey;
-            }
-          }
-        }
-      }
-      &.header-bg{
-        & .logo-imgdesc{
-          background: url('../src/assets/images/ae_logo-white.png') no-repeat !important;
-          background-size: 100% !important;
-        }
-        & #menu{
-          & .nav{
-            & .nav-link{
-              color: $white !important;
-              &:after{
-                border-right: 1px solid $white !important;
-                border-bottom: 1px solid $white !important;
-              }
-            }
-          }
-        }
-        &.sticky{
-          & .logo-imgdesc{
-            background: url('../src/assets/images/ae_logo-black.png') no-repeat !important;
-            background-size: 100% !important;
-          }
-          & #menu{
-            & .nav{
-              & .nav-link{
-                color: $grey !important;
-                &:after{
-                  border-right: 1px solid $grey !important;
-                  border-bottom: 1px solid $grey !important;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+.home{
   // rightside navigation text css
   & nav{
     &.nav__wrapper{
@@ -1135,7 +544,7 @@ $medgrey: #999;
 .serv-blue{
   display: none !important;
 }
-.home2e, .home2f, .home2g, .home{
+.home{
   .serv-pink{
     display: none !important;
   }
@@ -1236,141 +645,6 @@ header{
                 }
               }
             }
-          }
-        }
-      }
-    }
-  }
-}
-// home2e css section ends here --->
-// home2f
-.home2f, .home{
-  & header{
-    & nav{
-      & li{
-        &.dropdown{
-          &:hover{
-            & a{
-              color: $white !important;
-              & .submenu-title{
-                color: $grey;
-              }
-              &:after{
-                border-right: 1px solid $white !important;
-                border-bottom: 1px solid $white !important;
-              }
-              &:hover{
-                opacity: 1 !important;
-                & .submenu-title{
-                  // color: $pink !important;
-                  color: #8BC4E4 !important;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  & .nav__wrapper{
-    & .nav{
-      & li{
-        &.active{
-          &:nth-child(1){
-            & a{
-              h3{
-                color: $white !important;
-                &::before{
-                  border-top:2px solid $white !important;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  & header{
-    & .logo-imgdesc{
-      background: url('../src/assets/images/ae_logo-white.png') no-repeat !important;
-      background-size: 100% !important;
-    }
-    &.header-bg{
-      // & .logo-imgdesc{
-      //   background: url('../src/assets/images/ae_logo-white.png') no-repeat !important;
-      //   background-size: 100% !important;
-      // }
-      & #menu{
-        & .nav{
-          & .nav-link{
-            color: $white !important;
-            &:after{
-              border-right: 1px solid $white;
-              border-bottom: 1px solid $white;
-            }
-          }
-        }
-      }
-      &.sticky{
-        & .logo-imgdesc{
-          background: url('../src/assets/images/ae_logo-black.png') no-repeat !important;
-          background-size: 100% !important;
-        }
-        & #menu{
-          & .nav{
-            & .nav-link{
-              color: $grey !important;
-              &:after{
-                border-right: 1px solid $grey;
-                border-bottom: 1px solid $grey;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  // rightside navigation text css
-  & .nav__wrapper{
-    & .nav{
-      & li{
-        &.active{
-          & .nav__counter{
-            display: none;
-          }
-          & .nav__title{
-            height: 25px;
-            font-size: 24px;
-            transition: all 0.15s ease-out;
-            margin: 0 0 0.4em;
-            color: #8BC4E4 !important;
-            &:before{
-              content: "";
-              width: 20px;
-              height: 2px;
-              top: 12px;
-              border-top: 2px solid #8BC4E4 !important;
-              left: -25px;
-              position: absolute;
-              transition: all 0.15s ease-out;
-            }
-          }
-        }
-        & .nav__counter{
-          display: none;
-        }
-        & .nav__title{
-          display: block;
-          height: 25px;
-          opacity: 1;
-          font-size: 16px;
-          margin: 0 0 0.4em;
-          transition: all 0.15s ease-out;
-          color: #000;
-        }
-        &:hover{
-          & .nav__title{
-            color: #8BC4E4 !important;
           }
         }
       }
@@ -1509,60 +783,6 @@ header{
     }
   }
 }
-// technology page css
-.technology, .home{
-  & header{
-    & .logo-imgdesc{
-      background: url('../src/assets/images/ae_logo-black.png') no-repeat !important;
-      background-size: 100% !important;
-    }
-    & #menu{
-      & .nav{
-        & .nav-link{
-          color: $grey !important;
-          &:after{
-            border-right: 1px solid $grey;
-            border-bottom: 1px solid $grey;
-          }
-        }
-      }
-    }
-    &.header-bg{
-      & .logo-imgdesc{
-        background: url('../src/assets/images/ae_logo-white.png') no-repeat !important;
-        background-size: 100% !important;
-      }
-      & #menu{
-        & .nav{
-          & .nav-link{
-            color: $white !important;
-            &:after{
-              border-right: 1px solid $white;
-              border-bottom: 1px solid $white;
-            }
-          }
-        }
-      }
-      &.sticky{
-        & .logo-imgdesc{
-          background: url('../src/assets/images/ae_logo-black.png') no-repeat !important;
-          background-size: 100% !important;
-        }
-        & #menu{
-          & .nav{
-            & .nav-link{
-              color: $grey !important;
-              &:after{
-                border-right: 1px solid $grey;
-                border-bottom: 1px solid $grey;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
 .technology, .shared-services, .news{
   & .nav__wrapper{
     display: none !important;
@@ -1574,35 +794,6 @@ header{
 // media queries
 @media screen and (max-width:640px){
   // home2b, home2c, home2d
-  .home2b, .home2c, .home2d, .home2e, .home2f, .home2g, .home2h{
-    & .menu-toggle{
-      & .menu-close{
-        & .bar{
-          background-color: $grey !important;
-        }
-      }
-    }
-    & .header-bg{
-      & .menu-toggle{
-        & .menu-close{
-          & .bar{
-            background-color: $white !important;
-          }
-        }
-      }
-    }
-    & .header-bg{
-      &.sticky{
-        & .menu-toggle{
-          & .menu-close{
-            & .bar{
-              background-color: $grey !important;
-            }
-          }
-        }
-      }
-    }
-  }
   #menu{
     &.open{
       & .nav{
@@ -1797,154 +988,6 @@ header{
       padding: 0 20px !important;
     }
   }
-  .home2{
-    // header
-    & .header{
-      & .logo-section{
-        padding-left: 16px !important;
-      }
-      & .logo-imgdesc{
-        width: 240px !important;
-      }
-      & .menu-toggle{
-        padding-right: 0.5rem;
-        & .menu-close{
-          margin: 0 8px 0 0 !important;
-          width: 50px !important;
-          padding: 10px !important;
-        }
-      }
-    }
-    // particle
-    & .home-cont{
-      & .pad0{
-        padding: 0 !important;
-      }
-      & h1{
-        font-size: 11vw !important;
-      }
-      & p{
-        font-size: 4vw !important;
-        padding: 0 !important;
-      }
-    }
-    // technologies
-    & .sect{
-      & div{
-        padding: 0 20px !important;
-        & .pad0{
-          padding: 0 !important;
-        }
-      }
-    }
-    & .left-imge{
-      background: $lightgrey !important;
-    }
-    // talk to us
-    & .talk-to-us{
-      text-align: center;
-      & .right-bg{
-        background: $lightgrey !important;
-      }
-    }
-    // services
-    & .services{
-      background: linear-gradient(to top, $white 45%, $lightgrey 45%) !important;
-      & .serv-sect{
-        padding: 0 !important;
-        & p{
-          color: $grey !important;
-        }
-        &:nth-child(1){
-          & .serv-cont{
-            & h3{
-              color: $white !important;
-            }
-          }
-        }
-        &:nth-child(4){
-          & .serv-cont{
-            & h3{
-              color: $grey !important;
-            }
-          }
-        }
-      }
-    }
-    // solutions
-    & .solutions{
-      padding-top: 0 !important;
-    }
-    & .portfl{
-      &:before{
-        height: 4rem !important;
-      }
-      & .portf-cont{
-        padding: 0 20px !important;
-        & .pad0{
-          padding: 0 !important;
-        }
-      }
-    }
-    & .news{
-      & .news-sec{
-        padding-top: 1rem !important;
-        & >div{
-          padding: 0 20px !important;
-        }
-      }
-      & .blog-bg{
-        & .pad0{
-          padding: 0 !important;
-        }
-        & .nws-cont{
-          padding: 20px !important;
-          & .news-content{
-            padding: 0 !important;
-            top: 0 !important;
-            & h3{
-              margin-bottom: 15px !important;
-            }
-            & p{
-              font-size: 0.8em !important;
-            }
-          }
-        }
-      }
-    }
-    // footer
-    & footer{
-      & .foo-cont{
-        padding: 0 20px !important;
-      }
-    }
-  }
-  .home2c, .home2e{
-    & .menu-toggle{
-      & .menu-close{
-        & .bar{
-          background-color: $grey !important;
-        }
-      }
-    }
-  }
-  .home2c, .home3, .home4, .home2e, .home2f, .home2g, .home2h{
-    & .home-cont{
-      & .pad0{
-        padding: 0 20px !important;
-        & .pad0{
-          padding: 0 !important;
-        }
-        & .video-right{
-          position: relative !important;
-          width: auto !important;
-        }
-      }
-      & .h4{
-        opacity: 0.8 !important;
-      }
-    }
-  }
 }
 .lightcolor{
   & .nav__wrapper{
@@ -1957,10 +1000,6 @@ header{
 }
 // media query for screen size > 768 < 992
 @media screen and (min-width: 768px) and (max-width:991px){
-  // home
-  #app{
-    margin-bottom: 440px !important;
-  }
   .left-bg{
     & h2{font-size: 2.1em;}
     & p, li{font-size: 1em;}
@@ -2051,58 +1090,6 @@ header{
       }
     }
   }
-  // home2,2b,2c,2d
-  .home2, .home2b, .home2c, .home2d, .home2e, .home2g{
-    & .home-cont{
-      & .sec-text{
-        z-index: 1;
-      }
-      & .video-right{
-        bottom: 25px !important;
-        top: auto !important;
-      }
-    }
-    & .services{
-      & .serv-cont{
-        & h3, p{
-          color: $grey !important;
-        }
-      }
-    }
-  }
-  // home2b, home2c, home2d
-  .home2b, .home2c, .home2d, .home2e, .home2g{
-    & .menu-toggle{
-      & .menu-close{
-        & .bar{
-          background-color: $grey !important;
-        }
-      }
-    }
-    & .header-bg{
-      & .menu-toggle{
-        & .menu-close{
-          & .bar{
-            background-color: $white !important;
-          }
-        }
-      }
-    }
-    & .header-bg{
-      &.sticky{
-        & .menu-toggle{
-          & .menu-close{
-            & .bar{
-              background-color: $grey !important;
-            }
-          }
-        }
-      }
-    }
-  }
-  // home3
-
-  // home4
 }
 @media screen and (min-width: 992px) and (max-width: 1199px){
   .nav__wrapper{
@@ -2118,48 +1105,40 @@ header{
     }
   }
 }
-@media screen and (max-width:35em){
+@media screen and (max-width:1024px){
   body.scroll{
     overflow: hidden;
     & header{
       background: #fbfaf9 !important;
     }
   }
-  .home2h{
-    & .home-cont{
-      & h1{
-        font-size: 3.2em;
-      }
-    }
-  }
 }
 @supports (-ms-ime-align: auto) {
   /* Microsoft EdgeV13&14 CSS styles go here */
-  .nav__wrapper{
-    display: none !important;
-  }
   .home-cont{
     background: linear-gradient(to right, rgb(162, 207, 232) 30%, rgb(215, 243, 187) 70%) !important;
-  }
-  .home-cont{
+    display: block !important;
+    @media screen and (max-width: 640px){
+      background: linear-gradient(135deg, rgb(162, 207, 232) 30%, rgb(215, 243, 187) 70%) !important;
+    }
     &>div{
+      width: 79%;
+      @media screen and (max-width: 640px){
         width: 79%;
-        @media screen and (max-width: 640px){
-          width: 79%;
-          margin: 8rem auto 4rem !important;
-        }
-        @media screen and (min-width: 991px) and (max-width: 1400px){
-          margin: 10rem auto 4rem !important;
-        }
-        @media screen and (min-width: 1801px){
-          margin: 10rem auto 4rem !important;
-        }
-        @media screen and (min-width:120em){
-          width: 65%;
-        }
-        @media screen and (min-width:160em){
-          width: 50%;
-        }
+        margin: 8rem auto 4rem !important;
+      }
+      @media screen and (min-width: 991px) and (max-width: 1400px){
+        margin: 10rem auto 4rem !important;
+      }
+      @media screen and (min-width: 1801px){
+        margin: 10rem auto 4rem !important;
+      }
+      @media screen and (min-width:120em){
+        width: 65%;
+      }
+      @media screen and (min-width:160em){
+        width: 50%;
+      }
     }
     & .h1 {
     @media screen and (min-width: 991px) and (max-width: 1400px){
@@ -2193,32 +1172,30 @@ header{
 }
 @supports (-ms-accelerator: true) {
    /* Microsoft EdgeV13 CSS styles go here */
-   .nav__wrapper{
-    display: none !important;
-  }
   .home-cont{
     background: linear-gradient(to right, rgb(162, 207, 232) 30%, rgb(215, 243, 187) 70%) !important;
     display: block !important;
-  }
-   .home-cont{
+    @media screen and (max-width: 640px){
+      background: linear-gradient(135deg, rgb(162, 207, 232) 30%, rgb(215, 243, 187) 70%) !important;
+    }
     &>div{
+      width: 79%;
+      @media screen and (max-width: 640px){
         width: 79%;
-        @media screen and (max-width: 640px){
-          width: 79%;
-          margin: 8rem auto 4rem !important;
-        }
-        @media screen and (min-width: 991px) and (max-width: 1400px){
-          margin: 10rem auto 4rem !important;
-        }
-        @media screen and (min-width: 1801px){
-          margin: 10rem auto 4rem !important;
-        }
-        @media screen and (min-width:120em){
-          width: 65%;
-        }
-        @media screen and (min-width:160em){
-          width: 50%;
-        }
+        margin: 8rem auto 4rem !important;
+      }
+      @media screen and (min-width: 991px) and (max-width: 1400px){
+        margin: 10rem auto 4rem !important;
+      }
+      @media screen and (min-width: 1801px){
+        margin: 10rem auto 4rem !important;
+      }
+      @media screen and (min-width:120em){
+        width: 65%;
+      }
+      @media screen and (min-width:160em){
+        width: 50%;
+      }
     }
     & .h1 {
     @media screen and (min-width: 991px) and (max-width: 1400px){
@@ -2251,8 +1228,8 @@ header{
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
    /* IE10 & IE11 CSS styles go here ['162, 207, 232','215, 243, 187']*/
   // img{height: auto !important;}
-  .box-1, .box-3, .boxpink, .box-2, .boxpink2, .boxpink3, img{animation: none !important;}
-  .prod-list{
+.box-1, .box-3, .boxpink, .box-2, .boxpink2, .boxpink3, img{animation: none !important;}
+.prod-list{
     & a{
       display: -ms-flexbox;
     }
@@ -2267,37 +1244,42 @@ header{
     }
   }
   header{
-    & .logo-imgdesc{
-      margin-top: 10px;
+    display: inline-block !important;
+    & .logo-section{
+      top: 10px;
     }
   }
-  .nav__wrapper{
-    display: none !important;
+  #menu{
+    & .menu-sec{
+      & .nav{
+        line-height: 4 !important;
+      }
+    }
   }
   .home-cont{
     background: linear-gradient(to right, rgb(162, 207, 232) 30%, rgb(215, 243, 187) 70%) !important;
     display: block !important;
-  }
-   #header{display: inline-block;}
-   .home-cont{
+    @media screen and (max-width: 640px){
+      background: linear-gradient(135deg, rgb(162, 207, 232) 30%, rgb(215, 243, 187) 70%) !important;
+    }
     &>div{
+      width: 79%;
+      @media screen and (max-width: 640px){
         width: 79%;
-        @media screen and (max-width: 640px){
-          width: 79%;
-          margin: 8rem auto 4rem !important;
-        }
-        @media screen and (min-width: 991px) and (max-width: 1400px){
-          margin: 10rem auto 4rem !important;
-        }
-        @media screen and (min-width: 1801px){
-          margin: 10rem auto 4rem !important;
-        }
-        @media screen and (min-width:120em){
-          width: 65%;
-        }
-        @media screen and (min-width:160em){
-          width: 50%;
-        }
+        margin: 8rem auto 4rem !important;
+      }
+      @media screen and (min-width: 991px) and (max-width: 1400px){
+        margin: 10rem auto 4rem !important;
+      }
+      @media screen and (min-width: 1801px){
+        margin: 10rem auto 4rem !important;
+      }
+      @media screen and (min-width:120em){
+        width: 65%;
+      }
+      @media screen and (min-width:160em){
+        width: 50%;
+      }
     }
     & .h1 {
     @media screen and (min-width: 991px) and (max-width: 1400px){
@@ -2370,54 +1352,6 @@ header{
     }
     @media screen and (min-width: 1401px) and (max-width: 1800px){
       font-size: 1.1em;
-    }
-  }
-}
-.technology, .news, .shared-services{
-  & header{
-    &#header{
-      & nav{
-        & li{
-          &.dropdown{
-            &:hover{
-              & a{
-                color: #8BC4E4 !important;
-                & .submenu-title{
-                  color: $grey;
-                }
-                &:after{
-                  border-right: 1px solid #8BC4E4 !important;
-                  border-bottom: 1px solid #8BC4E4 !important;
-                }
-                &:hover{
-                  opacity: 1 !important;
-                  & .submenu-title{
-                    // color: $pink !important;
-                    color: #8BC4E4 !important;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-      &.sticky{
-        & nav{
-          & li{
-            &.dropdown{
-              &:hover{
-                & a{
-                  color: #8BC4E4 !important;
-                  &:after{
-                    border-right: 1px solid #8BC4E4 !important;
-                    border-bottom: 1px solid #8BC4E4 !important;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
     }
   }
 }

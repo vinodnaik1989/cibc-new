@@ -237,7 +237,8 @@ export class HeaderComponent implements OnInit {
 
 
   changeClasses() {
-    if ($(window).width() < 700) {
+    if ($(window).width() <= 1024) {
+      // alert();
       $('.menu-close').addClass('nav-test').toggleClass('open');
       $('#menu').toggleClass('open');
       $('body').toggleClass('scroll');

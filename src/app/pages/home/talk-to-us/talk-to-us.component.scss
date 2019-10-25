@@ -1,5 +1,6 @@
+@import '../../../../styles/vairable';
 .talk-to-us{
-  background: #fff url('../../../../assets/images/animated_dots.svg');
+  background: $white url('../../../../assets/images/animated_dots.svg');
   background-size: 25%;
   padding: 3rem 0;
   & .talk-title{
@@ -27,7 +28,7 @@
   padding: 5rem 0;
   overflow: visible;
   z-index: 0;
-  background: #333;
+  background: $grey;
   &:after{
     bottom: 0px;
     content: "";
@@ -37,7 +38,7 @@
     top: 0px;
     will-change: transform;
     z-index: 10;
-    background: #fff;
+    background: $white;
     transition: transform 800ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
   }
   &:after{

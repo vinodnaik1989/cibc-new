@@ -1,3 +1,4 @@
+@import '../../../../styles/vairable';
 .news{
   position: relative;
 }
@@ -31,8 +32,7 @@
     color: #bbb;
   }
   & h2{
-    color: #fff;
-    // font-size: 5.18em;
+    color: $white;
     font-weight: bolder;
     margin: 40px 0;
     @media(max-width: 640px){
@@ -45,7 +45,7 @@
   & .blog-bg{
     position: relative;
     display: block;
-    background: #fff;
+    background: $white;
     z-index: 20;
     @media(max-width: 640px){
       padding: 0;
@@ -89,6 +89,10 @@
         @media(max-width: 640px){
           top: 3%;
         }
+        @media screen and (min-width: 641px) and (max-width:767px){
+          top: 5% !important;
+          padding: 2rem;
+        }
         & .news-right-user{
           display: flex;
           align-items: center;
@@ -123,7 +127,7 @@
   }
   & .blg{
     position: relative;
-    padding-top: 3rem;
+    padding: 3rem 0;
     & .boxpink3{
       @media(max-width: 640px){
         display: none;
@@ -134,7 +138,7 @@
     z-index: 20;
     & .blog-sec{
       & .blg-cont{
-        background: #fff;
+        background: $white;
         height: 100%;
         position: relative;
         z-index: 5;
@@ -146,6 +150,9 @@
           }
           & p{
             font-size: 0.8em;
+            @media screen and (max-width:767px){
+              font-size: 18px;
+            }
           }
         }
         & .blg-img{
@@ -205,6 +212,9 @@
         }
       }
       cursor: pointer;
+      @media screen and (max-width:767px){
+        margin-bottom: 3rem;
+      }
     }
   }
 }

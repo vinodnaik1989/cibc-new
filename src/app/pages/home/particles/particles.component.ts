@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-// import { IParams } from '../../../../node_modules/angular-particle/lib/index';
+import { Component, OnInit, HostListener } from '@angular/core';
 import 'lodash';
+import * as $ from "jquery";
 
 declare var _: any;
+var PI2 = Math.PI * 2;
+var HALF_PI = Math.PI / 2;
+
+var isTouch = 'ontouchstart' in window;
+var isSafari =  !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);
 @Component({
   selector: 'app-particles',
   templateUrl: './particles.component.html',
   styleUrls: ['./particles.component.scss']
 })
 export class ParticlesComponent implements OnInit {
-
   constructor() { }
 
     myStyle: object = {};
@@ -18,7 +22,17 @@ export class ParticlesComponent implements OnInit {
     width: number = 100;
     height: number = 100;
 
+    @HostListener('window:resize', ['$event'])
+    onResize(event) {
+      setTimeout(() => {
+
+      }, 100);
+    }
     ngOnInit() {
+      this.renderParticleCanvas();
+    }
+
+    renderParticleCanvas(){
       function Canvas(options) {
         options = _.clone(options || {});
         this.options = _.defaults(options, this.options);
@@ -137,9 +151,10 @@ export class ParticlesComponent implements OnInit {
       }
 
       Canvas.prototype.loop = function() {
-      //   this.clear();
+        // this.clear();
         if(isTouch || isSafari) {
-          this.ghost();
+          // this.ghost();
+          this.ghostGradient();
         } else {
           this.ghostGradient();
         }
@@ -173,7 +188,8 @@ export class ParticlesComponent implements OnInit {
         if(typeof this.options.background === 'string') {
           this.ctx.fillStyle = 'rgb(' + this.options.background + ')';
         } else {
-           var gradient = this.ctx.createRadialGradient(this.width/2, this.height/2, 0, this.width/2, this.height/2, Math.max(this.width, this.height)/2);
+          // var gradient = this.ctx.createRadialGradient(this.width/2, this.height/2, 0, this.width/2, this.height/2, Math.max(this.width, this.height)/2);
+          var gradient = this.ctx.createLinearGradient(0, 0, (this.width/2)+550, 0);
 
           var length = this.options.background.length;
           for(var i = 0; i < length; i++){
@@ -287,6 +303,9 @@ export class ParticlesComponent implements OnInit {
         return abs || false ? Math.abs(distance) : distance;
       };
 
+      const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+      const element = document.getElementById('01').offsetHeight+100;
+
       new Canvas({
         el: document.getElementById('canvas'),
 
@@ -294,73 +313,13 @@ export class ParticlesComponent implements OnInit {
         speed: 0.3,
         radius: 10,
         width: function() { return window.innerWidth; },
-        height: function() { return window.innerHeight; },
+        height: function() { return element; },
+        // height: function() { return window.innerHeight; },
         size: 15,
-        // color: '30, 180, 1',
-        // color: '222, 99, 139, 1',
         color: '255, 255, 255, 1',
         maxDistance: 100,
-        background: ['51, 51, 51', '34, 34, 34']
-        // background: ['1, 62, 66', '1, 40, 60']
+        background: ['162, 207, 232','215, 243, 187']
       });
-      // particles
-      // this.myStyle = {
-      //     'position': 'absolute',
-      //     'width': '100%',
-      //     'height': 'auto',
-      //     'z-index': -1,
-      //     'top': 0,
-      //     'left': 0,
-      //     'right': 0,
-      //     'bottom': 0,
-      // };
-      // this.myParams = {
-      //   particles: {
-      //     number: {
-      //       value: 30,
-      //     },
-      //     color: {
-      //       value: '#DE638B'
-      //     },
-      //     shape: {
-      //       type: 'circle',
-      //     },
-      //     move: {
-      //       enable: 'true',
-      //       speed: 2,
-      //       direction: 'random',
-      //     },
-      //     opacity: {
-      //       value: 1,
-      //       random: 'false'
-      //     },
-      //     size: {
-      //       value: '5',
-      //       random: 'true',
-      //     },
-      //     line_linked: {
-      //       enable: 'false',
-      //       distance: '260',
-      //       color: '#ccc',
-      //       width: '1',
-      //       opacity: '0.2'
-      //     }
-      //   },
-      //   interactivity: {
-      //     detect_on: 'canvas',
-      //     events: {
-      //       onhover:{
-      //         enable: 'false',
-      //         mode: 'grab',
-      //       },
-      //     },
-      //   }
-      // };
+
     }
-
 }
-var PI2 = Math.PI * 2;
-var HALF_PI = Math.PI / 2;
-
-var isTouch = 'ontouchstart' in window;
-var isSafari =  !!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/);

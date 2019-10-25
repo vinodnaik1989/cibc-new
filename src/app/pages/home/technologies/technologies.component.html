@@ -7,13 +7,13 @@
   </div>
 </div>
 <div class="techn techn-list">
-  <div class="tech-list col-xl-6 col-lg-9 col-md-10 col-sm-12 offset-md-3">
-    <div class="row" *ngFor="let tech of technologies">
+  <div class="tech-list col-xl-6 col-lg-9 col-md-12 col-sm-12 offset-lg-3 offset-md-0">
+    <div class="row m-0" *ngFor="let tech of technologies">
       <div class="tech-img col-xl-3 col-lg-4 col-md-4 col-sm-12 pad0">
         <img src='{{tech.image}}' class="serv-pink"/>
         <img src='{{tech.image1}}' class="serv-blue"/>
       </div>
-      <div class="tech-content col-xl-9 col-lg-6 col-md-6 col-sm-12 pad0">
+      <div class="tech-content col-xl-9 col-lg-6 col-md-7 col-sm-12 pad0">
         <h3>{{tech.title}}</h3>
         <p>{{tech.content}}</p>
         <ul>

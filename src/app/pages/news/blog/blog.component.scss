@@ -7,6 +7,10 @@
     & .sec2-news-image{
       overflow: hidden;
       height: 350px;
+      @media screen and (max-width: 640px){
+        height: auto;
+        margin-bottom: 2rem;
+      }
       & img{
         width: 100%;
       }

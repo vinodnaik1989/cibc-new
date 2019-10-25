@@ -3,6 +3,9 @@
   position: relative;
   padding: 6rem 0 4rem;
   background: $white;
+  @media screen and (max-width: 640px){
+    padding: 6rem 15px 4rem;
+  }
   & .sec-title{
     -webkit-box-align: center;
     align-items: center;
@@ -52,6 +55,9 @@
           letter-spacing: 1px;
           font-size: 1rem;
           text-transform: uppercase;
+          @media screen and (max-width: 640px){
+            margin-right: 10px;
+          }
           & a{
             text-decoration: none;
             color: $grey;

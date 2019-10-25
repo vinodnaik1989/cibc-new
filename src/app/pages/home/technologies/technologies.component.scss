@@ -1,3 +1,4 @@
+@import '../../../../styles/vairable';
 .technologies {
   padding: 16rem 0px 8rem;
   @media(max-width: 640px){
@@ -10,7 +11,7 @@
   padding-top: 8rem;
   position: relative;
   & h2{
-    color: #fff;
+    color: $white;
   }
   & p{
     color: #bbb;
@@ -21,9 +22,6 @@
   align-items: center;
   background-color: transparent;
   color: inherit;
-  &:before{
-    // height: 16rem;
-  }
   &:before{
     content: "";
     height: 24%;
@@ -38,6 +36,9 @@
     @media screen and (min-width:511px) and (max-width:614px){
       height: 15%;
     }
+    @media screen and (min-width: 641px) and (max-width:767px){
+      height: 12% !important;
+    }
     @media screen and (min-width:1600px){
       height: 23.5%;
       width: 3px;
@@ -48,20 +49,21 @@
   }
   &:after{
     content: "";
-    // height: 7rem;
-    // left: 6.25vw;
     height: 22%;
     left: 6.5%;
     position: absolute;
     top: 24%;
     width: 10%;
     right: auto;
-    // top: 8rem;
-    // width: 12vw;
     background: url('../../../../assets/images/circle-blue.svg') center top / contain no-repeat;
     @media screen and (max-width: 640px){
       height: 13%;
       left: 7%;
+      top: 12%;
+    }
+    @media screen and (min-width: 641px) and (max-width:767px){
+      height: 17%;
+      left: 6%;
       top: 12%;
     }
     @media screen and (min-width: 2160px){
@@ -71,21 +73,21 @@
   & .tech-cont{
     &:before{
       content: "";
-      // height: 6.375vw;
-      // left: -18.25vw;
       height: 100%;
       left: -30%;
       right: auto;
       position: absolute;
-      // top: calc(8rem - 2vw);
-      // width: 9.375vw;
       width: 20%;
-      // background: url('../../../../assets/images/dots.svg') center top / contain no-repeat rgb(50, 50, 49);
       background: url('../../../../assets/images/dots.svg') center bottom / contain repeat-y !important;
       @media screen and (max-width: 640px){
         height: 12.375vw;
         left: 7.75vw;
         width: 12.375vw;
+      }
+      @media screen and (min-width: 641px) and (max-width:767px){
+        height: 50%;
+        left: 3%;
+        top: -46% !important;
       }
       @media screen and (min-width: 2160px){
         top: calc(1rem - 2.75vw);
@@ -118,13 +120,19 @@
     @media(max-width:768px){
       display: none;
     }
+    @media screen and (min-width: 769px) and (max-width:991px){
+      display: none;
+    }
   }
   & .tech-list{
+    @media screen and (min-width: 641px) and (max-width:767px){
+      padding: 0 20px;
+    }
     & >div{
       padding-bottom: 40px;
     }
     & h3 {
-      color: #fff;
+      color: $white;
       font-weight: bold;
     }
     & p {
@@ -133,6 +141,9 @@
     & .tech-img{
       text-align: center;
       @media(max-width:640px){
+        margin-bottom: 3rem;
+      }
+      @media screen and (min-width: 641px) and (max-width:767px){
         margin-bottom: 3rem;
       }
       & img{
@@ -156,11 +167,39 @@
           &:nth-child(2){
             margin-right: 15px;
           }
-          @media(max-width:640px){
-            & img{
+          @media screen and (min-width: 769px) and (max-width:991px){
+            width: 25%;
+          }
+          @media screen and (min-width: 992px) and (max-width:1024px){
+            width: 30%;
+          }
+          @media screen and (min-width: 1025px) and (max-width:1480px){
+            width: 30%;
+          }
+          & img{
+            @media(max-width:640px){
               width: 75%;
             }
+            @media screen and (min-width: 769px) and (max-width:1480px){
+              width: 100%;
+            }
           }
+        }
+      }
+    }
+  }
+}
+.techn-list{
+  & .tech-list{
+    & .row{
+      &:nth-child(4){
+        & img{
+          padding-left: 10px;
+        }
+      }
+      &:nth-child(5){
+        & img{
+          padding-left: 10px;
         }
       }
     }

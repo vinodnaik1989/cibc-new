@@ -1,3 +1,14 @@
+@import '../../../../styles/vairable';
+#canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+}
+.home-particles{
+  position: relative;
+  background: #fff;
+}
 .home-cont{
   position: relative;
 }
@@ -5,25 +16,46 @@
   -webkit-box-align: center;
   align-items: center;
   box-sizing: border-box;
-  display: flex;
+  // display: flex;
   // min-height: 70vh;
   position: relative;
   color: #fff;
-  & .pad0{
-    @media(max-width: 640px){
-      padding: 0 !important;
-    }
-  }
-  // z-index: -99;
   &>div{
-    // width: 79%;
-    @media(max-width: 640px){
+    width: 79%;
+    @media screen and (max-width: 640px){
       width: 79%;
+      margin: 8rem auto 4rem !important;
+    }
+    @media screen and (min-width: 991px) and (max-width: 1400px){
+      margin: 10rem auto 4rem !important;
+    }
+    @media screen and (min-width: 1801px){
+      margin: 10rem auto 4rem !important;
+    }
+    @media screen and (min-width:120em){
+      width: 65%;
+    }
+    @media screen and (min-width:160em){
+      width: 50%;
+    }
+    @media screen and (max-width: 736px) and (orientation: landscape){
+      margin: 8rem auto 4rem !important;
+    }
+    @media screen and (max-width: 812px) and (orientation: landscape){
       margin: 8rem auto 4rem !important;
     }
     margin: 12rem auto 8rem;
     position: relative;
     z-index: 99;
+  }
+  &:after{
+    content: "";
+    background: url('../../../../assets/images/wave-bg2.png');
+    width: 100%;
+    height: 40px;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 0;
   }
   & h1{
     display: inline-block;
@@ -32,15 +64,34 @@
     animation: 400ms cubic-bezier(0.23, 1, 0.32, 1) 800ms 1 normal backwards running h1;
   }
   & .h1 {
-    color: rgb(251, 250, 249);
-    font-size: 3.2358em;
+    color: #333;
+    @media screen and (min-width: 991px) and (max-width: 1400px){
+      font-size: 2.2358em;
+    }
+    @media screen and (min-width: 1401px) and (max-width: 1800px){
+      font-size: 3.2358em;
+    }
+    @media screen and (min-width: 1801px){
+      font-size: 3.2358em;
+    }
+    @media screen and (max-width:48em){
+      font-size: 3.0358em;
+    }
+    @media screen and (max-width:64em){
+      font-size: 2.7358em;
+    }
+    @media screen and (max-width: 736px) and (orientation: landscape){
+      font-size: 2.2358em;
+    }
+    @media screen and (max-width: 736px) and (orientation: landscape){
+      font-size: 2.2358em;
+    }
+    font-size: 3.8358em;
     font-weight: bold;
     line-height: 1.15;
     margin-bottom: 0.5em;
     margin-top: 0.25em;
-    @media(max-width:640px){
-      font-size: 11vw;
-    }
+    z-index: 1;
     &::after{
       bottom: 0px;
       content: "";
@@ -51,18 +102,26 @@
       transform: scale(0, 1);
       transform-origin: right center;
       animation: 400ms cubic-bezier(0.23, 1, 0.32, 1) 1100ms 1 normal backwards running h1aft;
-      background: rgb(251, 250, 249);
+      background: #444;
     }
   }
   & p{
     font-size: 1.272em;
-    color: rgb(187, 187, 187);
-    @media(max-width:640px){
-      font-size: 4vw;
+    color: #333;
+    @media screen and (min-width: 991px) and (max-width: 1400px){
+      font-size: 1.1em;
+    }
+    @media screen and (min-width: 1401px) and (max-width: 1800px){
+      font-size: 1.1em;
+    }
+    @media screen and (max-width: 736px) and (orientation: landscape){
+      font-size: 1em;
+    }
+    @media screen and (max-width: 736px) and (orientation: landscape){
+      font-size: 1em;
     }
   }
   & h4{
-    // font-size: 0.618em;
     font-size: 1em;
     font-weight: normal;
     letter-spacing: 0.1em;
@@ -70,19 +129,20 @@
     margin-top: 0px;
     opacity: 0.5;
     text-transform: uppercase;
+    color: #333;
     & span{
       &:nth-child(1){
-        animation: 1200ms ease-in 1s 1 normal backwards running image;
+        animation: 800ms ease-in 1s 1 normal backwards running image;
       }
     }
     & span{
       &:nth-child(2){
-        animation: 1200ms ease-in 1.5s 1 normal backwards running image;
+        animation: 1300ms ease-in 1.5s 1 normal backwards running image;
       }
     }
     & span{
       &:nth-child(3){
-        animation: 1200ms ease-in 2.5s 1 normal backwards running image;
+        animation: 1800ms ease-in 2.5s 1 normal backwards running image;
       }
     }
   }

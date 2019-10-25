@@ -1,3 +1,4 @@
+@import '../../../../styles/vairable';
 .serv4{
   -webkit-box-align: center;
   align-items: center;
@@ -8,13 +9,16 @@
   -webkit-box-align: start;
   align-items: start;
   padding-top: 8rem;
-  background: linear-gradient(to left, rgb(34, 34, 34) 50%, rgb(51, 51, 51) 50%);
+  background: linear-gradient(to left, $lightgrey 50%, $white 50%) !important;
   @media(max-width:640px){
-    background: linear-gradient(to top, rgb(34, 34, 34) 45%, rgb(51, 51, 51) 45%);
+    background: linear-gradient(to top, $lightgrey 45%, $white 45%) !important;
+    padding-top: 3rem;
+  }
+  @media screen and (max-width:767px){
+    background: linear-gradient(to top, $lightgrey 48%, $white 48%) !important;
     padding-top: 3rem;
   }
   & h3{
-    color: #fff;
     margin-bottom: 1rem;
     font-size: 2rem;
     text-transform: uppercase;
@@ -22,8 +26,8 @@
       height: 76px;
     }
   }
-  & p{
-    color: #bbb;
+  & h3, p{
+    color: $grey;
   }
   & img{
     margin-bottom: 2rem;
@@ -37,6 +41,9 @@
   & .serv-sect:nth-child(even){
     padding-left: 40px;
     @media(max-width: 640px){
+      padding-left: 15px;
+    }
+    @media screen and (min-width: 641px) and (max-width:767px){
       padding-left: 15px;
     }
   }
@@ -130,6 +137,7 @@
 }
 .portfl{
   padding: 12rem 0px 4rem;
+  background: $grey;
   & h2{
     color: #fff;
     font-weight: bold;
@@ -140,10 +148,7 @@
   }
   &:before{
     content: "";
-    // height: 10.2rem;
-    // left: 17.85vw;
     position: absolute;
-    // top: 3.2rem;
     height: 16% !important;
     left: 18%;
     right: auto;
@@ -154,9 +159,9 @@
       height: 4% !important;
       top: 6%;
     }
-  }
-  &:after{
-    // top: 16rem;
+    @media screen and (min-width: 641px) and (max-width:767px){
+      height: 6% !important;
+    }
   }
   &:after{
     content: "";
@@ -167,37 +172,38 @@
     width: 10%;
     position: absolute;
     background: url('../../../../assets/images/circle-blue.svg') center top/contain no-repeat;
-    @media(max-width: 640px){
+    @media screen and (max-width: 640px){
       top: 4%;
       left: 13%;
       height: 6rem;
+    }
+    @media screen and (min-width: 641px) and (max-width:767px){
+      top: 6% !important;
+      height: 4% !important;
     }
   }
   & .portf-cont{
     &:before{
       content: "";
-      // height: 9.375vw;
-      // left: -20.15vw;
       height: 11rem;
       left: -35%;
       right: auto;
       width: 25%;
       position: absolute;
-      // top: calc(8rem - 2vw);
-      // width: 9.375vw;
       background: url('../../../../assets/images/dots.svg') center bottom/contain repeat-y !important;
       @media(max-width: 640px){
         top: -60% !important;
         left: 6%;
         height: 4rem;
       }
+      @media screen and (min-width: 641px) and (max-width:767px){
+        height: 6rem !important;
+        top: -75% !important;
+        left: 8% !important;
+      }
     }
     &:before{
       top: -10%;
-      // top: calc(0rem - 2.75vw);
-      @media(max-width: 640px){
-        // top: calc(-8rem - 2.75vw);
-      }
     }
   }
 }
@@ -206,8 +212,11 @@
 }
 .folios{
   display: block;
+  @media screen and (max-width:767px){
+    margin-bottom: 3rem;
+  }
   & .boxpink{
-    @media(max-width: 640px){
+    @media screen and (max-width: 640px){
       display: block;
     }
   }

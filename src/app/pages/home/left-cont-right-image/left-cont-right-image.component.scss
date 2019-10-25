@@ -1,3 +1,4 @@
+@import '../../../../styles/vairable';
 .bef-aft{
   -webkit-box-align: center;
   align-items: center;
@@ -21,7 +22,6 @@
   overflow: hidden;
   padding: 4rem 0px;
   text-decoration: none;
-  // min-height: 100vh;
   z-index: 0;
   &::after{
     bottom: 0px;
@@ -62,7 +62,6 @@
   // padding: 8rem 0px;
   padding: 8rem 0px 12rem;
   overflow: visible;
-  background: #333;
   @media (max-width:640px){
     padding-top: 4rem;
   }
