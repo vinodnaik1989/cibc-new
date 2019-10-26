@@ -3,11 +3,13 @@ import {SubMenu} from '../../../models/submenu';
 import * as $ from 'jquery';
 import {NavigationEnd, Router} from '@angular/router';
 import {filter} from 'rxjs/operators';
+import {NgbAccordionConfig} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  providers: [NgbAccordionConfig]
 })
 export class HeaderComponent implements OnInit {
 
@@ -191,7 +193,10 @@ export class HeaderComponent implements OnInit {
   isShown: boolean = false;
   menuOpened = false;
 
-  constructor(public router: Router) {
+  constructor(public router: Router, config: NgbAccordionConfig) {
+    config.closeOthers = true;
+    config.type = 'info';
+
     this.router.events.pipe(
       filter((event: any) => event instanceof NavigationEnd)
     ).subscribe(x => {

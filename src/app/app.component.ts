@@ -31,7 +31,7 @@ const BLOG_DATA_2: BlogData[] = [
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
 
@@ -75,6 +75,8 @@ export class AppComponent {
   title = 'cibc';
 
   constructor(private renderer: Renderer2, private router: Router) {
+
+
     // this.selectActive = 0;
     this.setActive = function (index) {
       this.selectActive = 0;
