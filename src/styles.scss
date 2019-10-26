@@ -11,6 +11,14 @@ html body{
 .responsive-menu, #mobile-menu{
   display: none !important;
 }
+@media screen and (max-width: 1024px){
+  .responsive-menu{
+    display: block !important;
+  }
+  #menu{
+    display: none !important;
+  }
+}
 body{
   background: transparent;
   height: 100%;

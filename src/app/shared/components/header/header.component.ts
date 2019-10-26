@@ -236,10 +236,18 @@ export class HeaderComponent implements OnInit {
   }
 
 
+  // changeClasses() {
+  //   if ($(window).width() <= 1024) {
+  //     $('.menu-close').addClass('nav-test').toggleClass('open');
+  //     $('#menu').toggleClass('open');
+  //     $('body').toggleClass('scroll');
+  //   }
+  // }
+
   changeClasses() {
     if ($(window).width() <= 1024) {
       $('.menu-close').addClass('nav-test').toggleClass('open');
-      $('#menu').toggleClass('open');
+      $('#mobile-menu').toggleClass('open');
       $('body').toggleClass('scroll');
     }
   }

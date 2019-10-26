@@ -47,8 +47,9 @@
       justify-content: space-between;
       & ul{
         padding: 0;
-        display: flex;
+        display: block;
         & li{
+          display: inline-block;
           list-style: none;
           line-height: 38px;
           margin-right: 22px;
