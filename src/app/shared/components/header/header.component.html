@@ -16,24 +16,24 @@
           <div id="menu" class="collapse navbar-collapse">
             <div class="menu-sec">
               <ul class="nav navbar-nav mr-0">
-                <li (mouseover)="menuOpen()" (mouseout)="menuClose()" class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Products</a>
+                <li (mouseover)="menuOpen()" (mouseout)="menuClose()" class="nav-item dropdown" *ngFor="let i of submenu">
+                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">{{i.main_title}}</a>
                   <ul class="dropdown-menu" [ngClass]='{"active": menuOpened === true}'>
                     <li>
                       <div class="submenu-content">
                         <div class="row">
                           <div class="col-md-7 divider prod-left">
                             <div class="left-submenu-image">
-                              <img src="../../assets/images/products-blue.png" class="serv-blue"/>
-                              <h4>Products</h4>
+                              <img src="{{i.submenu_img}}" class="serv-blue"/>
+                              <h4>{{i.submenu_title}}</h4>
                               <div class="prod-desc">
-                                <p>Explore our suite of Product</p>
+                                <p>{{i.submenu_desc}}</p>
                               </div>
                             </div>
                           </div>
                           <div class="col-md-5 divider prod-list">
                             <ul>
-                              <li *ngFor="let item of submenu" [ngClass]='{"active": "/"+item.link === router.url}'>
+                              <li [ngClass]='{"active": "/"+item.link === router.url}' *ngFor="let item of i.submenu">
                                 <a href="#" routerLink="/{{item.link}}" (click)="changeClasses()">
                                   <div class="icon">
                                     <img src="{{item.icon}}"/>
@@ -51,251 +51,33 @@
                     </li>
                   </ul>
                 </li>
-                <li (mouseover)="menuOpen()" (mouseout)="menuClose()" class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">
-                    Shared Services</a>
-                  <ul class="dropdown-menu" [ngClass]='{"active": menuOpened === true}'>
-                    <li>
-                      <div class="submenu-content">
-                        <div class="row">
-                          <div class="col-md-7 divider prod-left">
-                            <div class="left-submenu-image">
-                              <img src="../../assets/images/shared-serives-blue.png" class="serv-blue"/>
-                              <h4>Shared Services</h4>
-                              <div class="prod-desc">
-                                <p>Explore our suite of Shared Services</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-5 divider prod-list">
-                            <ul>
-                              <li *ngFor="let item of sharedservices"
-                                  [ngClass]='{"active": "/"+item.link === router.url}'>
-                                <a href="#" routerLink="/{{item.link}}" (click)="changeClasses()">
-                                  <div class="icon"><img src="{{item.icon}}"/></div>
-                                  <div class="submenu-title">{{item.title}}</div>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li (mouseover)="menuOpen()" (mouseout)="menuClose()" class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Training &
-                    Support</a>
-                  <ul class="dropdown-menu" [ngClass]='{"active": menuOpened === true}'>
-                    <li>
-                      <div class="submenu-content">
-                        <div class="row">
-                          <div class="col-md-7 divider prod-left">
-                            <div class="left-submenu-image">
-                              <img src="../../assets/images/training-support-blue.png" class="serv-blue"/>
-                              <h4>Training &amp; Support</h4>
-                              <div class="prod-desc">
-                                <p>Explore our suite of Training &amp; Support</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-5 divider prod-list">
-                            <ul>
-                              <li *ngFor="let item of training" [ngClass]='{"active": "/"+item.link === router.url}' >
-                                <a href="#" routerLink="/{{item.link}}" (click)="changeClasses()">
-                                  <div class="icon"><img src="{{item.icon}}"/></div>
-                                  <div class="submenu-title">{{item.title}}</div>
-                                  <!-- <span>{{item.abbr}}</span> -->
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li (mouseover)="menuOpen()" (mouseout)="menuClose()" class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Knowledge
-                    Center</a>
-                  <ul class="dropdown-menu" [ngClass]='{"active": menuOpened === true}'>
-                    <li>
-                      <div class="submenu-content">
-                        <div class="row">
-                          <div class="col-md-7 divider prod-left">
-                            <div class="left-submenu-image">
-                              <img src="../../assets/images/knowledge-center-blue.png" class="serv-blue"/>
-                              <h4>Knowledge Center</h4>
-                              <div class="prod-desc">
-                                <p>Explore our suite of Knowledge Center</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-5 divider prod-list">
-                            <ul>
-                              <li *ngFor="let item of knowledge" [ngClass]='{"active": "/"+item.link === router.url}'>
-                                <a href="#" routerLink="/{{item.link}}" (click)="changeClasses()">
-                                  <div class="icon"><img src="{{item.icon}}"/></div>
-                                  <div class="submenu-title">{{item.title}}</div>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
-                <li (mouseover)="menuOpen()" (mouseout)="menuClose()" class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Contact
-                    Us</a>
-                  <ul class="dropdown-menu" [ngClass]='{"active": menuOpened === true}'>
-                    <li>
-                      <div class="submenu-content">
-                        <div class="row">
-                          <div class="col-md-7 divider prod-left">
-                            <div class="left-submenu-image">
-                              <h4>Contact Us</h4>
-                              <div class="prod-desc">
-                                <p>Explore our suite of Contact Us</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-md-5 divider prod-list">
-                            <ul>
-                              <li *ngFor="let item of contact" [ngClass]='{"active": "/"+item.link === router.url}'>
-                                <a href="#" routerLink="/{{item.link}}" (click)="changeClasses()">
-                                  <div class="icon"><img src="{{item.icon}}"/></div>
-                                  <div class="submenu-title">{{item.title}}</div>
-                                  <!-- <span>{{item.abbr}}</span> -->
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
               </ul>
             </div>
           </div>
-          <!-- mobile menu -->
           <div id="mobile-menu">
-            <ul class="mobile-nav mr-0">
-              <li class="mobile-dropdown">
-                <a class="mobile-toggle" href="#">Products</a>
-                <ul class="mobile-submenu">
-                  <li>
-                    <div class="col-sm-12 divider mobile-submenu-list">
-                      <ul>
-                        <li *ngFor="let item of submenu">
-                          <a href="#" routerLink="/{{item.link}}">
-                            <div class="icon">
-                              <img src="{{item.icon}}"/>
-                            </div>
-                            <div class="submenu-title">
-                              {{item.title}}
-                              <span>{{item.abbr}}</span>
-                            </div>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="mobile-dropdown">
-                <a class="mobile-toggle" href="#">Shared Services</a>
-                <ul class="mobile-submenu">
-                  <li>
-                    <div class="col-sm-12 divider mobile-submenu-list">
-                      <ul>
-                        <li *ngFor="let item of submenu">
-                          <a href="#" routerLink="/{{item.link}}">
-                            <div class="icon">
-                              <img src="{{item.icon}}"/>
-                            </div>
-                            <div class="submenu-title">
-                              {{item.title}}
-                              <span>{{item.abbr}}</span>
-                            </div>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="mobile-dropdown">
-                <a class="mobile-toggle" href="#">Training &amp; Support</a>
-                <ul class="mobile-submenu">
-                  <li>
-                    <div class="col-sm-12 divider mobile-submenu-list">
-                      <ul>
-                        <li *ngFor="let item of submenu">
-                          <a href="#" routerLink="/{{item.link}}">
-                            <div class="icon">
-                              <img src="{{item.icon}}"/>
-                            </div>
-                            <div class="submenu-title">
-                              {{item.title}}
-                              <span>{{item.abbr}}</span>
-                            </div>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="mobile-dropdown">
-                <a class="mobile-toggle" href="#">Knowledge Center</a>
-                <ul class="mobile-submenu">
-                  <li>
-                    <div class="col-sm-12 divider mobile-submenu-list">
-                      <ul>
-                        <li *ngFor="let item of submenu">
-                          <a href="#" routerLink="/{{item.link}}">
-                            <div class="icon">
-                              <img src="{{item.icon}}"/>
-                            </div>
-                            <div class="submenu-title">
-                              {{item.title}}
-                              <span>{{item.abbr}}</span>
-                            </div>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li class="mobile-dropdown">
-                <a class="mobile-toggle" href="#">Contact Us</a>
-                <ul class="mobile-submenu">
-                  <li>
-                    <div class="col-sm-12 divider mobile-submenu-list">
-                      <ul>
-                        <li *ngFor="let item of submenu">
-                          <a href="#" routerLink="/{{item.link}}">
-                            <div class="icon">
-                              <img src="{{item.icon}}"/>
-                            </div>
-                            <div class="submenu-title">
-                              {{item.title}}
-                              <span>{{item.abbr}}</span>
-                            </div>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-            </ul>
+              <ngb-accordion #acc="ngbAccordion" activeIds="config-panel-one">
+                <ngb-panel title="One" id="config-panel-one">
+                  <ng-template ngbPanelContent>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                    aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                    sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                    craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                    occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                    labore sustainable VHS.
+                  </ng-template>
+                </ngb-panel>
+                <ngb-panel title="Two">
+                  <ng-template ngbPanelContent>
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                    aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                    sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                    craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                    occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                    labore sustainable VHS.
+                  </ng-template>
+                </ngb-panel>
+              </ngb-accordion>
           </div>
-          <!-- end of mobile menu -->
         </nav>
       </div>
     </div>

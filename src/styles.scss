@@ -2,7 +2,6 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 $white : #fff;
 $grey : #333;
-$pink : #DE638B;
 $lightgrey: #d4d4d4;
 html body{
   font-family: 'Questrial', sans-serif;
@@ -173,7 +172,7 @@ button{
     left: 0;
     right: 0;
     bottom: 0;
-    background: $pink;
+    // background: $pink;
     -webkit-transform: scaleY(0);
     transform: scaleY(0);
     -webkit-transform-origin: 50% 0;
@@ -467,40 +466,6 @@ button{
         }
       }
     }
-    &.header-bg{
-      & .logo-imgdesc{
-        background: url('../src/assets/images/ae_logo-white.png') no-repeat !important;
-        background-size: 100% !important;
-      }
-      & #menu{
-        & .nav{
-          & .nav-link{
-            color: $white !important;
-            &:after{
-              border-right: 1px solid $white;
-              border-bottom: 1px solid $white;
-            }
-          }
-        }
-      }
-      &.sticky{
-        & .logo-imgdesc{
-          background: url('../src/assets/images/ae_logo-black.png') no-repeat !important;
-          background-size: 100% !important;
-        }
-        & #menu{
-          & .nav{
-            & .nav-link{
-              color: $grey !important;
-              &:after{
-                border-right: 1px solid $grey;
-                border-bottom: 1px solid $grey;
-              }
-            }
-          }
-        }
-      }
-    }
   }
 }
 .technology, .shared-services, .news, .home{
@@ -527,7 +492,6 @@ button{
           display: block;
           & a{
             &:after{
-              // transform: rotate(225deg);
               transition: transform 0.2s;
               vertical-align: middle;
             }
@@ -801,6 +765,9 @@ button{
     }
   }
 }
+
+// css for ie11, edge
+
 @supports (-ms-ime-align: auto) {
   /* Microsoft EdgeV13&14 CSS styles go here */
   .home-cont{

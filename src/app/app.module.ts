@@ -18,6 +18,7 @@ import { SharedModule } from './shared/shared.module';
 import { NewsComponent } from './pages/news/news.component';
 import { BlogComponent } from './pages/news/blog/blog.component';
 import { TechnologyComponent } from './pages/technology/technology.component';
+import {NgbModule, NgbAccordionConfig} from '@ng-bootstrap/ng-bootstrap';
 // const routes: Routes =[];
 @NgModule({
   declarations: [
@@ -39,11 +40,12 @@ import { TechnologyComponent } from './pages/technology/technology.component';
     AppRoutingModule,
     ParticlesModule,
     SharedModule,
+    NgbModule
     // RouterModule.forRoot(routes,{useHash:false})
     // RouterModule.forRoot(Routes, {useHash: true})
   ],
   // providers: [],
-  providers: [Location, {provide: LocationStrategy, useClass: PathLocationStrategy}],
+  providers: [Location, {provide: LocationStrategy, useClass: PathLocationStrategy}, NgbAccordionConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
