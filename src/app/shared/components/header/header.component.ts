@@ -1,9 +1,9 @@
-import {Component, OnInit, HostListener, Host} from '@angular/core';
+import {Component, OnInit, HostListener, Host, ViewChild} from '@angular/core';
 import {SubMenu} from '../../../models/submenu';
 import * as $ from 'jquery';
 import {NavigationEnd, Router} from '@angular/router';
 import {filter} from 'rxjs/operators';
-import {NgbAccordionConfig} from '@ng-bootstrap/ng-bootstrap';
+import {NgbAccordion, NgbAccordionConfig} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +12,8 @@ import {NgbAccordionConfig} from '@ng-bootstrap/ng-bootstrap';
   providers: [NgbAccordionConfig]
 })
 export class HeaderComponent implements OnInit {
+  @ViewChild(NgbAccordion, {static: false}) acc: NgbAccordion;
+
 
   opened = false;
   submenu: any[] = [
@@ -218,21 +220,22 @@ export class HeaderComponent implements OnInit {
   }
 
 
-  changeClasses() {
-    if ($(window).width() <= 1024) {
-      $('.menu-close').addClass('nav-test').toggleClass('open');
-      $('#menu').toggleClass('open');
-      $('body').toggleClass('scroll');
-    }
-  }
-
   // changeClasses() {
   //   if ($(window).width() <= 1024) {
   //     $('.menu-close').addClass('nav-test').toggleClass('open');
-  //     $('#mobile-menu').toggleClass('open');
+  //     $('#menu').toggleClass('open');
   //     $('body').toggleClass('scroll');
   //   }
   // }
+
+  changeClasses() {
+    if ($(window).width() <= 1024) {
+      $('.menu-close').addClass('nav-test').toggleClass('open');
+      $('#mobile-menu').toggleClass('open');
+      $('body').toggleClass('scroll');
+      this.acc.collapseAll();
+    }
+  }
 
   toggle() {
     this.opened = !this.opened;

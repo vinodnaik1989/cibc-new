@@ -1,4 +1,5 @@
 $lightgrey: #d4d4d4;
+$black: #000;
 @import '../../../../styles/vairable';
 header {
   display: block;
@@ -540,126 +541,107 @@ nav {
   }
 }
 @media screen and (max-width: 1024px) {
-
-  #menu{
-    & .dropdown{
-      & .dropdown-menu{
-        box-shadow: none !important;
-        & .prod-left{
-          display: none;
-          opacity: 0;
-        }
-      }
-    }
-    &.open{
-      & .dropdown{
-        & .dropdown-menu{
-          height: auto;
-          opacity: 0;
-          visibility: hidden;
-          transform: height 0.2s ease-out;
-          position: relative;
-          -webkit-transition: all 1s -0.25s ease-out;
-          -moz-transition: all 1s -0.25s ease-out;
-          -o-transition: all 1s -0.25s ease-out;
-          -ms-transition: all 1s -0.25s ease-out;
-          transition: all 400ms -0.25s ease-out;
-          padding: 0;
-          top: 0;
-          max-height: 0;
-          transform: none;
-          width: 100%;
-          left: 0;
-        }
-        &.open{
-          & .dropdown-menu{
-            position: relative !important;
-            top: 0 !important;
-            background: #d4d4d4;
-            height: auto;
-            opacity: 1;
-            -webkit-transition: all 600ms ease;
-            -moz-transition: all 600ms ease;
-            -o-transition: all 600ms ease;
-            -ms-transition: all 600ms ease;
-            transition: all 600ms ease;
-            /* max-height: 250px; */
-            max-height: inherit;
-            visibility: visible;
-            width: 100%;
-            left: 0;
-            overflow-y: scroll;
-          }
-        }
-      }
-      & .nav{
-        padding: 0 !important;
-        & .nav-link{
-          &:focus{
-            outline: none;
-          }
-        }
-      }
-    }
-  }
-
-  nav .dropdown:hover .dropdown-menu > li {
-    width: 100%;
-    background: #fbfaf9 !important;
-    box-shadow: none;
-    float: none;
-    left: auto;
-  }
-
-  nav .dropdown:hover .dropdown-menu img {
-    width: 60% !important;
-  }
-
-  header nav li.dropdown:hover a:after, .home header nav li.dropdown:hover a:after {
-    border-right: 1px solid #333 !important;
-    border-bottom: 1px solid #333 !important;
-    position: absolute !important;
-    right: 25px;
-    top: 23px;
-    transform: rotate(45deg) !important;
-  }
-
-  nav .dropdown.open .dropdown-menu li .submenu-content li {
-    padding: 10px 0 !important;
-    line-height: 22px;
-  }
-
-  nav .dropdown:hover .dropdown-menu li .submenu-content ul {
-    padding: 0 .5rem !important;
-  }
-
-  header#header #menu .nav .dropdown {
-    border-bottom: .5px solid #e7e6e6 !important;
-    width: 100%;
-  }
-
-  header#header #menu .nav .nav-link {
-    height: 60px !important;
-    line-height: 55px !important;
-    position: relative;
-    color: #333 !important;
-    font-size: 18px;
-  }
-
-  header #menu .nav .nav-link:after {
-    position: absolute !important;
-    right: 25px;
-    top: 28px;
-    border-right: 1px solid #333 !important;
-    border-bottom: 1px solid #333 !important;
-  }
-
-  #menu.open {
-    position: fixed !important;
-  }
   // css for mobile menu
-  // #header{
-  //   & #menu{display: none !important;}
-  // }
+  #header{
+    & #menu{display: none !important;}
+  }
 
+  #mobile-menu{
+    &.open{
+      display: block !important;
+      height: 92vh;
+      position: fixed;
+      top: 61px;
+      width: 100%;
+      left: 0;
+      background: $white;
+      overflow: scroll;
+      z-index: 9;
+      & .accordion{
+        & ::ng-deep{
+          .card {
+            border: none;
+            & .card-header{
+              background: none !important;
+              border-bottom: .5px solid #e7e6e6;
+              margin-bottom: 0 !important;
+              padding: 0;
+              & .btn-link{
+                color: $black;
+                width: 100%;
+                text-align: left;
+                padding: 0 15px;
+                text-decoration: none;
+                text-transform: none;
+                letter-spacing: 0;
+                &:after{
+                  content: '';
+                  position: absolute !important;
+                  right: 25px;
+                  top: 28px;
+                  width: 8px;
+                  height: 8px;
+                  transform: rotate(45deg);
+                  border-right: 1px solid #333 !important;
+                  border-bottom: 1px solid #333 !important;
+                }
+              }
+            }
+          }
+          .card-body{
+            background: $bgGrey;
+            padding: 1rem 0;
+            & ul{
+              padding: 0;
+              margin: 0;
+              & li{
+                list-style: none;
+                & a{
+                  display: flex;
+                  display: -ms-flexbox;
+                  display: -webkit-flex;
+                  opacity: .6;
+                  padding: .7rem 1rem !important;
+                  text-decoration: none;
+                  & span{
+                    display: block;
+                    font-size: 0.82em;
+                    opacity: 1;
+                  }
+                }
+                & .icon{
+                  flex: 1;
+                  display: flex;
+                  vertical-align: middle;
+                  position: relative;
+                  display: -ms-flexbox;
+                  -ms-flex: 1;
+                  -ms-flex-item-align: center;
+                  width: 25px;
+                  float: left;
+                  & img{
+                    margin: 0 auto;
+                    display: block;
+                    width: 60% !important;
+                  }
+                }
+                & .submenu-title{
+                  width: calc(100% - 40px);
+                  float: left;
+                  padding-left: 5px;
+                }
+                &.active{
+                  & a{
+                    color: $black !important;
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
+

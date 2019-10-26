@@ -51,6 +51,9 @@
   }
   & .sec2-right{
     padding-left: 3rem;
+    @media screen and (max-width: 640px){
+      padding-left: 1rem;
+    }
     & h3{
       font-weight: bold;
     }
@@ -114,6 +117,9 @@
   }
   & .blocks{
     padding-top: 0;
+    @media screen and (max-width:640px){
+      margin-bottom: 2rem;
+    }
     & >div{
       border: 1px solid $lightgrey;
       position: relative;
@@ -242,6 +248,9 @@
 #sec-five{
   padding: 4rem 0;
   position: relative;
+  @media screen and (max-width:640px){
+    padding: 0;
+  }
   & .sec5-right-cont{
     padding-left: 2rem;
     @media screen and (max-width:640px){

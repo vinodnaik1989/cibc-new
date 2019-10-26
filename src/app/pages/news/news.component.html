@@ -13,11 +13,9 @@
       <div class="row m-0">
         <nav class="w-100">
           <ul>
-            <li><a href="#">Menu 1</a></li>
-            <li><a href="#">Menu 2</a></li>
-            <li><a href="#">Menu 3</a></li>
-            <li><a href="#">Menu 4</a></li>
-            <li><a href="#">Menu 5</a></li>
+            <li *ngFor="let n of news" (click)="select(n)" [ngClass]="{active: isActive(n)}">
+              <a>{{n.title}}</a>
+            </li>
           </ul>
           <div class="sec1-search">
             <img src="../../../assets/icons/search.svg">

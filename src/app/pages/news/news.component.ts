@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogData } from '../../models/reusable';
 import {Blog} from '../../models/blog';
+import {News} from '../../models/news';
 
 const BLOG_DATA_1: BlogData[] = [
   {
@@ -54,6 +55,27 @@ export class NewsComponent implements OnInit {
 
   ];
 
+  news: any[] = [
+    {
+      title:"Menu 1",
+    },
+    {
+      title:"Menu 2",
+    },
+    {
+      title:"Menu 3",
+    },
+    {
+      title:"Menu 4",
+    },
+    {
+      title:"Menu 5",
+    },
+
+  ];
+
+
+
   blogData1 = BLOG_DATA_1;
   blogData2 = BLOG_DATA_2;
 
@@ -61,5 +83,14 @@ export class NewsComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  selected = false;
+
+  select(item) {
+    this.selected = item;
+  };
+  isActive(item) {
+      return this.selected === item;
+  };
 
 }

@@ -63,10 +63,17 @@
             text-decoration: none;
             color: $grey;
             opacity: 0.6;
+            cursor: pointer;
             @media screen and (max-width:640px){
-              font-size: .6em;
+              font-size: .8em;
             }
             &:hover{
+              opacity: 1;
+            }
+          }
+          &.active{
+            & a{
+              font-weight: bold;
               opacity: 1;
             }
           }
