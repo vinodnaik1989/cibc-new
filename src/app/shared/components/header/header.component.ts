@@ -18,11 +18,11 @@ export class HeaderComponent implements OnInit {
   opened = false;
   submenu: any[] = [
     {
-      main_title:'Products',
-      submenu_img:'../../assets/images/products-blue.png',
-      submenu_title:'Products',
-      submenu_desc:'Explore our suite of Shared Services',
-      submenu:[
+      main_title: 'Products',
+      submenu_img: '../../assets/images/products-blue.png',
+      submenu_title: 'Products',
+      submenu_desc: 'Explore our suite of Shared Services',
+      submenu: [
         {
           title: 'CMTS',
           abbr: 'Capital Market Token Services',
@@ -54,11 +54,11 @@ export class HeaderComponent implements OnInit {
       ],
     },
     {
-      main_title:'Shared Services',
-      submenu_img:'../../assets/images/shared-serives-blue.png',
-      submenu_title:'Shared Services',
-      submenu_desc:'Explore our suite of Shared Services',
-      submenu:[
+      main_title: 'Shared Services',
+      submenu_img: '../../assets/images/shared-serives-blue.png',
+      submenu_title: 'Shared Services',
+      submenu_desc: 'Explore our suite of Shared Services',
+      submenu: [
         {
           title: 'Messaging',
           icon: '../../assets/icons/message-square.svg',
@@ -97,11 +97,11 @@ export class HeaderComponent implements OnInit {
       ],
     },
     {
-      main_title:'Training & Support',
-      submenu_img:'../../assets/images/training-support-blue.png',
-      submenu_title:'Training and Support',
-      submenu_desc:'Explore our suite Training and Support',
-      submenu:[
+      main_title: 'Training & Support',
+      submenu_img: '../../assets/images/training-support-blue.png',
+      submenu_title: 'Training and Support',
+      submenu_desc: 'Explore our suite Training and Support',
+      submenu: [
         {
           title: 'Open Source Web and Mobile Framework',
           icon: '../../assets/icons/codepen.svg',
@@ -131,10 +131,10 @@ export class HeaderComponent implements OnInit {
     },
     {
       main_title: 'Knowledge Center',
-      submenu_img:'../../assets/images/knowledge-center-blue.png',
-      submenu_title:'Knowledge Center',
-      submenu_desc:'Explore our suite of Knowledge Center',
-      submenu:[
+      submenu_img: '../../assets/images/knowledge-center-blue.png',
+      submenu_title: 'Knowledge Center',
+      submenu_desc: 'Explore our suite of Knowledge Center',
+      submenu: [
         {
           title: 'Training Materials',
           icon: '../../assets/icons/book.svg',
@@ -169,9 +169,9 @@ export class HeaderComponent implements OnInit {
     },
     {
       main_title: 'Contact Us',
-      submenu_title:'Contact Us',
-      submenu_desc:'Explore our suite of Contact Us',
-      submenu:[
+      submenu_title: 'Contact Us',
+      submenu_desc: 'Explore our suite of Contact Us',
+      submenu: [
         {
           title: 'Message',
           icon: '../../assets/icons/send.svg',
@@ -194,6 +194,7 @@ export class HeaderComponent implements OnInit {
   public navIsFixed: boolean = false;
   isShown: boolean = false;
   menuOpened = false;
+  mobileMenuToggled = false;
 
   constructor(public router: Router, config: NgbAccordionConfig) {
     config.closeOthers = true;
@@ -214,27 +215,19 @@ export class HeaderComponent implements OnInit {
     this.menuOpened = true;
   }
 
-
   menuClose() {
     this.menuOpened = false;
   }
 
-
-  // changeClasses() {
-  //   if ($(window).width() <= 1024) {
-  //     $('.menu-close').addClass('nav-test').toggleClass('open');
-  //     $('#menu').toggleClass('open');
-  //     $('body').toggleClass('scroll');
-  //   }
-  // }
-
-  changeClasses() {
+  toggleMobileMenu() {
     if ($(window).width() <= 1024) {
-      $('.menu-close').addClass('nav-test').toggleClass('open');
-      $('#mobile-menu').toggleClass('open');
-      $('body').toggleClass('scroll');
+      this.mobileMenuToggled = !this.mobileMenuToggled;
       this.acc.collapseAll();
     }
+  }
+
+  closeMenu() {
+    this.mobileMenuToggled = false;
   }
 
   toggle() {

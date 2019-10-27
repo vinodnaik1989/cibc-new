@@ -350,6 +350,10 @@ nav .menu-sec .dropdown:hover .dropdown-menu.active {
 }
 
 header {
+  &.open{
+    background: #fbfaf9 !important;
+  }
+
   &#header {
     & nav {
       & li {

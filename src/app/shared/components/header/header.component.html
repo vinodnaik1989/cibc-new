@@ -1,22 +1,26 @@
-<header id="header">
+<header id="header" [ngClass]="{'open': mobileMenuToggled}">
   <div class="col-lg-12">
     <div class="">
       <div class="row">
         <nav class="navbar navbar-expand-lg justify-content-end">
           <div class="logo-section">
-            <a href="" routerLink="" class="navbar-brand">
+            <a href="" routerLink="" class="navbar-brand" (click)="closeMenu()">
               <div class="logo-imgdesc">
               </div>
             </a>
           </div>
           <div class="menu-toggle responsive-menu">
-            <div class="menu-close" (click)="changeClasses()"><span class="bar"></span><span class="bar"></span><span
-              class="bar"></span></div>
+            <div class="menu-close" (click)="toggleMobileMenu()" [ngClass]="{'open': mobileMenuToggled}">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
           </div>
           <div id="menu" class="collapse navbar-collapse">
             <div class="menu-sec">
               <ul class="nav navbar-nav mr-0">
-                <li (mouseover)="menuOpen()" (mouseout)="menuClose()" class="nav-item dropdown" *ngFor="let i of submenu">
+                <li (mouseover)="menuOpen()" (mouseout)="menuClose()" class="nav-item dropdown"
+                    *ngFor="let i of submenu">
                   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">{{i.main_title}}</a>
                   <ul class="dropdown-menu" [ngClass]='{"active": menuOpened === true}'>
                     <li>
@@ -34,7 +38,7 @@
                           <div class="col-md-5 divider prod-list">
                             <ul>
                               <li [ngClass]='{"active": "/"+item.link === router.url}' *ngFor="let item of i.submenu">
-                                <a href="#" routerLink="/{{item.link}}" (click)="changeClasses()">
+                                <a href="#" routerLink="/{{item.link}}" (click)="toggleMobileMenu()">
                                   <div class="icon">
                                     <img src="{{item.icon}}"/>
                                   </div>
@@ -54,26 +58,26 @@
               </ul>
             </div>
           </div>
-          <div id="mobile-menu">
-              <ngb-accordion #acc="ngbAccordion">
-                <ngb-panel title="{{i.main_title}}" *ngFor="let i of submenu">
-                  <ng-template ngbPanelContent>
-                    <ul>
-                      <li [ngClass]='{"active": "/"+item.link === router.url}' *ngFor="let item of i.submenu">
-                        <a href="#" routerLink="/{{item.link}}" (click)="changeClasses()">
-                          <div class="icon">
-                            <img src="{{item.icon}}"/>
-                          </div>
-                          <div class="submenu-title">
-                            {{item.title}}
-                            <span>{{item.abbr}}</span>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </ng-template>
-                </ngb-panel>
-              </ngb-accordion>
+          <div id="mobile-menu" [ngClass]="{'open': mobileMenuToggled}">
+            <ngb-accordion #acc="ngbAccordion">
+              <ngb-panel title="{{i.main_title}}" *ngFor="let i of submenu">
+                <ng-template ngbPanelContent>
+                  <ul>
+                    <li [ngClass]='{"active": "/"+item.link === router.url}' *ngFor="let item of i.submenu">
+                      <a href="#" routerLink="/{{item.link}}" (click)="toggleMobileMenu()">
+                        <div class="icon">
+                          <img src="{{item.icon}}"/>
+                        </div>
+                        <div class="submenu-title">
+                          {{item.title}}
+                          <span>{{item.abbr}}</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </ng-template>
+              </ngb-panel>
+            </ngb-accordion>
           </div>
         </nav>
       </div>
