@@ -18,7 +18,12 @@
             </li>
           </ul>
           <div class="sec1-search">
-            <img src="../../../assets/icons/search.svg">
+            <img src="../../../assets/icons/search.svg" (click)="onToggleSearch()">
+            <input [ngClass]='{"show": toggleSearch === true}' type="search" class="search-text" placeholder="Search Application Engineering" autocomplete="off">
+            <!-- <form action="" role="search" id="search"> -->
+              <!-- <input type="submit" value="" class="search-submit"> -->
+
+          <!-- </form> -->
           </div>
         </nav>
       </div>

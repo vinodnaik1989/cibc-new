@@ -74,10 +74,13 @@ export class NewsComponent implements OnInit {
 
   ];
 
-
-
   blogData1 = BLOG_DATA_1;
   blogData2 = BLOG_DATA_2;
+
+  toggleSearch: boolean = false;
+  onToggleSearch() {
+    this.toggleSearch = !this.toggleSearch;
+  }
 
   constructor() { }
 
