@@ -7,7 +7,7 @@
 }
 .home-particles{
   position: relative;
-  background: #fff;
+  background: $white;
 }
 .home-cont{
   position: relative;
@@ -21,7 +21,7 @@
   align-items: center;
   box-sizing: border-box;
   position: relative;
-  color: #fff;
+  color: $white;
   &>div{
     width: 79%;
     @media screen and (max-width: 640px){
@@ -137,7 +137,7 @@
     margin-top: 0px;
     opacity: 0.5;
     text-transform: uppercase;
-    color: #333;
+    color: $grey;
     & span{
       &:nth-child(1){
         animation: 800ms ease-in 1s 1 normal backwards running image;

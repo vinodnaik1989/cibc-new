@@ -65,7 +65,7 @@
     }
     & .box-3{
       display: block;
-      background: #DE638B;
+      background: $blue;
       @media(max-width: 640px){
         display: none;
       }
@@ -83,7 +83,7 @@
         z-index: 10;
         border-width: 2px;
         border-style: solid;
-        border-color: #fbfaf9;
+        border-color: $bgGrey;
         -o-border-image: initial;
         border-image: initial;
         margin: 1rem;

@@ -24,7 +24,7 @@
       position: absolute;
       right: 0;
       bottom: 3rem;
-      background: #8BC4E4;
+      background: $blue;
     }
   }
   & p{
@@ -78,7 +78,7 @@
     color: $grey;
   }
 }
-// section four sec4 blocks sec4-block sec4-block-image sec4-img sec4-cont
+// section four
 #sec-four{
   & .sec4{
     position: relative;
@@ -283,7 +283,7 @@
     & .sec6-techs{
       & h4{
         text-transform: uppercase;
-        border-bottom: 1px solid$grey;
+        border-bottom: 1px solid $grey;
         align-items: center;
         margin-bottom: 1.5rem;
         padding-bottom: 1rem;

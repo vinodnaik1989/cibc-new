@@ -111,7 +111,7 @@
             & a{
               &:after{
                 content: "|";
-                color: #333;
+                color: $grey;
                 padding: 0 1rem;
                 @media screen and (max-width:640px){
                   padding: 0 .5rem !important
@@ -202,7 +202,7 @@
           align-items: center;
           padding: 1rem 0 15px;
           & .news-user-image{
-            border: 1px solid #333;
+            border: 1px solid $grey;
             border-radius: 50%;
             padding: 10px;
           }

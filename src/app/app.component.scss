@@ -75,13 +75,13 @@
         // padding-left: 1em;
         & span{
           font-size: 24px;
-          color: #DE638B;
+          color: $blue;
         }
         & h3{
           height: 25px;
           opacity: 1;
           overflow: visible;
-          color: #DE638B;
+          color: $blue;
           font-size: 18px;
         }
       }
@@ -94,13 +94,13 @@
       // padding-left: 1em;
       .nav__counter {
         font-size: 28px;
-        color: #DE638B;
+        color: $blue;
         &:after {
           content: '';
           width: 20px;
           height: 400px;
           top: 20px;
-          border-top: 2px solid #DE638B;
+          border-top: 2px solid $blue;
           right: 40px;
           position: absolute;
         }
@@ -109,7 +109,7 @@
         height: 25px;
         opacity: 1;
         overflow: visible;
-        color: #DE638B;
+        color: $blue;
       }
       .nav__body {
         height: 100px;
