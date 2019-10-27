@@ -70,6 +70,21 @@
   }
   & .h1 {
     color: $grey;
+    font-size: 3.8358em;
+    font-weight: bold;
+    line-height: 1.15;
+    margin-bottom: 0.5em;
+    margin-top: 0.25em;
+    z-index: 1;
+    @media screen and (max-width:640px){
+      font-size: 2.2358em !important;
+    }
+    @media screen and (max-width: 736px) and (orientation: landscape){
+      font-size: 2.2358em;
+    }
+    @media screen and (max-width: 736px) and (orientation: landscape){
+      font-size: 2.2358em;
+    }
     @media screen and (min-width: 991px) and (max-width: 1400px){
       font-size: 2.2358em;
     }
@@ -79,24 +94,9 @@
     @media screen and (min-width: 1801px){
       font-size: 3.2358em;
     }
-    @media screen and (max-width:48em){
-      font-size: 3.0358em;
-    }
-    @media screen and (max-width:64em){
-      font-size: 2.7358em;
-    }
-    @media screen and (max-width: 736px) and (orientation: landscape){
-      font-size: 2.2358em;
-    }
-    @media screen and (max-width: 736px) and (orientation: landscape){
-      font-size: 2.2358em;
-    }
-    font-size: 3.8358em;
-    font-weight: bold;
-    line-height: 1.15;
-    margin-bottom: 0.5em;
-    margin-top: 0.25em;
-    z-index: 1;
+    // @media screen and (max-width:48em){
+    //   font-size: 3.0358em;
+    // }
     &::after{
       bottom: 0px;
       content: "";
