@@ -58,6 +58,7 @@
           text-transform: uppercase;
           @media screen and (max-width: 640px){
             margin-right: 10px;
+            font-size: .8rem;
           }
           & a{
             text-decoration: none;
@@ -120,7 +121,7 @@
             margin: 1rem 0;
           }
           & p{
-            opacity: 0.5;
+            // opacity: 0.5;
           }
         }
         & .news-right-user {

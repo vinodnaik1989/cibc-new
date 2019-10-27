@@ -133,13 +133,8 @@ header {
       height: 65px;
       overflow: hidden;
       line-height: 4;
-      // & .nav-item{
       &:last-child {
         padding-right: 1rem;
-      }
-      // }
-      @media(max-width: 1024px) {
-        // overflow-y: scroll;
       }
     }
   }
@@ -351,7 +346,7 @@ nav .menu-sec .dropdown:hover .dropdown-menu.active {
 
 header {
   &.open{
-    background: #fbfaf9 !important;
+    background: $bgGrey !important;
   }
 
   &#header {
@@ -364,6 +359,7 @@ header {
               & .submenu-title {
                 color: $grey;
                 line-height: 1.4;
+                opacity: .6;
                 @media screen and (max-width:640px){
                   line-height: 1.4;
                 }
@@ -432,6 +428,12 @@ nav {
               }
               &:last-child{
                 margin-bottom: 0;
+              }
+              &.active{
+                & .submenu-title{
+                  color: $black !important;
+                  opacity: 1 !important;
+                }
               }
             }
             .prod-list {
