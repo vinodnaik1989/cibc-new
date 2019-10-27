@@ -839,7 +839,9 @@ button{
     }
   }
   #menu-mobile{
-    overflow: hidden !important;
+    &.open{
+      overflow: hidden !important;
+    }
   }
   .home-cont{
     background: linear-gradient(to right, rgb(162, 207, 232) 30%, rgb(215, 243, 187) 70%) !important;
