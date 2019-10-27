@@ -68,7 +68,7 @@
             opacity: 0.6;
             cursor: pointer;
             @media screen and (max-width:640px){
-              font-size: .8em;
+              // font-size: .8em;
             }
             &:hover{
               opacity: 1;
@@ -173,15 +173,26 @@
 }
 
 // #search{
+  .sec1-search{
+    @media screen and (max-width:767px) {
+      position: absolute !important;
+      left: auto;
+      right: 0;
+      top: 60px;
+    }
+  }
+
   .search-text{
     width: 0;
     transition: width .2s ease-in-out;
     opacity: 0;
     border: none;
     overflow: hidden;
-    @media screen and (max-width:786px) {
+    @media screen and (max-width:767px) {
+      position: relative;
+      left: auto;
+      right: 0;
       top: 60px;
-      position: absolute;
     }
     &.show{
       overflow: hidden;
@@ -193,12 +204,12 @@
       opacity: 1;
       height: 30px;
       margin-left: 10px;
-      @media screen and (max-width:786px) {
-        top: 60px;
-        right: 0;
-        text-align: left;
-        position: absolute;
-        margin-left: 0;
+      @media screen and (max-width:767px) {
+        // top: 60px;
+        // right: 0;
+        // text-align: left;
+        // position: absolute;
+        // margin-left: 0;
       }
       &:focus{
         outline: none;

@@ -843,6 +843,20 @@ button{
       overflow: hidden !important;
     }
   }
+  .sec1-search{
+    position: absolute !important;
+    right: 0;
+    & img{
+      position: relative;
+      top: -5px
+    }
+    & .search-text{
+      &.show{
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
   .home-cont{
     background: linear-gradient(to right, rgb(162, 207, 232) 30%, rgb(215, 243, 187) 70%) !important;
     display: block !important;
