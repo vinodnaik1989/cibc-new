@@ -817,7 +817,10 @@ button{
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
    /* IE10 & IE11 CSS styles go here */
-.box-1, .box-3, .boxpink, .box-2, .boxpink2, .boxpink3, img{animation: none !important;}
+  li.dropdown:last-child img.serv-blue {
+    display: none;
+  }
+  .box-1, .box-3, .boxpink, .box-2, .boxpink2, .boxpink3, img{animation: none !important;}
   .prod-list{
     & a{
       display: -ms-flexbox;
