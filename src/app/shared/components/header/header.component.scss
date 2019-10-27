@@ -514,17 +514,6 @@ nav {
         }
       }
     }
-    &.open{
-      & .dropdown-menu{
-        & li{
-          & .submenu-content{
-            & li{
-              padding: 5px 10px;
-            }
-          }
-        }
-      }
-    }
   }
 }
 // css for mobile menu ----->
@@ -541,7 +530,7 @@ nav {
       width: 100%;
       left: 0;
       background: $white;
-      overflow: scroll;
+      // overflow: scroll;
       z-index: 9;
       & .accordion{
         & ::ng-deep{
