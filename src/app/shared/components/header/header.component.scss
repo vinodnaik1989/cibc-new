@@ -1,4 +1,5 @@
 @import '../../../../styles/vairable';
+
 header {
   display: block;
 }
@@ -108,6 +109,7 @@ header {
     line-height: 0.9; //added
   }
 }
+
 #menu {
   position: absolute;
   width: 100%;
@@ -345,7 +347,7 @@ nav .menu-sec .dropdown:hover .dropdown-menu.active {
 }
 
 header {
-  &.open{
+  &.open {
     background: $bgGrey !important;
   }
 
@@ -360,7 +362,7 @@ header {
                 color: $grey;
                 line-height: 1.4;
                 opacity: .6;
-                @media screen and (max-width:640px){
+                @media screen and (max-width: 640px) {
                   line-height: 1.4;
                 }
               }
@@ -381,56 +383,58 @@ header {
     }
   }
 }
+
 nav {
-  & .dropdown{
-    &:hover{
-      & .dropdown-menu{
+  & .dropdown {
+    &:hover {
+      & .dropdown-menu {
         width: auto;
         padding: 0;
         background: none !important;
         left: auto;
         right: 0;
-        & >li{
+        & > li {
           width: 715px;
           float: right;
           background: $white !important;
           margin-right: 15px;
-          box-shadow: 0 13px 12px 5px rgba(28, 39, 81, 0.15);
+          -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.1);
         }
-        & ul{
+        & ul {
           padding: 0;
 
         }
-        & li{
-          & a{
+        & li {
+          & a {
             padding: 0 !important;
             font-weight: bold;
-            &:hover{
+            &:hover {
               font-weight: bold !important;
             }
-            & span{
+            & span {
               display: block;
               font-size: 0.82em;
               opacity: 1;
             }
           }
-          & .submenu-content{
-            & li{
+          & .submenu-content {
+            & li {
               padding: 10px 15px;
-              & a{
-                &:hover{
+              & a {
+                &:hover {
                   text-decoration: none;
                   transition: 0.1s;
-                  & span{
+                  & span {
                     color: inherit;
                   }
                 }
               }
-              &:last-child{
+              &:last-child {
                 margin-bottom: 0;
               }
-              &.active{
-                & .submenu-title{
+              &.active {
+                & .submenu-title {
                   color: $black !important;
                   opacity: 1 !important;
                 }
@@ -439,13 +443,13 @@ nav {
             .prod-list {
               padding: 18px;
               // padding: 10px;
-              & li{
-                & a{
+              & li {
+                & a {
                   display: flex !important;
                   display: -ms-flexbox !important;
                   justify-content: space-between !important;
                   width: 100%;
-                  & .icon{
+                  & .icon {
                     flex: 1;
                     display: flex;
                     vertical-align: middle;
@@ -455,8 +459,8 @@ nav {
                     -ms-flex-item-align: center;
                   }
                 }
-                &.active{
-                  & a{
+                &.active {
+                  & a {
                     opacity: 1 !important;
                   }
                 }
@@ -469,7 +473,7 @@ nav {
                   float: left;
                   padding-left: 5px;
                 }
-                &:hover{
+                &:hover {
                   background: $menuHoverBg;
                 }
               }
@@ -485,26 +489,26 @@ nav {
                 position: relative;
                 top: 50%;
                 transform: translateY(-50%);
-                &:hover{
-                  & h4{
+                &:hover {
+                  & h4 {
                     color: $black;
                   }
-                  & p{
+                  & p {
                     color: $grey;
                   }
                 }
-                & h4{
+                & h4 {
                   margin: 15px 0;
                   color: $black
                 }
-                & p{
+                & p {
                   color: $grey;
                 }
-                & >img{
+                & > img {
                   width: 85%;
                 }
-                & .prod-desc{
-                  & p{
+                & .prod-desc {
+                  & p {
                     font-size: 14px;
                   }
                 }
@@ -516,13 +520,16 @@ nav {
     }
   }
 }
+
 // css for mobile menu ----->
 @media screen and (max-width: 1024px) {
-  #header{
-    & #menu{display: none !important;}
+  #header {
+    & #menu {
+      display: none !important;
+    }
   }
-  #mobile-menu{
-    &.open{
+  #mobile-menu {
+    &.open {
       display: block !important;
       height: 92vh;
       position: fixed;
@@ -532,16 +539,16 @@ nav {
       background: $white;
       // overflow: scroll;
       z-index: 9;
-      & .accordion{
-        & ::ng-deep{
+      & .accordion {
+        & ::ng-deep {
           .card {
             border: none;
-            & .card-header{
+            & .card-header {
               background: none !important;
               border-bottom: .5px solid #e7e6e6;
               margin-bottom: 0 !important;
               padding: 0;
-              & .btn-link{
+              & .btn-link {
                 color: $black;
                 width: 100%;
                 text-align: left;
@@ -549,7 +556,7 @@ nav {
                 text-decoration: none;
                 text-transform: none;
                 letter-spacing: 0;
-                &:after{
+                &:after {
                   content: '';
                   position: absolute !important;
                   right: 25px;
@@ -563,28 +570,28 @@ nav {
               }
             }
           }
-          .card-body{
+          .card-body {
             background: $bgGrey;
             padding: 1rem 0;
-            & ul{
+            & ul {
               padding: 0;
               margin: 0;
-              & li{
+              & li {
                 list-style: none;
-                & a{
+                & a {
                   display: flex;
                   display: -ms-flexbox;
                   display: -webkit-flex;
                   opacity: .6;
                   padding: .7rem 1rem !important;
                   text-decoration: none;
-                  & span{
+                  & span {
                     display: block;
                     font-size: 0.82em;
                     opacity: 1;
                   }
                 }
-                & .icon{
+                & .icon {
                   flex: 1;
                   display: flex;
                   vertical-align: middle;
@@ -594,19 +601,19 @@ nav {
                   -ms-flex-item-align: center;
                   width: 25px;
                   float: left;
-                  & img{
+                  & img {
                     margin: 0 auto;
                     display: block;
                     width: 60% !important;
                   }
                 }
-                & .submenu-title{
+                & .submenu-title {
                   width: calc(100% - 40px);
                   float: left;
                   padding-left: 5px;
                 }
-                &.active{
-                  & a{
+                &.active {
+                  & a {
                     color: $black !important;
                     opacity: 1;
                   }
